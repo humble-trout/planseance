@@ -1,0 +1,1708 @@
+"id_aire_geographique","commune","code_insee","code_departement","region","nom_region","nb_habitants"
+1,Moncoutant,"79179","79",4,Nouvelle Aquitaine,5251
+2,Sèvremoine,"49301","49",3,Pays De La Loire,26095
+3,Mauléon,"79079","79",4,Nouvelle Aquitaine,8844
+4,Épinal,"88160","88",9,Grand Est,33217
+5,Martigues,"13056","13",7,Provence-Alpes-Cote D'Azur,49037
+6,Villard-Bonnot,"38547","38",6,Auvergne / Rhone-Alpes,7431
+7,Cabris,"06026","6",7,Provence-Alpes-Cote D'Azur,1413
+8,Coulommiers,"77131","77",2,Ile-De-France,15167
+9,Cucuron,"84042","84",7,Provence-Alpes-Cote D'Azur,1810
+10,Carcans,"33097","33",4,Nouvelle Aquitaine,2455
+11,Clichy,"92024","92",2,Ile-De-France,63166
+12,Biscarrosse,"40046","40",4,Nouvelle Aquitaine,14393
+13,Aix-en-Provence,"13001","13",7,Provence-Alpes-Cote D'Azur,150358
+14,Saint François Longchamp,"73235","73",6,Auvergne / Rhone-Alpes,551
+15,Noves,"13066","13",7,Provence-Alpes-Cote D'Azur,5893
+16,Amnéville,"57019","57",8,Grand Est,10739
+17,Pontailler-sur-Saône,"21496","21",6,Bourgogne / Franche-Comte,1313
+18,Pouillon,"40233","40",4,Nouvelle Aquitaine,3169
+19,Guer,"56075","56",3,Bretagne,6378
+20,Héric,"44073","44",3,Pays De La Loire,6523
+21,Saint-Philbert-de-Grand-Lieu,"44188","44",3,Pays De La Loire,9409
+22,Saint-Herblain,"44162","44",3,Pays De La Loire,49801
+23,Besse-sur-Issole,"83018","83",7,Provence-Alpes-Cote D'Azur,3122
+24,Barbezieux-Saint-Hilaire,"16028","16",4,Nouvelle Aquitaine,4924
+25,Mauriac,"15120","15",6,Auvergne / Rhone-Alpes,3701
+26,Arzon,"56005","56",3,Bretagne,2305
+27,Carnac,"56034","56",3,Bretagne,4337
+28,Poix-de-Picardie,"80630","80",3,Hauts De France,2370
+29,Gémenos,"13042","13",7,Provence-Alpes-Cote D'Azur,6827
+30,Puget-Ville,"83100","83",7,Provence-Alpes-Cote D'Azur,4456
+31,Jœuf,"54280","54",9,Grand Est,6636
+32,Halluin,"59279","59",5,Hauts De France,20934
+33,Saint-Jean-de-Monts,"85234","85",4,Pays De La Loire,8954
+34,Carbon-Blanc,"33096","33",4,Nouvelle Aquitaine,8355
+35,Montauroux,"83081","83",7,Provence-Alpes-Cote D'Azur,6730
+36,Villers-sur-Mer,"14754","14",3,Normandie,2559
+37,Montceau-les-Mines,"71306","71",6,Bourgogne / Franche-Comte,17488
+38,Belley,"01034","1",6,Auvergne / Rhone-Alpes,9550
+39,Conflans-Sainte-Honorine,"78172","78",2,Ile-De-France,36372
+40,Donges,"44052","44",3,Pays De La Loire,8191
+41,Les Clayes-sous-Bois,"78165","78",2,Ile-De-France,17624
+42,Muret,"31395","31",4,Occitanie,25336
+43,Buxerolles,"86041","86",4,Nouvelle Aquitaine,10127
+44,La Souterraine,"23176","23",4,Nouvelle Aquitaine,5182
+45,Dives-sur-Mer,"14225","14",3,Normandie,5403
+46,Kembs,"68163","68",8,Grand Est,5721
+47,Albi,"81004","81",4,Occitanie,50783
+48,Le Plessis-Robinson,"92060","92",2,Ile-De-France,29719
+49,Mers-les-Bains,"80533","80",3,Hauts De France,2632
+50,Les Sables-d'Olonne,"85194","85",4,Pays De La Loire,48401
+51,Rochefort,"17299","17",4,Nouvelle Aquitaine,24042
+52,Ruffec,"16292","16",4,Nouvelle Aquitaine,3520
+53,Claye-Souilly,"77118","77",2,Ile-De-France,12435
+54,Toulouse,"31555","31",4,Occitanie,503020
+55,Betton,"35024","35",3,Bretagne,12935
+56,Lamotte-Beuvron,"41106","41",3,Centre-Val De Loire,4666
+57,Guichen,"35126","35",3,Bretagne,8968
+58,Bellac,"87011","87",4,Nouvelle Aquitaine,3744
+59,Arles,"13004","13",7,Provence-Alpes-Cote D'Azur,51691
+60,La Ferté-Saint-Aubin,"45146","45",3,Centre-Val De Loire,7530
+61,Pontarlier,"25462","25",6,Bourgogne / Franche-Comte,18618
+62,Hourtin,"33203","33",4,Nouvelle Aquitaine,4037
+63,Chilly-Mazarin,"91161","91",2,Ile-De-France,20050
+64,Mirecourt,"88304","88",9,Grand Est,5292
+65,Caudry,"59139","59",5,Hauts De France,14170
+66,Saint-Paul-Trois-Châteaux,"26324","26",6,Auvergne / Rhone-Alpes,9162
+67,Rothau,"67414","67",8,Grand Est,1551
+68,Le Coudray-Saint-Germer,"60164","60",3,Hauts De France,869
+69,Les Allues,"73015","73",6,Auvergne / Rhone-Alpes,1877
+70,Lons-le-Saunier,"39300","39",6,Bourgogne / Franche-Comte,17921
+71,Coutances,"50147","50",3,Normandie,9554
+72,Argenton-sur-Creuse,"36006","36",3,Centre-Val De Loire,5077
+73,Pithiviers,"45252","45",3,Centre-Val De Loire,9213
+74,Menton,"06083","6",7,Provence-Alpes-Cote D'Azur,31163
+75,Montpellier,"34172","34",7,Occitanie,302425
+76,MIGENNES,"89257","89",3,Bourgogne / Franche-Comte,7402
+77,Dampierre-sur-Salon,"70198","70",9,Bourgogne / Franche-Comte,1258
+78,L' Aigle,"61214","61",3,Normandie,8144
+79,Vincennes,"94080","94",2,Ile-De-France,50168
+80,Serémange-Erzange,"57647","57",8,Grand Est,4220
+81,Joinville-le-Pont,"94042","94",2,Ile-De-France,19278
+82,Aiguillon,"47004","47",4,Nouvelle Aquitaine,4368
+83,Montendre,"17240","17",4,Nouvelle Aquitaine,3274
+84,Fontcouverte-la-Toussuire,"73116","73",6,Auvergne / Rhone-Alpes,493
+85,Bourg-la-Reine,"92014","92",2,Ile-De-France,21291
+86,Nort-sur-Erdre,"44110","44",3,Pays De La Loire,9396
+87,Saint-Renan,"29260","29",3,Bretagne,8470
+88,Wissembourg,"67544","67",8,Grand Est,7709
+89,Saint-Louis,"68297","68",8,Grand Est,23122
+90,Autrans-Méaudre en Vercors,"38225","38",6,Auvergne / Rhone-Alpes,3172
+91,Elne,"66065","66",7,Occitanie,9518
+92,Sarlat-la-Canéda,"24520","24",4,Nouvelle Aquitaine,9192
+93,Sommières,"30321","30",7,Occitanie,5109
+94,Phalsbourg,"57540","57",8,Grand Est,4939
+95,Laragne-Montéglin,"05070","5",7,Provence-Alpes-Cote D'Azur,3631
+96,Vénissieux,"69259","69",6,Auvergne / Rhone-Alpes,67017
+875,Tarbes,"65440","65",4,Occitanie,43944
+97,Divatte-sur-Loire,"44029","44",3,Pays De La Loire,7162
+98,Paris 20e Arrondissement,"75120","75",1,Ile-De-France,193044
+99,Saint-Brevin-les-Pins,"44154","44",3,Pays De La Loire,14809
+100,Plaisance-du-Touch,"31424","31",4,Occitanie,19904
+101,Lamballe,"22093","22",3,Bretagne,17169
+102,Rambouillet,"78517","78",2,Ile-De-France,27534
+103,Laon,"02408","2",3,Hauts De France,24738
+104,Lannemezan,"65258","65",4,Occitanie,5964
+105,Paray-Vieille-Poste,"91479","91",2,Ile-De-France,7885
+106,Saint-Priest-en-Jarez,"42275","42",6,Auvergne / Rhone-Alpes,6182
+107,Tourcoing,"59599","59",5,Hauts De France,99826
+108,Saint-Pol-de-Léon,"29259","29",3,Bretagne,6985
+109,Bondy,"93010","93",2,Ile-De-France,53509
+110,Rabastens,"81220","81",4,Occitanie,5895
+111,Château-Renard,"45083","45",3,Centre-Val De Loire,2139
+112,Thumeries,"59592","59",5,Hauts De France,4001
+113,Hirson,"02381","2",3,Hauts De France,8874
+114,Sézanne,"51535","51",3,Grand Est,4881
+115,Loudéac,"22136","22",3,Bretagne,10031
+116,Le Perreux-sur-Marne,"94058","94",2,Ile-De-France,33981
+117,La Ferté-Milon,"02307","2",3,Hauts De France,2190
+118,Die,"26113","26",6,Auvergne / Rhone-Alpes,5014
+119,Alençon,"61001","61",3,Normandie,26464
+120,Montaigu-Vendée,"85146","85",4,Pays De La Loire,21206
+121,Bollène,"84019","84",7,Provence-Alpes-Cote D'Azur,14043
+122,Vaucresson,"92076","92",2,Ile-De-France,8941
+123,Saint-Vincent-de-Tyrosse,"40284","40",4,Nouvelle Aquitaine,8046
+124,Le Lavandou,"83070","83",7,Provence-Alpes-Cote D'Azur,6048
+125,Saint-Georges-de-Didonne,"17333","17",4,Nouvelle Aquitaine,5356
+126,Fontvieille,"13038","13",7,Provence-Alpes-Cote D'Azur,3599
+127,École-Valentin,"25212","25",6,Bourgogne / Franche-Comte,2754
+128,Les Belleville,"73257","73",6,Auvergne / Rhone-Alpes,3592
+129,Chambly,"60139","60",3,Hauts De France,10266
+130,Privas,"07186","7",6,Auvergne / Rhone-Alpes,8826
+131,Plancher-les-Mines,"70414","70",9,Bourgogne / Franche-Comte,969
+132,Aucamville,"31022","31",4,Occitanie,9340
+133,Soulac-sur-Mer,"33514","33",4,Nouvelle Aquitaine,2860
+134,Perpignan,"66136","66",7,Occitanie,119447
+135,Mulhouse,"68224","68",8,Grand Est,109285
+136,Narbonne,"11262","11",7,Occitanie,57320
+137,Montreuil,"62588","62",5,Hauts De France,2036
+138,Grans,"13044","13",7,Provence-Alpes-Cote D'Azur,5286
+139,Bordeaux,"33063","33",4,Nouvelle Aquitaine,263247
+140,Lavelanet,"09160","9",4,Occitanie,6177
+141,Charmoille,"25125","25",6,Bourgogne / Franche-Comte,328
+142,Le Loroux-Bottereau,"44084","44",3,Pays De La Loire,8654
+143,La Courtine,"23067","23",4,Nouvelle Aquitaine,806
+144,Saint-Chamond,"42207","42",6,Auvergne / Rhone-Alpes,35697
+145,Val-Cenis,"73290","73",6,Auvergne / Rhone-Alpes,2106
+146,Le Vigan,"30350","30",7,Occitanie,3824
+147,Les Ulis,"91692","91",2,Ile-De-France,25299
+148,Corbeil-Essonnes,"91174","91",2,Ile-De-France,52613
+149,Saint-Étienne-de-Montluc,"44158","44",3,Pays De La Loire,7758
+150,Sucy-en-Brie,"94071","94",2,Ile-De-France,27318
+151,Châtel,"74063","74",6,Auvergne / Rhone-Alpes,1248
+152,Châteauroux,"36044","36",3,Centre-Val De Loire,44890
+153,Cancale,"35049","35",3,Bretagne,5405
+154,Mornant,"69141","69",6,Auvergne / Rhone-Alpes,6413
+155,Lalouvesc,"07128","7",6,Auvergne / Rhone-Alpes,380
+156,Briançon,"05023","5",7,Provence-Alpes-Cote D'Azur,11095
+157,La Tour-d'Aigues,"84133","84",7,Provence-Alpes-Cote D'Azur,4466
+158,Épernay,"51230","51",3,Grand Est,22836
+159,Saint-Saturnin,"72320","72",3,Pays De La Loire,2787
+160,Viry-Châtillon,"91687","91",2,Ile-De-France,31297
+161,Cadillac,"33081","33",4,Nouvelle Aquitaine,2877
+162,Saint-Michel-sur-Orge,"91570","91",2,Ile-De-France,21441
+163,Ornans,"25434","25",6,Bourgogne / Franche-Comte,4528
+164,Villenave-d'Ornon,"33550","33",4,Nouvelle Aquitaine,38696
+165,Plouescat,"29185","29",3,Bretagne,3612
+166,Pleurtuit,"35228","35",3,Bretagne,7085
+167,Jeandelaincourt,"54276","54",9,Grand Est,794
+168,Bonneville,"74042","74",6,Auvergne / Rhone-Alpes,12902
+169,Masseube,"32242","32",4,Occitanie,1897
+170,Augerolles,"63016","63",6,Auvergne / Rhone-Alpes,899
+171,Lattes,"34129","34",7,Occitanie,17909
+172,Bagnoles de l'Orne Normandie,"61483","61",3,Normandie,2767
+173,L' Isle-sur-la-Sorgue,"84054","84",7,Provence-Alpes-Cote D'Azur,20531
+174,Châteaudun,"28088","28",3,Centre-Val De Loire,13259
+175,Leucate,"11202","11",7,Occitanie,4635
+176,Saint-Brieuc,"22278","22",3,Bretagne,45602
+177,Lézignan-Corbières,"11203","11",7,Occitanie,11338
+178,Corbie,"80212","80",3,Hauts De France,6356
+179,Besançon,"25056","25",6,Bourgogne / Franche-Comte,121519
+180,Parentis-en-Born,"40217","40",4,Nouvelle Aquitaine,7123
+181,Montgeron,"91421","91",2,Ile-De-France,24217
+182,Thann,"68334","68",8,Grand Est,7932
+183,Vervins,"02789","2",3,Hauts De France,2695
+184,Valenciennes,"59606","59",5,Hauts De France,43188
+185,Saint-Martin-d'Hères,"38421","38",6,Auvergne / Rhone-Alpes,38455
+186,Gournay-en-Bray,"76312","76",3,Normandie,6120
+187,La Tranche-sur-Mer,"85294","85",4,Pays De La Loire,3040
+188,Aubagne,"13005","13",7,Provence-Alpes-Cote D'Azur,47640
+189,Orsay,"91471","91",2,Ile-De-France,15890
+190,Garlin,"64233","64",4,Nouvelle Aquitaine,1375
+191,Nay,"64417","64",4,Nouvelle Aquitaine,3464
+192,Ribes,"07189","7",6,Auvergne / Rhone-Alpes,332
+193,L' Isle-Jourdain,"32160","32",4,Occitanie,9454
+194,Châteaurenard,"13027","13",7,Provence-Alpes-Cote D'Azur,16454
+195,Le Bourgneuf-la-Forêt,"53039","53",3,Pays De La Loire,1765
+196,Pau,"64445","64",4,Nouvelle Aquitaine,77061
+197,Royan,"17306","17",4,Nouvelle Aquitaine,19174
+198,Montigny-sur-Crécy,"02517","2",3,Hauts De France,300
+199,Rixheim,"68278","68",8,Grand Est,14245
+200,Pont-Saint-Esprit,"30202","30",7,Occitanie,10660
+201,Châtenay-Malabry,"92019","92",2,Ile-De-France,34748
+202,Alès,"30007","30",7,Occitanie,43492
+203,Carpentras,"84031","84",7,Provence-Alpes-Cote D'Azur,30564
+204,Plougonvelin,"29190","29",3,Bretagne,4396
+205,Lys-Haut-Layon,"49373","49",3,Pays De La Loire,7917
+206,Nérac,"47195","47",4,Nouvelle Aquitaine,7365
+207,Saint-Sulpice-la-Pointe,"81271","81",4,Occitanie,9751
+208,Decazeville,"12089","12",4,Occitanie,5408
+209,Lalanne-Trie,"65250","65",4,Occitanie,120
+210,Auxerre,"89024","89",3,Bourgogne / Franche-Comte,35244
+211,Massy,"91377","91",2,Ile-De-France,50844
+212,Marciac,"32233","32",4,Occitanie,1288
+213,Landivisiau,"29105","29",3,Bretagne,9522
+214,Chambray-lès-Tours,"37050","37",3,Centre-Val De Loire,12221
+215,Ambert,"63003","63",6,Auvergne / Rhone-Alpes,6877
+216,Lambersart,"59328","59",5,Hauts De France,27868
+217,Amiens,"80021","80",3,Hauts De France,136808
+218,Champagne-sur-Seine,"77079","77",2,Ile-De-France,6504
+219,Reims,"51454","51",3,Grand Est,183287
+220,Bourbon-Lancy,"71047","71",6,Bourgogne / Franche-Comte,4756
+221,Curan,"12307","12",4,Occitanie,308
+222,L' Île-Bouchard,"37119","37",3,Centre-Val De Loire,1556
+223,Les Ancizes-Comps,"63004","63",6,Auvergne / Rhone-Alpes,1736
+224,Bessières,"31066","31",4,Occitanie,4258
+225,Metz,"57463","57",8,Grand Est,122036
+226,Sainte-Solange,"18235","18",3,Centre-Val De Loire,1141
+227,Bain-de-Bretagne,"35012","35",3,Bretagne,7583
+228,Rouen,"76540","76",3,Normandie,115792
+229,Décines-Charpieu,"69275","69",6,Auvergne / Rhone-Alpes,29063
+230,Tassin-la-Demi-Lune,"69244","69",6,Auvergne / Rhone-Alpes,22795
+231,Bourg-Saint-Maurice,"73054","73",6,Auvergne / Rhone-Alpes,7561
+232,Saint-Pol-sur-Ternoise,"62767","62",5,Hauts De France,5023
+233,Domfront en Poiraie,"61145","61",3,Normandie,4297
+234,Avion,"62065","62",5,Hauts De France,17812
+235,Asnières-sur-Seine,"92004","92",2,Ile-De-France,88672
+236,Saint-Astier,"24372","24",4,Nouvelle Aquitaine,5429
+237,Mimizan,"40184","40",4,Nouvelle Aquitaine,7489
+238,Paris 19e Arrondissement,"75119","75",1,Ile-De-France,184156
+239,Lanester,"56098","56",3,Bretagne,23421
+240,Uzès,"30334","30",7,Occitanie,8721
+241,Pont-Sainte-Maxence,"60509","60",3,Hauts De France,12637
+242,Gonfreville-l'Orcher,"76305","76",3,Normandie,9101
+243,Propriano,"2A249","20",7,Corse,3747
+244,Meillonnas,"01241","1",6,Auvergne / Rhone-Alpes,1414
+245,Choisy-le-Roi,"94022","94",2,Ile-De-France,46466
+246,Saint-Bonnet-en-Champsaur,"05132","5",7,Provence-Alpes-Cote D'Azur,2146
+247,La Roche-sur-Foron,"74224","74",6,Auvergne / Rhone-Alpes,11537
+248,Longjumeau,"91345","91",2,Ile-De-France,21242
+249,Givet,"08190","8",3,Grand Est,6487
+250,Agde,"34003","34",7,Occitanie,29589
+251,Nantua,"01269","1",6,Auvergne / Rhone-Alpes,3587
+252,Ferney-Voltaire,"01160","1",6,Auvergne / Rhone-Alpes,10784
+253,Carantec,"29023","29",3,Bretagne,3309
+254,La Baule-Escoublac,"44055","44",3,Pays De La Loire,16706
+255,Ibos,"65226","65",4,Occitanie,3043
+256,Six-Fours-les-Plages,"83129","83",7,Provence-Alpes-Cote D'Azur,35890
+257,Argentan,"61006","61",3,Normandie,13765
+258,Paris 15e Arrondissement,"75115","75",1,Ile-De-France,231186
+259,Brioude,"43040","43",6,Auvergne / Rhone-Alpes,6851
+260,Auxonne,"21038","21",6,Bourgogne / Franche-Comte,7709
+261,Auray,"56007","56",3,Bretagne,14571
+262,Saint-Hilaire-la-Palud,"79257","79",4,Nouvelle Aquitaine,1545
+263,Vieux-Boucau-les-Bains,"40328","40",4,Nouvelle Aquitaine,1670
+264,Gagny,"93032","93",2,Ile-De-France,39817
+265,Barjac,"30029","30",7,Occitanie,1645
+266,Eymoutiers,"87064","87",4,Nouvelle Aquitaine,2107
+267,Chalon-sur-Saône,"71076","71",6,Bourgogne / Franche-Comte,46567
+268,Pollestres,"66144","66",7,Occitanie,5400
+269,Nevers,"58194","58",6,Bourgogne / Franche-Comte,33285
+270,Audun-le-Tiche,"57038","57",8,Grand Est,7172
+271,Tocane-Saint-Apre,"24553","24",4,Nouvelle Aquitaine,1774
+272,La Richardais,"35241","35",3,Bretagne,2564
+273,Montsûrs-Saint-Céneré,"53161","53",3,Pays De La Loire,3250
+274,Saint-Laurent-de-Neste,"65389","65",4,Occitanie,990
+275,Belfort,"90010","90",6,Bourgogne / Franche-Comte,46225
+276,Argentat-sur-Dordogne,"19010","19",4,Nouvelle Aquitaine,3000
+277,Les Monts d'Aunay,"14027","14",3,Normandie,4659
+278,Mandelieu-la-Napoule,"06079","6",7,Provence-Alpes-Cote D'Azur,22067
+279,Châtillon-en-Vendelais,"35072","35",3,Bretagne,1700
+280,Lencloître,"86128","86",4,Nouvelle Aquitaine,2513
+281,Ajaccio,"2A004","20",7,Corse,73483
+282,Vern-sur-Seiche,"35352","35",3,Bretagne,8442
+283,Remiremont,"88383","88",9,Grand Est,8010
+284,Jonzac,"17197","17",4,Nouvelle Aquitaine,3766
+285,Castelnaudary,"11076","11",7,Occitanie,12978
+286,La Seyne-sur-Mer,"83126","83",7,Provence-Alpes-Cote D'Azur,62999
+287,Reignier-Ésery,"74220","74",6,Auvergne / Rhone-Alpes,8349
+288,Carnoux-en-Provence,"13119","13",7,Provence-Alpes-Cote D'Azur,6706
+289,Nogent-le-Rotrou,"28280","28",3,Centre-Val De Loire,9866
+290,Beaurainville,"62100","62",5,Hauts De France,2099
+291,Aime-la-Plagne,"73006","73",6,Auvergne / Rhone-Alpes,4537
+292,Moëlan-sur-Mer,"29150","29",3,Bretagne,6906
+293,Tarnos,"40312","40",4,Nouvelle Aquitaine,13234
+294,Argelès-Gazost,"65025","65",4,Occitanie,3069
+295,Port-de-Bouc,"13077","13",7,Provence-Alpes-Cote D'Azur,16422
+296,Roissy-en-Brie,"77390","77",2,Ile-De-France,22747
+297,Le Mans,"72181","72",3,Pays De La Loire,147983
+298,Woippy,"57751","57",8,Grand Est,14649
+299,Saint-Max,"54482","54",9,Grand Est,10139
+300,Montauban,"82121","82",4,Occitanie,63158
+301,Blain,"44015","44",3,Pays De La Loire,10261
+302,Avignon,"84007","84",7,Provence-Alpes-Cote D'Azur,92277
+303,Pont-Sainte-Marie,"10297","10",3,Grand Est,5237
+304,Pleaux,"15153","15",6,Auvergne / Rhone-Alpes,1488
+305,Chelles,"77108","77",2,Ile-De-France,54691
+306,Quiberon,"56186","56",3,Bretagne,4756
+307,Pontcharra,"38314","38",6,Auvergne / Rhone-Alpes,7519
+308,Oyonnax,"01283","1",6,Auvergne / Rhone-Alpes,22724
+309,Puy-Saint-Vincent,"05110","5",7,Provence-Alpes-Cote D'Azur,292
+310,Haguenau,"67180","67",8,Grand Est,36009
+311,Arcachon,"33009","33",4,Nouvelle Aquitaine,11391
+312,Marennes,"17219","17",4,Nouvelle Aquitaine,6304
+313,Avranches,"50025","50",3,Normandie,10785
+314,Carhaix-Plouguer,"29024","29",3,Bretagne,7773
+315,Maîche,"25356","25",6,Bourgogne / Franche-Comte,4362
+316,Colomiers,"31149","31",4,Occitanie,40342
+317,Mitry-Mory,"77294","77",2,Ile-De-France,20713
+318,Garches,"92033","92",2,Ile-De-France,17960
+319,Lodève,"34142","34",7,Occitanie,7618
+320,Ermont,"95219","95",2,Ile-De-France,29453
+321,Sarreguemines,"57631","57",8,Grand Est,21017
+322,Les Achards,"85152","85",4,Pays De La Loire,5445
+323,Cesson-Sévigné,"35051","35",3,Bretagne,17799
+324,Montpon-Ménestérol,"24294","24",4,Nouvelle Aquitaine,5878
+325,Vouziers,"08490","8",3,Grand Est,4305
+326,Bort-les-Orgues,"19028","19",4,Nouvelle Aquitaine,2696
+327,Montguyon,"17241","17",4,Nouvelle Aquitaine,1583
+328,Paris 14e Arrondissement,"75114","75",1,Ile-De-France,134926
+329,Issy-les-Moulineaux,"92040","92",2,Ile-De-France,68641
+330,Guéthary,"64249","64",4,Nouvelle Aquitaine,1365
+331,Vendays-Montalivet,"33540","33",4,Nouvelle Aquitaine,2583
+332,Tence,"43244","43",6,Auvergne / Rhone-Alpes,3175
+333,Moreuil,"80570","80",3,Hauts De France,4022
+334,Levallois-Perret,"92044","92",2,Ile-De-France,67809
+335,Orly,"94054","94",2,Ile-De-France,24526
+336,Allos,"04006","4",7,Provence-Alpes-Cote D'Azur,845
+337,Léon,"40150","40",4,Nouvelle Aquitaine,1985
+338,L' Argentière-la-Bessée,"05006","5",7,Provence-Alpes-Cote D'Azur,2324
+339,Méru,"60395","60",3,Hauts De France,14546
+340,Évreux,"27229","27",3,Normandie,48096
+341,Aulnay-sous-Bois,"93005","93",2,Ile-De-France,86873
+342,Maule,"78380","78",2,Ile-De-France,6182
+343,Villerupt,"54580","54",9,Grand Est,10206
+344,Gières,"38179","38",6,Auvergne / Rhone-Alpes,7227
+345,Béthune,"62119","62",5,Hauts De France,25314
+346,Villard-de-Lans,"38548","38",6,Auvergne / Rhone-Alpes,4492
+347,Taverny,"95607","95",2,Ile-De-France,26773
+348,Montmélian,"73171","73",6,Auvergne / Rhone-Alpes,4137
+349,Caussade,"82037","82",4,Occitanie,7022
+350,Font-Romeu-Odeillo-Via,"66124","66",7,Occitanie,1964
+351,Barbaste,"47021","47",4,Nouvelle Aquitaine,1571
+352,Ludres,"54328","54",9,Grand Est,6219
+353,Signes,"83127","83",7,Provence-Alpes-Cote D'Azur,3038
+354,Tournon-Saint-Martin,"36224","36",3,Centre-Val De Loire,1152
+355,Missillac,"44098","44",3,Pays De La Loire,5502
+356,Chartres,"28085","28",3,Centre-Val De Loire,39511
+357,Enghien-les-Bains,"95210","95",2,Ile-De-France,11574
+358,Castillonnès,"47057","47",4,Nouvelle Aquitaine,1386
+359,Saint-Rémy-de-Provence,"13100","13",7,Provence-Alpes-Cote D'Azur,9888
+360,Millau,"12145","12",4,Occitanie,22178
+361,Sarcelles,"95585","95",2,Ile-De-France,58715
+362,Matour,"71289","71",6,Bourgogne / Franche-Comte,1176
+363,Thônes,"74280","74",6,Auvergne / Rhone-Alpes,6876
+364,Saint-Germain-en-Laye,"78551","78",2,Ile-De-France,46171
+365,Bréal-sous-Montfort,"35037","35",3,Bretagne,6589
+366,Saint-Laurent-du-Pont,"38412","38",6,Auvergne / Rhone-Alpes,4601
+367,Montfort-sur-Meu,"35188","35",3,Bretagne,6917
+368,Fresnes,"94034","94",2,Ile-De-France,28679
+369,Callac,"22025","22",3,Bretagne,2263
+370,Saint-Pierre-du-Mont,"40281","40",4,Nouvelle Aquitaine,10087
+371,La Guerche-de-Bretagne,"35125","35",3,Bretagne,4392
+372,Lamalou-les-Bains,"34126","34",7,Occitanie,2501
+373,Saint-Pourçain-sur-Sioule,"03254","3",6,Auvergne / Rhone-Alpes,5221
+374,Rieupeyroux,"12198","12",4,Occitanie,2015
+375,Isola,"06073","6",7,Provence-Alpes-Cote D'Azur,667
+376,Camarès,"12044","12",4,Occitanie,1055
+377,Pontault-Combault,"77373","77",2,Ile-De-France,37804
+378,Sedan,"08409","8",3,Grand Est,16730
+379,Nancy,"54395","54",9,Grand Est,105885
+380,Douvres-la-Délivrande,"14228","14",3,Normandie,5278
+381,Dourdan,"91200","91",2,Ile-De-France,10910
+382,Villard,"74301","74",6,Auvergne / Rhone-Alpes,962
+383,Coudekerque-Branche,"59155","59",5,Hauts De France,20987
+384,Nogent-sur-Marne,"94052","94",2,Ile-De-France,33820
+385,Saint Antoine l'Abbaye,"38359","38",6,Auvergne / Rhone-Alpes,1219
+386,Fay-aux-Loges,"45142","45",3,Centre-Val De Loire,3860
+387,Dijon,"21231","21",6,Bourgogne / Franche-Comte,162454
+388,Sainte-Maure-de-Touraine,"37226","37",3,Centre-Val De Loire,4199
+389,Beaufort-en-Anjou,"49021","49",3,Pays De La Loire,7242
+390,Tournon-sur-Rhône,"07324","7",6,Auvergne / Rhone-Alpes,11421
+391,Saint-Vallier,"26333","26",6,Auvergne / Rhone-Alpes,4172
+392,Saint-Jean-de-Bournay,"38399","38",6,Auvergne / Rhone-Alpes,4759
+393,Provins,"77379","77",2,Ile-De-France,12394
+394,Nouan-le-Fuzelier,"41161","41",3,Centre-Val De Loire,2369
+395,Charolles,"71106","71",6,Bourgogne / Franche-Comte,3233
+396,Guéret,"23096","23",4,Nouvelle Aquitaine,13327
+397,Mayenne,"53147","53",3,Pays De La Loire,13495
+398,Landerneau,"29103","29",3,Bretagne,16627
+399,Cluny,"71137","71",6,Bourgogne / Franche-Comte,5176
+400,Bretignolles-sur-Mer,"85035","85",4,Pays De La Loire,5180
+401,Paris 16e Arrondissement,"75116","75",1,Ile-De-France,165118
+402,Saint-Martin-Vésubie,"06127","6",7,Provence-Alpes-Cote D'Azur,1443
+403,Orthez,"64430","64",4,Nouvelle Aquitaine,11106
+404,Dunières,"43087","43",6,Auvergne / Rhone-Alpes,2727
+405,La Mézière,"35177","35",3,Bretagne,5055
+406,DIJON,"21231","21",6,Bourgogne / Franche-Comte,162454
+407,Labouheyre,"40134","40",4,Nouvelle Aquitaine,2831
+408,Gréoux-les-Bains,"04094","4",7,Provence-Alpes-Cote D'Azur,2825
+409,Pomeys,"69155","69",6,Auvergne / Rhone-Alpes,1160
+410,Aubière,"63014","63",6,Auvergne / Rhone-Alpes,10756
+411,L' Isle-Adam,"95313","95",2,Ile-De-France,11923
+412,Ganges,"34111","34",7,Occitanie,4216
+413,Saint-Genis-de-Saintonge,"17331","17",4,Nouvelle Aquitaine,1293
+414,Autun,"71014","71",6,Bourgogne / Franche-Comte,14215
+415,Tarascon-sur-Ariège,"09306","9",4,Occitanie,3044
+416,Saint-Amant-Roche-Savine,"63314","63",6,Auvergne / Rhone-Alpes,527
+417,Montmoreau,"16230","16",4,Nouvelle Aquitaine,2604
+418,Saint-Jean-d'Angély,"17347","17",4,Nouvelle Aquitaine,7172
+419,Plélan-le-Grand,"35223","35",3,Bretagne,4116
+420,Saint-Omer,"62765","62",5,Hauts De France,15428
+421,Ivry-sur-Seine,"94041","94",2,Ile-De-France,64248
+422,Samatan,"32410","32",4,Occitanie,2484
+423,Clermont,"60157","60",3,Hauts De France,10481
+424,Toulouges,"66213","66",7,Occitanie,7385
+425,Le Touquet-Paris-Plage,"62826","62",5,Hauts De France,4527
+426,Noirétable,"42159","42",6,Auvergne / Rhone-Alpes,1681
+427,Val d'Anast,"35168","35",3,Bretagne,4025
+428,Paris 8e Arrondissement,"75108","75",1,Ile-De-France,36218
+429,Monistrol-sur-Loire,"43137","43",6,Auvergne / Rhone-Alpes,9393
+430,Saint-Jorioz,"74242","74",6,Auvergne / Rhone-Alpes,6358
+431,La Celle-Saint-Cloud,"78126","78",2,Ile-De-France,20889
+432,Cabestany,"66028","66",7,Occitanie,10580
+433,Villejuif,"94076","94",2,Ile-De-France,56585
+434,Vinon-sur-Verdon,"83150","83",7,Provence-Alpes-Cote D'Azur,4381
+435,Neufchâtel-en-Bray,"76462","76",3,Normandie,4855
+436,Montbard,"21425","21",6,Bourgogne / Franche-Comte,4965
+437,Paris 13e Arrondissement,"75113","75",1,Ile-De-France,179013
+438,Revel,"31451","31",4,Occitanie,9947
+439,Courseulles-sur-Mer,"14191","14",3,Normandie,4237
+440,Semur-en-Auxois,"21603","21",6,Bourgogne / Franche-Comte,4466
+441,La Bernerie-en-Retz,"44012","44",3,Pays De La Loire,3246
+442,Mouans-Sartoux,"06084","6",7,Provence-Alpes-Cote D'Azur,10397
+443,Maisons-Alfort,"94046","94",2,Ile-De-France,57944
+444,Boissy-Saint-Léger,"94004","94",2,Ile-De-France,17345
+445,Cherbourg-en-Cotentin,"50129","50",3,Normandie,80082
+446,Lille,"59350","59",5,Hauts De France,238104
+447,Saint-Pargoire,"34281","34",7,Occitanie,2393
+448,Senonches,"28373","28",3,Centre-Val De Loire,3049
+449,Saint-Gobain,"02680","2",3,Hauts De France,2343
+450,Condé-sur-Vire,"50139","50",3,Normandie,4227
+451,Alfortville,"94002","94",2,Ile-De-France,45317
+452,Moulins-lès-Metz,"57487","57",8,Grand Est,5079
+453,Rosny-sous-Bois,"93064","93",2,Ile-De-France,45622
+454,Clermont-Ferrand,"63113","63",6,Auvergne / Rhone-Alpes,149898
+455,Vallet,"44212","44",3,Pays De La Loire,9631
+456,Beaupréau-en-Mauges,"49023","49",3,Pays De La Loire,24167
+457,Binic-Étables-sur-Mer,"22055","22",3,Bretagne,7075
+458,Argentonnay,"79013","79",4,Nouvelle Aquitaine,3283
+459,Romillé,"35245","35",3,Bretagne,4157
+460,Pornic,"44131","44",3,Pays De La Loire,17340
+461,La Talaudière,"42305","42",6,Auvergne / Rhone-Alpes,7143
+462,Sélestat,"67462","67",8,Grand Est,19530
+463,Ouistreham,"14488","14",3,Normandie,9558
+464,Savenay,"44195","44",3,Pays De La Loire,9476
+465,Risoul,"05119","5",7,Provence-Alpes-Cote D'Azur,676
+466,Ballancourt-sur-Essonne,"91045","91",2,Ile-De-France,7812
+467,Vitry-sur-Seine,"94081","94",2,Ile-De-France,96138
+468,Champagny-en-Vanoise,"73071","73",6,Auvergne / Rhone-Alpes,577
+469,Dinard,"35093","35",3,Bretagne,10755
+470,Mulsanne,"72213","72",3,Pays De La Loire,5295
+471,Armentières,"59017","59",5,Hauts De France,25588
+472,Barjols,"83012","83",7,Provence-Alpes-Cote D'Azur,3056
+473,Fosses,"95250","95",2,Ile-De-France,9895
+474,Chomérac,"07066","7",6,Auvergne / Rhone-Alpes,3178
+475,Casteljaloux,"47052","47",4,Nouvelle Aquitaine,4575
+476,Beynes,"78062","78",2,Ile-De-France,7697
+477,Villarembert,"73318","73",6,Auvergne / Rhone-Alpes,259
+478,Marcoussis,"91363","91",2,Ile-De-France,8398
+479,Luz-Saint-Sauveur,"65295","65",4,Occitanie,944
+480,Surgères,"17434","17",4,Nouvelle Aquitaine,6970
+481,Toucy,"89419","89",3,Bourgogne / Franche-Comte,2732
+482,Mont-Saint-Aignan,"76451","76",3,Normandie,20101
+483,Firminy,"42095","42",6,Auvergne / Rhone-Alpes,17126
+484,Ruoms,"07201","7",6,Auvergne / Rhone-Alpes,2303
+485,Villeneuve-d'Ascq,"59009","59",5,Hauts De France,61902
+486,Ploërmel,"56165","56",3,Bretagne,10348
+487,Modane,"73157","73",6,Auvergne / Rhone-Alpes,3154
+488,Chalonnes-sur-Loire,"49063","49",3,Pays De La Loire,6649
+489,Noirmoutier-en-l'Île,"85163","85",4,Pays De La Loire,4588
+490,Marcq-en-Barœul,"59378","59",5,Hauts De France,39319
+491,Préfailles,"44136","44",3,Pays De La Loire,1254
+492,Chef-Boutonne,"79083","79",4,Nouvelle Aquitaine,2514
+493,Aizenay,"85003","85",4,Pays De La Loire,10270
+494,Pauillac,"33314","33",4,Nouvelle Aquitaine,5164
+495,Moulins,"03190","3",6,Auvergne / Rhone-Alpes,19997
+496,Bruz,"35047","35",3,Bretagne,19561
+497,Allevard,"38006","38",6,Auvergne / Rhone-Alpes,4106
+498,Villeneuve-la-Garenne,"92078","92",2,Ile-De-France,24670
+499,Ribeauvillé,"68269","68",8,Grand Est,4847
+500,Barcelonnette,"04019","4",7,Provence-Alpes-Cote D'Azur,2760
+501,L' Île-d'Yeu,"85113","85",4,Pays De La Loire,5008
+502,Verrières-le-Buisson,"91645","91",2,Ile-De-France,14931
+503,Caluire-et-Cuire,"69034","69",6,Auvergne / Rhone-Alpes,43929
+504,Château-Thierry,"02168","2",3,Hauts De France,15618
+505,Villefranche-de-Lauragais,"31582","31",4,Occitanie,4916
+506,Élancourt,"78208","78",2,Ile-De-France,26117
+507,Tournefeuille,"31557","31",4,Occitanie,29405
+508,Rostrenen,"22266","22",3,Bretagne,3428
+509,Sens,"89387","89",3,Bourgogne / Franche-Comte,27367
+510,Chauvigny,"86070","86",4,Nouvelle Aquitaine,7198
+511,Damgan,"56052","56",3,Bretagne,1937
+512,Urrugne,"64545","64",4,Nouvelle Aquitaine,10656
+513,Dun-le-Palestel,"23075","23",4,Nouvelle Aquitaine,1114
+514,Osséja,"66130","66",7,Occitanie,1441
+515,Fort-Mahon-Plage,"80333","80",3,Hauts De France,1311
+516,Fillière,"74282","74",6,Auvergne / Rhone-Alpes,9781
+517,Saint-Nazaire,"44184","44",3,Pays De La Loire,73643
+518,Entraygues-sur-Truyère,"12094","12",4,Occitanie,999
+519,Issoudun,"36088","36",3,Centre-Val De Loire,11578
+520,Rion-des-Landes,"40243","40",4,Nouvelle Aquitaine,3106
+521,Eaubonne,"95203","95",2,Ile-De-France,25782
+522,Quimperlé,"29233","29",3,Bretagne,12553
+523,Elbeuf,"76231","76",3,Normandie,16225
+524,Crépy-en-Valois,"60176","60",3,Hauts De France,14645
+525,Bourg-en-Bresse,"01053","1",6,Auvergne / Rhone-Alpes,43363
+526,Plaisance,"32319","32",4,Occitanie,1446
+527,Bousbecque,"59098","59",5,Hauts De France,4845
+528,Fourneaux,"73117","73",6,Auvergne / Rhone-Alpes,708
+529,Garges-lès-Gonesse,"95268","95",2,Ile-De-France,43294
+530,Matha,"17224","17",4,Nouvelle Aquitaine,2257
+531,Sarrebourg,"57630","57",8,Grand Est,12582
+532,Boulogne-sur-Mer,"62160","62",5,Hauts De France,40985
+533,Triguères,"45329","45",3,Centre-Val De Loire,1306
+534,Clisson,"44043","44",3,Pays De La Loire,7752
+535,Bray-Dunes,"59107","59",5,Hauts De France,4521
+536,Mamers,"72180","72",3,Pays De La Loire,5252
+537,Goussainville,"95280","95",2,Ile-De-France,31052
+538,Albert,"80016","80",3,Hauts De France,9983
+539,Hauteville-sur-Mer,"50231","50",3,Normandie,712
+540,Bagnères-de-Bigorre,"65059","65",4,Occitanie,7318
+541,Collioure,"66053","66",7,Occitanie,2429
+542,La Haye,"50236","50",3,Normandie,4078
+543,Canteleu,"76157","76",3,Normandie,14157
+544,Sceaux,"92071","92",2,Ile-De-France,20721
+545,Clamecy,"58079","58",6,Bourgogne / Franche-Comte,3779
+546,La Crèche,"79048","79",4,Nouvelle Aquitaine,5917
+547,Tremblay-en-France,"93073","93",2,Ile-De-France,36653
+548,Les Orres,"05098","5",7,Provence-Alpes-Cote D'Azur,543
+549,Lacoste,"84058","84",7,Provence-Alpes-Cote D'Azur,432
+550,Toul,"54528","54",9,Grand Est,16107
+551,Eyguières,"13035","13",7,Provence-Alpes-Cote D'Azur,7014
+552,Agon-Coutainville,"50003","50",3,Normandie,2933
+553,Paris 1er Arrondissement,"75101","75",1,Ile-De-France,16149
+554,Chaudes-Aigues,"15045","15",6,Auvergne / Rhone-Alpes,829
+555,Liffré,"35152","35",3,Bretagne,8265
+556,Castelnau-Durban,"09082","9",4,Occitanie,462
+557,Saint-Genest-Lerpt,"42223","42",6,Auvergne / Rhone-Alpes,6252
+558,Lesparre-Médoc,"33240","33",4,Nouvelle Aquitaine,5920
+559,Fontenay-sous-Bois,"94033","94",2,Ile-De-France,51807
+560,Villefranche-sur-Mer,"06159","6",7,Provence-Alpes-Cote D'Azur,5037
+561,Guillestre,"05065","5",7,Provence-Alpes-Cote D'Azur,2374
+562,Les Vans,"07334","7",6,Auvergne / Rhone-Alpes,2710
+563,Villeneuve-sur-Lot,"47323","47",4,Nouvelle Aquitaine,22385
+564,Lion-sur-Mer,"14365","14",3,Normandie,2539
+565,Verdun,"55545","55",9,Grand Est,17846
+566,Ancenis,"44003","44",3,Pays De La Loire,11479
+567,Lorient,"56121","56",3,Bretagne,58881
+568,Château-Renault,"37063","37",3,Centre-Val De Loire,4977
+569,Le Havre,"76351","76",3,Normandie,167658
+570,Quend,"80649","80",3,Hauts De France,1299
+571,Le Plessis-Trévise,"94059","94",2,Ile-De-France,19733
+572,Baud,"56010","56",3,Bretagne,6427
+573,Renazé,"53188","53",3,Pays De La Loire,2580
+574,Saint-Chély-d'Apcher,"48140","48",7,Occitanie,4814
+575,Brie-Comte-Robert,"77053","77",2,Ile-De-France,19447
+576,Marseille,"13055","13",7,Provence-Alpes-Cote D'Azur,876602
+577,Saint-Maur-des-Fossés,"94068","94",2,Ile-De-France,75449
+578,Le Grand-Quevilly,"76322","76",3,Normandie,26269
+579,Perros-Guirec,"22168","22",3,Bretagne,7342
+580,Hyères,"83069","83",7,Provence-Alpes-Cote D'Azur,55528
+581,Feurs,"42094","42",6,Auvergne / Rhone-Alpes,8488
+582,Valdahon,"25578","25",6,Bourgogne / Franche-Comte,5841
+583,Ugine,"73303","73",6,Auvergne / Rhone-Alpes,7366
+584,Le Teil,"07319","7",6,Auvergne / Rhone-Alpes,9051
+585,Jarny,"54273","54",9,Grand Est,8369
+586,Montmirail,"51380","51",3,Grand Est,3609
+587,Vienne,"38544","38",6,Auvergne / Rhone-Alpes,30401
+588,Drancy,"93029","93",2,Ile-De-France,71535
+589,Vitré,"35360","35",3,Bretagne,19171
+590,Torcy,"77468","77",2,Ile-De-France,22604
+591,Saint-Bonnet-le-Château,"42204","42",6,Auvergne / Rhone-Alpes,1532
+592,Crest,"26108","26",6,Auvergne / Rhone-Alpes,8974
+593,Champagnole,"39097","39",6,Bourgogne / Franche-Comte,8466
+594,Saint-Amand-les-Eaux,"59526","59",5,Hauts De France,16177
+595,Valloire,"73306","73",6,Auvergne / Rhone-Alpes,1096
+596,Auterive,"31033","31",4,Occitanie,10062
+597,Dieppe,"76217","76",3,Normandie,28535
+598,Le Pont-de-Beauvoisin,"38315","38",6,Auvergne / Rhone-Alpes,3689
+599,Achères,"78005","78",2,Ile-De-France,21812
+600,Pontoise,"95500","95",2,Ile-De-France,32453
+601,Charlieu,"42052","42",6,Auvergne / Rhone-Alpes,3810
+602,Guipry-Messac,"35176","35",3,Bretagne,7323
+603,Souillac,"46309","46",4,Occitanie,3520
+604,Lectoure,"32208","32",4,Occitanie,4049
+605,Corte,"2B096","20",7,Corse,7665
+606,Colmar,"68066","68",8,Grand Est,69398
+607,Soorts-Hossegor,"40304","40",4,Nouvelle Aquitaine,3584
+608,Douvaine,"74105","74",6,Auvergne / Rhone-Alpes,6772
+609,Le Pradet,"83098","83",7,Provence-Alpes-Cote D'Azur,10656
+610,Saint-Dié-des-Vosges,"88413","88",9,Grand Est,19936
+611,Biars-sur-Cère,"46029","46",4,Occitanie,2050
+612,Besse-et-Saint-Anastaise,"63038","63",6,Auvergne / Rhone-Alpes,1543
+613,Pierrelatte,"26235","26",6,Auvergne / Rhone-Alpes,13979
+614,Clelles,"38113","38",6,Auvergne / Rhone-Alpes,541
+615,Villedieu-les-Poêles-Rouffigny,"50639","50",3,Normandie,3913
+616,Dreux,"28134","28",3,Centre-Val De Loire,31239
+617,Le Chambon-sur-Lignon,"43051","43",6,Auvergne / Rhone-Alpes,2465
+618,Orléans,"45234","45",3,Centre-Val De Loire,119380
+619,Clermont-l'Hérault,"34079","34",7,Occitanie,9285
+620,Brignoles,"83023","83",7,Provence-Alpes-Cote D'Azur,17964
+621,Le Monêtier-les-Bains,"05079","5",7,Provence-Alpes-Cote D'Azur,1085
+622,Saint-Avold,"57606","57",8,Grand Est,15494
+623,Le Luc,"83073","83",7,Provence-Alpes-Cote D'Azur,11166
+624,Colombes,"92025","92",2,Ile-De-France,87328
+625,Chatou,"78146","78",2,Ile-De-France,30190
+626,Arpajon,"91021","91",2,Ile-De-France,11266
+627,Saint-Nazaire-de-Valentane,"82168","82",4,Occitanie,322
+628,Montdidier,"80561","80",3,Hauts De France,6152
+629,Saint Geniez d'Olt et d'Aubrac,"12224","12",4,Occitanie,2256
+630,Panissières,"42165","42",6,Auvergne / Rhone-Alpes,2964
+631,Basse-Goulaine,"44009","44",3,Pays De La Loire,9659
+632,Camaret-sur-Mer,"29022","29",3,Bretagne,2516
+633,Acigné,"35001","35",3,Bretagne,7029
+634,Brest,"29019","29",3,Bretagne,142110
+635,Sarre-Union,"67434","67",8,Grand Est,2836
+636,Loudun,"86137","86",4,Nouvelle Aquitaine,7052
+637,Lans-en-Vercors,"38205","38",6,Auvergne / Rhone-Alpes,2794
+638,Bouguenais,"44020","44",3,Pays De La Loire,20748
+639,Saint-Gilles-Croix-de-Vie,"85222","85",4,Pays De La Loire,8170
+640,Chablis,"89068","89",3,Bourgogne / Franche-Comte,2210
+641,Pamiers,"09225","9",4,Occitanie,16421
+642,Mirepoix,"09194","9",4,Occitanie,3236
+643,Bolbec,"76114","76",3,Normandie,11684
+644,Saumur,"49328","49",3,Pays De La Loire,27112
+645,La Clayette,"71133","71",6,Bourgogne / Franche-Comte,1699
+646,Albiez-Montrond,"73013","73",6,Auvergne / Rhone-Alpes,374
+647,Les Pennes-Mirabeau,"13071","13",7,Provence-Alpes-Cote D'Azur,22174
+648,Saint-Palais-sur-Mer,"17380","17",4,Nouvelle Aquitaine,4002
+649,Châteaubernard,"16089","16",4,Nouvelle Aquitaine,3831
+650,La Vôge-les-Bains,"88029","88",9,Grand Est,1712
+651,Bois-d'Arcy,"78073","78",2,Ile-De-France,15184
+652,Lieusaint,"77251","77",2,Ile-De-France,13891
+653,Furiani,"2B120","20",7,Corse,5901
+654,Chambéry,"73065","73",6,Auvergne / Rhone-Alpes,60749
+655,Le Porge,"33333","33",4,Nouvelle Aquitaine,3371
+656,Guilherand-Granges,"07102","7",6,Auvergne / Rhone-Alpes,11154
+657,Pont-l'Abbé,"29220","29",3,Bretagne,8786
+658,Beaulieu,"07028","7",6,Auvergne / Rhone-Alpes,534
+659,Oloron-Sainte-Marie,"64422","64",4,Nouvelle Aquitaine,11309
+660,Baugé-en-Anjou,"49018","49",3,Pays De La Loire,11978
+661,Sainte-Hermine,"85223","85",4,Pays De La Loire,3008
+662,Saint-Priest,"69290","69",6,Auvergne / Rhone-Alpes,48612
+663,Évian-les-Bains,"74119","74",6,Auvergne / Rhone-Alpes,9369
+664,Rennes,"35238","35",3,Bretagne,226654
+665,Saint-Gratien,"95555","95",2,Ile-De-France,21060
+666,Annecy,"74010","74",6,Auvergne / Rhone-Alpes,134942
+667,Prayssac,"46225","46",4,Occitanie,2485
+668,Cogolin,"83042","83",7,Provence-Alpes-Cote D'Azur,12007
+669,Fréjus,"83061","83",7,Provence-Alpes-Cote D'Azur,56598
+670,Vertou,"44215","44",3,Pays De La Loire,26449
+671,Verneuil-sur-Seine,"78642","78",2,Ile-De-France,16283
+672,Vence,"06157","6",7,Provence-Alpes-Cote D'Azur,19585
+673,Château-Gontier,"53062","53",3,Pays De La Loire,17535
+674,La Tour-du-Pin,"38509","38",6,Auvergne / Rhone-Alpes,8353
+675,Fronton,"31202","31",4,Occitanie,6535
+676,Pont-Audemer,"27467","27",3,Normandie,10152
+677,Verdun-sur-Garonne,"82190","82",4,Occitanie,4900
+678,Valognes,"50615","50",3,Normandie,7064
+679,Chalmazel-Jeansagnière,"42039","42",6,Auvergne / Rhone-Alpes,458
+680,La Bourboule,"63047","63",6,Auvergne / Rhone-Alpes,1790
+681,Richelieu,"37196","37",3,Centre-Val De Loire,1671
+682,Nogent-sur-Seine,"10268","10",3,Grand Est,6062
+683,Moissy-Cramayel,"77296","77",2,Ile-De-France,18117
+684,Brétigny-sur-Orge,"91103","91",2,Ile-De-France,27361
+685,Tonnay-Boutonne,"17448","17",4,Nouvelle Aquitaine,1194
+686,Loudenvielle,"65282","65",4,Occitanie,301
+687,Cabrerets,"46040","46",4,Occitanie,233
+688,Bagnères-de-Luchon,"31042","31",4,Occitanie,2368
+689,Veynes,"05179","5",7,Provence-Alpes-Cote D'Azur,3378
+690,Marvejols,"48092","48",7,Occitanie,4956
+691,Évron,"53097","53",3,Pays De La Loire,8896
+692,Val-d'Isère,"73304","73",6,Auvergne / Rhone-Alpes,1636
+693,Luçon,"85128","85",4,Pays De La Loire,9918
+694,Gien,"45155","45",3,Centre-Val De Loire,13716
+695,La Châtaigneraie,"85059","85",4,Pays De La Loire,2638
+696,Forbach,"57227","57",8,Grand Est,21797
+697,Gonesse,"95277","95",2,Ile-De-France,25950
+698,Saint-Amand-Montrond,"18197","18",3,Centre-Val De Loire,9785
+699,Berck,"62108","62",5,Hauts De France,13778
+700,Vizille,"38562","38",6,Auvergne / Rhone-Alpes,7474
+701,Saint-Léonard-de-Noblat,"87161","87",4,Nouvelle Aquitaine,4468
+702,Sainte-Eulalie,"33397","33",4,Nouvelle Aquitaine,5017
+703,Vaujany,"38527","38",6,Auvergne / Rhone-Alpes,350
+704,Senlis,"60612","60",3,Hauts De France,15709
+705,Charleville-Mézières,"08105","8",3,Grand Est,47433
+706,Beaulieu-sur-Mer,"06011","6",7,Provence-Alpes-Cote D'Azur,3788
+707,Sarzeau,"56240","56",3,Bretagne,9045
+708,Saint-Girons,"09261","9",4,Occitanie,6812
+709,Ribérac,"24352","24",4,Nouvelle Aquitaine,3989
+710,Levens,"06075","6",7,Provence-Alpes-Cote D'Azur,5011
+711,Saint-André-de-Cubzac,"33366","33",4,Nouvelle Aquitaine,12924
+712,Le Faouët,"56057","56",3,Bretagne,2856
+713,Vauréal,"95637","95",2,Ile-De-France,16207
+714,Maisons-Laffitte,"78358","78",2,Ile-De-France,23700
+715,Bourbonne-les-Bains,"52060","52",3,Grand Est,2024
+716,Barèges,"65481","65",4,Occitanie,162
+717,Le Hom,"14689","14",3,Normandie,3647
+718,Embrun,"05046","5",7,Provence-Alpes-Cote D'Azur,6781
+719,Labastide-Rouairoux,"81115","81",4,Occitanie,1438
+720,Tullins,"38517","38",6,Auvergne / Rhone-Alpes,7883
+721,Meyzieu,"69282","69",6,Auvergne / Rhone-Alpes,35468
+722,Rive-de-Gier,"42186","42",6,Auvergne / Rhone-Alpes,15208
+723,Saint-Gaudens,"31483","31",4,Occitanie,12204
+724,Crécy-en-Ponthieu,"80222","80",3,Hauts De France,1392
+725,Aire-sur-la-Lys,"62014","62",5,Hauts De France,9869
+726,Pont-l'Évêque,"14514","14",3,Normandie,4862
+727,Vayrac,"46330","46",4,Occitanie,1329
+728,Soultz-sous-Forêts,"67474","67",8,Grand Est,3206
+729,Saint-Jean-de-Luz,"64483","64",4,Nouvelle Aquitaine,14702
+730,Ramonville-Saint-Agne,"31446","31",4,Occitanie,15017
+731,Castanet-Tolosan,"31113","31",4,Occitanie,14636
+732,Saint-Julien-en-Genevois,"74243","74",6,Auvergne / Rhone-Alpes,15968
+733,Parthenay,"79202","79",4,Nouvelle Aquitaine,10494
+734,Bailleul,"59043","59",5,Hauts De France,15250
+735,Troyes,"10387","10",3,Grand Est,63708
+736,Hendaye,"64260","64",4,Nouvelle Aquitaine,18071
+737,Carcès,"83032","83",7,Provence-Alpes-Cote D'Azur,3470
+738,Bar-le-Duc,"55029","55",9,Grand Est,15135
+739,Noyon,"60471","60",3,Hauts De France,13409
+740,Angoulême,"16015","16",4,Nouvelle Aquitaine,43079
+741,Tonnerre,"89418","89",3,Bourgogne / Franche-Comte,4508
+742,Montataire,"60414","60",3,Hauts De France,13834
+743,Meschers-sur-Gironde,"17230","17",4,Nouvelle Aquitaine,3201
+744,Saint-Jean-de-Maurienne,"73248","73",6,Auvergne / Rhone-Alpes,7894
+745,Lourdes,"65286","65",4,Occitanie,13546
+746,Thillois,"51569","51",3,Grand Est,575
+747,Santes,"59553","59",5,Hauts De France,5714
+748,Noisiel,"77337","77",2,Ile-De-France,15853
+749,L' Haÿ-les-Roses,"94038","94",2,Ile-De-France,31847
+750,Fécamp,"76259","76",3,Normandie,18334
+751,Bourganeuf,"23030","23",4,Nouvelle Aquitaine,2674
+752,Bellegarde-sur-Valserine,"01033","1",6,Auvergne / Rhone-Alpes,16770
+753,Chasseneuil-sur-Bonnieure,"16085","16",4,Nouvelle Aquitaine,3381
+754,Ernée,"53096","53",3,Pays De La Loire,5746
+755,Villefranche-sur-Saône,"69264","69",6,Auvergne / Rhone-Alpes,36419
+756,Lure,"70310","70",9,Bourgogne / Franche-Comte,8143
+757,Craponne,"69069","69",6,Auvergne / Rhone-Alpes,11657
+758,Mazamet,"81163","81",4,Occitanie,10361
+759,Cestas,"33122","33",4,Nouvelle Aquitaine,17219
+760,Rueil-Malmaison,"92063","92",2,Ile-De-France,79713
+761,Saint-Martin-en-Haut,"69227","69",6,Auvergne / Rhone-Alpes,4042
+762,Château-Salins,"57132","57",8,Grand Est,2542
+763,Isigny-sur-Mer,"14342","14",3,Normandie,3630
+764,Fayence,"83055","83",7,Provence-Alpes-Cote D'Azur,5857
+765,Val de Briey,"54099","54",9,Grand Est,8269
+766,Les Rousses,"39470","39",6,Bourgogne / Franche-Comte,3738
+767,Vernoux-en-Vivarais,"07338","7",6,Auvergne / Rhone-Alpes,2003
+768,Ormesson-sur-Marne,"94055","94",2,Ile-De-France,10611
+769,La Roche-Chalais,"24354","24",4,Nouvelle Aquitaine,3060
+770,Montmorillon,"86165","86",4,Nouvelle Aquitaine,6372
+771,Roncq,"59508","59",5,Hauts De France,13675
+772,Bédarieux,"34028","34",7,Occitanie,5952
+773,Candé,"49054","49",3,Pays De La Loire,2870
+774,Captieux,"33095","33",4,Nouvelle Aquitaine,1364
+775,Stenay,"55502","55",9,Grand Est,2623
+776,Gif-sur-Yvette,"91272","91",2,Ile-De-France,21996
+777,Hazebrouck,"59295","59",5,Hauts De France,21869
+778,Douai,"59178","59",5,Hauts De France,40697
+779,Vic-en-Bigorre,"65460","65",4,Occitanie,5101
+780,Sainte-Livrade-sur-Lot,"47252","47",4,Nouvelle Aquitaine,6660
+781,Blénod-lès-Pont-à-Mousson,"54079","54",9,Grand Est,4669
+782,Paris 5e Arrondissement,"75105","75",1,Ile-De-France,58050
+783,Eauze,"32119","32",4,Occitanie,4069
+784,Châtellerault,"86066","86",4,Nouvelle Aquitaine,32345
+785,Gresse-en-Vercors,"38186","38",6,Auvergne / Rhone-Alpes,380
+786,Aix-les-Bains,"73008","73",6,Auvergne / Rhone-Alpes,31642
+787,Ham,"80410","80",3,Hauts De France,4595
+788,Châtillon-sur-Seine,"21154","21",6,Bourgogne / Franche-Comte,5690
+789,Bonneuil-sur-Marne,"94011","94",2,Ile-De-France,18488
+790,Terrasson-Lavilledieu,"24547","24",4,Nouvelle Aquitaine,6370
+791,Lagny-sur-Marne,"77243","77",2,Ile-De-France,21332
+792,Castelsarrasin,"82033","82",4,Occitanie,14404
+793,Pontivy,"56178","56",3,Bretagne,16030
+794,Creil,"60175","60",3,Hauts De France,36193
+795,Samoëns,"74258","74",6,Auvergne / Rhone-Alpes,2438
+796,Montricher-Albanne,"73173","73",6,Auvergne / Rhone-Alpes,487
+797,Grenoble,"38185","38",6,Auvergne / Rhone-Alpes,160483
+798,Jaux,"60325","60",3,Hauts De France,2346
+799,Créon,"33140","33",4,Nouvelle Aquitaine,4998
+800,Retournac,"43162","43",6,Auvergne / Rhone-Alpes,3043
+801,Chantilly,"60141","60",3,Hauts De France,10821
+802,Le Tréport,"76711","76",3,Normandie,4533
+803,Péronne,"80620","80",3,Hauts De France,7628
+804,PARAY-LE-MONIAL,"71342","71",6,Bourgogne / Franche-Comte,9612
+805,Chalindrey,"52093","52",3,Grand Est,2461
+806,Thollon-les-Mémises,"74279","74",6,Auvergne / Rhone-Alpes,849
+807,Flers,"61169","61",3,Normandie,14928
+808,Paimpol,"22162","22",3,Bretagne,7471
+809,Dole,"39198","39",6,Bourgogne / Franche-Comte,24483
+810,Gilley,"25271","25",6,Bourgogne / Franche-Comte,1768
+811,Chartres-de-Bretagne,"35066","35",3,Bretagne,8327
+812,La Trimouille,"86273","86",4,Nouvelle Aquitaine,881
+813,Les Mureaux,"78440","78",2,Ile-De-France,33705
+814,La Gaude,"06065","6",7,Provence-Alpes-Cote D'Azur,7225
+815,Plestin-les-Grèves,"22194","22",3,Bretagne,3734
+816,Vagney,"88486","88",9,Grand Est,4008
+817,Condom,"32107","32",4,Occitanie,6670
+818,Montrouge,"92049","92",2,Ile-De-France,48174
+819,Ussel,"19275","19",4,Nouvelle Aquitaine,9530
+820,Saint-Jean-Pied-de-Port,"64485","64",4,Nouvelle Aquitaine,1810
+821,Rosières,"07199","7",6,Auvergne / Rhone-Alpes,1306
+822,Nozay,"44113","44",3,Pays De La Loire,4305
+823,Giromagny,"90052","90",6,Bourgogne / Franche-Comte,2994
+824,Conflans-en-Jarnisy,"54136","54",9,Grand Est,2410
+825,Dardilly,"69072","69",6,Auvergne / Rhone-Alpes,9459
+826,Chaville,"92022","92",2,Ile-De-France,20830
+827,Segré-en-Anjou Bleu,"49331","49",3,Pays De La Loire,18478
+828,Côteaux du Blanzacais,"16046","16",4,Nouvelle Aquitaine,1013
+829,Blagnac,"31069","31",4,Occitanie,26600
+830,Rezé,"44143","44",3,Pays De La Loire,43756
+831,Évaux-les-Bains,"23076","23",4,Nouvelle Aquitaine,1322
+832,Romainville,"93063","93",2,Ile-De-France,31554
+833,Deauville,"14220","14",3,Normandie,3615
+834,Châlons-en-Champagne,"51108","51",3,Grand Est,45481
+835,Saint-Médard-en-Jalles,"33449","33",4,Nouvelle Aquitaine,32866
+836,Valréas,"84138","84",7,Provence-Alpes-Cote D'Azur,9616
+837,Port-Vendres,"66148","66",7,Occitanie,4070
+838,Inzinzac-Lochrist,"56090","56",3,Bretagne,6669
+839,Verneuil d'Avre et d'Iton,"27679","27",3,Normandie,7717
+840,Vendôme,"41269","41",3,Centre-Val De Loire,16307
+841,Saint-Valery-en-Caux,"76655","76",3,Normandie,4068
+842,Chauffailles,"71120","71",6,Bourgogne / Franche-Comte,3759
+843,Vélizy-Villacoublay,"78640","78",2,Ile-De-France,23020
+844,Joué-lès-Tours,"37122","37",3,Centre-Val De Loire,39143
+845,Mâcon,"71270","71",6,Bourgogne / Franche-Comte,35137
+846,Fourmies,"59249","59",5,Hauts De France,11574
+847,Cernay,"68063","68",8,Grand Est,11769
+848,Saint-Étienne-de-Tinée,"06120","6",7,Provence-Alpes-Cote D'Azur,1566
+849,Allonnes,"72003","72",3,Pays De La Loire,11207
+850,Arras,"62041","62",5,Hauts De France,43133
+851,Baume-les-Dames,"25047","25",6,Bourgogne / Franche-Comte,5144
+852,Sète,"34301","34",7,Occitanie,45175
+853,Seyssel,"74269","74",6,Auvergne / Rhone-Alpes,2426
+854,Flassans-sur-Issole,"83057","83",7,Provence-Alpes-Cote D'Azur,3650
+855,Paris 4e Arrondissement,"75104","75",1,Ile-De-France,29326
+856,Périgueux,"24322","24",4,Nouvelle Aquitaine,30823
+857,Miribel,"01249","1",6,Auvergne / Rhone-Alpes,10355
+858,Guise,"02361","2",3,Hauts De France,4628
+859,Mouzon,"08311","8",3,Grand Est,2266
+860,Chaumont,"52121","52",3,Grand Est,22966
+861,La Rochefoucauld,"16281","16",4,Nouvelle Aquitaine,4113
+862,Huelgoat,"29081","29",3,Bretagne,1431
+863,Valence,"82186","82",4,Occitanie,5381
+864,Plouguenast,"22219","22",3,Bretagne,2486
+865,Vannes,"56260","56",3,Bretagne,56018
+866,Coggia,"2A090","20",7,Corse,736
+867,Vernon,"27681","27",3,Normandie,24678
+868,Pertuis,"84089","84",7,Provence-Alpes-Cote D'Azur,20767
+869,Mauléon-Licharre,"64371","64",4,Nouvelle Aquitaine,3189
+870,Niort,"79191","79",4,Nouvelle Aquitaine,60845
+871,Chauny,"02173","2",3,Hauts De France,11843
+872,Berre-l'Étang,"13014","13",7,Provence-Alpes-Cote D'Azur,13903
+873,Rives-en-Seine,"76164","76",3,Normandie,4158
+874,Ballan-Miré,"37018","37",3,Centre-Val De Loire,8225
+876,Arrens-Marsous,"65032","65",4,Occitanie,707
+877,Trappes,"78621","78",2,Ile-De-France,33527
+878,Val-de-Reuil,"27701","27",3,Normandie,12988
+879,Mèze,"34157","34",7,Occitanie,12549
+880,Roissy-en-France,"95527","95",2,Ile-De-France,2817
+881,Gaillon,"27275","27",3,Normandie,6935
+882,Digoin,"71176","71",6,Bourgogne / Franche-Comte,7854
+883,Nîmes,"30189","30",7,Occitanie,149761
+884,Aurillac,"15014","15",6,Auvergne / Rhone-Alpes,26973
+885,Auch,"32013","32",4,Occitanie,23624
+886,Oissel,"76484","76",3,Normandie,12341
+887,Sablé-sur-Sarthe,"72264","72",3,Pays De La Loire,12594
+888,Limoges,"87085","87",4,Nouvelle Aquitaine,132768
+889,Charbonnières-les-Bains,"69044","69",6,Auvergne / Rhone-Alpes,5385
+890,Combourg,"35085","35",3,Bretagne,6206
+891,Lunéville,"54329","54",9,Grand Est,18160
+892,Sainte-Foy-la-Grande,"33402","33",4,Nouvelle Aquitaine,2697
+893,Pierrefeu-du-Var,"83091","83",7,Provence-Alpes-Cote D'Azur,6188
+894,Eaux-Bonnes,"64204","64",4,Nouvelle Aquitaine,194
+895,Blois,"41018","41",3,Centre-Val De Loire,48127
+896,Luzy,"58149","58",6,Bourgogne / Franche-Comte,2033
+897,Les Andelys,"27016","27",3,Normandie,8193
+898,Legé,"44081","44",3,Pays De La Loire,4742
+899,Mont-de-Marsan,"40192","40",4,Nouvelle Aquitaine,31366
+900,Saint-Paul-de-Fenouillet,"66187","66",7,Occitanie,1796
+901,Houlgate,"14338","14",3,Normandie,1728
+902,Vendenheim,"67506","67",8,Grand Est,6080
+903,Locminé,"56117","56",3,Bretagne,4815
+904,Saint-Sever,"40282","40",4,Nouvelle Aquitaine,5046
+905,Lyon,"69123","69",6,Auvergne / Rhone-Alpes,528633
+906,Balbigny,"42011","42",6,Auvergne / Rhone-Alpes,2892
+907,Le Haillan,"33200","33",4,Nouvelle Aquitaine,11756
+908,Fontaine-le-Comte,"86100","86",4,Nouvelle Aquitaine,4046
+909,Courrières,"62250","62",5,Hauts De France,10455
+910,Rosières,"43165","43",6,Auvergne / Rhone-Alpes,1557
+911,Saint-Genest-Malifaux,"42224","42",6,Auvergne / Rhone-Alpes,3089
+912,Vitrolles,"13117","13",7,Provence-Alpes-Cote D'Azur,34814
+913,Orcières,"05096","5",7,Provence-Alpes-Cote D'Azur,696
+914,Reichshoffen,"67388","67",8,Grand Est,5494
+915,Digne-les-Bains,"04070","4",7,Provence-Alpes-Cote D'Azur,17804
+916,Chemillé-en-Anjou,"49092","49",3,Pays De La Loire,21811
+917,Aubervilliers,"93001","93",2,Ile-De-France,89559
+918,Châtillon,"92020","92",2,Ile-De-France,36688
+919,Lorgues,"83072","83",7,Provence-Alpes-Cote D'Azur,9589
+920,Paris 18e Arrondissement,"75118","75",1,Ile-De-France,191911
+921,PLAISIR,"78490","78",2,Ile-De-France,31243
+922,Monclar-de-Quercy,"82115","82",4,Occitanie,2051
+923,Trets,"13110","13",7,Provence-Alpes-Cote D'Azur,10680
+924,Orange,"84087","84",7,Provence-Alpes-Cote D'Azur,29103
+925,Fenouillet,"31182","31",4,Occitanie,5509
+926,Yerres,"91691","91",2,Ile-De-France,29325
+927,Paris 6e Arrondissement,"75106","75",1,Ile-De-France,40452
+928,Cosne-Cours-sur-Loire,"58086","58",6,Bourgogne / Franche-Comte,9658
+929,Château-Arnoux-Saint-Auban,"04049","4",7,Provence-Alpes-Cote D'Azur,5172
+930,La Roche-Bernard,"56195","56",3,Bretagne,707
+931,Villers-Cotterêts,"02810","2",3,Hauts De France,10803
+932,La Rochette,"16282","16",4,Nouvelle Aquitaine,544
+933,Pralognan-la-Vanoise,"73206","73",6,Auvergne / Rhone-Alpes,734
+934,Ax-les-Thermes,"09032","9",4,Occitanie,1350
+935,Buis-les-Baronnies,"26063","26",6,Auvergne / Rhone-Alpes,2370
+936,Fontainebleau,"77186","77",2,Ile-De-France,16368
+937,Audincourt,"25031","25",6,Bourgogne / Franche-Comte,13763
+938,Murat,"15138","15",6,Auvergne / Rhone-Alpes,1913
+939,Pézenas,"34199","34",7,Occitanie,8110
+940,Yssingeaux,"43268","43",6,Auvergne / Rhone-Alpes,7743
+941,Le Boulou,"66024","66",7,Occitanie,5370
+942,Saint-Pierre-d'Albigny,"73270","73",6,Auvergne / Rhone-Alpes,4272
+943,RENNES,"35238","35",3,Bretagne,226654
+944,Saverne,"67437","67",8,Grand Est,11602
+945,Vouneuil-sur-Vienne,"86298","86",4,Nouvelle Aquitaine,2329
+946,Clamart,"92023","92",2,Ile-De-France,53740
+947,Commentry,"03082","3",6,Auvergne / Rhone-Alpes,6285
+948,Blâmont,"54077","54",9,Grand Est,1065
+949,Biganos,"33051","33",4,Nouvelle Aquitaine,11186
+950,Bagnols-sur-Cèze,"30028","30",7,Occitanie,18405
+951,Montigny-lès-Cormeilles,"95424","95",2,Ile-De-France,22305
+952,Mijoux,"01247","1",6,Auvergne / Rhone-Alpes,312
+953,Cerizay,"79062","79",4,Nouvelle Aquitaine,4874
+954,Saint-Lô,"50502","50",3,Normandie,20112
+955,Montreuil,"93048","93",2,Ile-De-France,111954
+956,Épernon,"28140","28",3,Centre-Val De Loire,5669
+957,Saintes-Maries-de-la-Mer,"13096","13",7,Provence-Alpes-Cote D'Azur,2145
+958,Lunel,"34145","34",7,Occitanie,26626
+959,Pléneuf-Val-André,"22186","22",3,Bretagne,4197
+960,Cazouls-lès-Béziers,"34069","34",7,Occitanie,5220
+961,Albertville,"73011","73",6,Auvergne / Rhone-Alpes,20414
+962,Douarnenez,"29046","29",3,Bretagne,14379
+963,Liévin,"62510","62",5,Hauts De France,30432
+964,Vaux-le-Pénil,"77487","77",2,Ile-De-France,11254
+965,Boulogne-sur-Gesse,"31080","31",4,Occitanie,1688
+966,Penmarch,"29158","29",3,Bretagne,5241
+967,Toulon,"83137","83",7,Provence-Alpes-Cote D'Azur,181506
+968,Gisors,"27284","27",3,Normandie,12046
+969,Morteau,"25411","25",6,Bourgogne / Franche-Comte,7187
+970,Montmédy,"55351","55",9,Grand Est,2124
+971,Grasse,"06069","6",7,Provence-Alpes-Cote D'Azur,49607
+972,Épinay-sur-Seine,"93031","93",2,Ile-De-France,54569
+973,Arette,"64040","64",4,Nouvelle Aquitaine,1104
+974,Wingen-sur-Moder,"67538","67",8,Grand Est,1605
+975,Carentan les Marais,"50099","50",3,Normandie,10389
+976,Aurignac,"31028","31",4,Occitanie,1312
+977,Moûtiers,"73181","73",6,Auvergne / Rhone-Alpes,3932
+978,Lyon ,"69123","69",6,Auvergne / Rhone-Alpes,528633
+979,Lillebonne,"76384","76",3,Normandie,8904
+980,Bois-Colombes,"92009","92",2,Ile-De-France,29817
+981,Biarritz,"64122","64",4,Nouvelle Aquitaine,26583
+982,Fontenay-aux-Roses,"92032","92",2,Ile-De-France,25389
+983,Montignac,"24291","24",4,Nouvelle Aquitaine,2811
+984,Eysines,"33162","33",4,Nouvelle Aquitaine,24483
+985,Saint-Étienne,"42218","42",6,Auvergne / Rhone-Alpes,176016
+986,Gennevilliers,"92036","92",2,Ile-De-France,50096
+987,Lecci,"2A139","20",7,Corse,1920
+988,Le Thillot,"88468","88",9,Grand Est,3372
+989,Arudy,"64062","64",4,Nouvelle Aquitaine,2300
+990,Pont-de-Roide-Vermondans,"25463","25",6,Bourgogne / Franche-Comte,4162
+991,Le Neubourg,"27428","27",3,Normandie,4478
+992,Montivilliers,"76447","76",3,Normandie,15719
+993,Thiers,"63430","63",6,Auvergne / Rhone-Alpes,11841
+994,Beaugency,"45028","45",3,Centre-Val De Loire,7571
+995,Sainte-Foy-lès-Lyon,"69202","69",6,Auvergne / Rhone-Alpes,22452
+996,Talence,"33522","33",4,Nouvelle Aquitaine,45355
+997,La Ferté-Bernard,"72132","72",3,Pays De La Loire,9198
+998,Notre-Dame-de-Monts,"85164","85",4,Pays De La Loire,2206
+999,Nanterre,"92050","92",2,Ile-De-France,96402
+1000,Joigny,"89206","89",3,Bourgogne / Franche-Comte,9691
+1001,LANGON,"33227","33",4,Nouvelle Aquitaine,7516
+1002,Le Blanc-Mesnil,"93007","93",2,Ile-De-France,58116
+1003,Saint-Gély-du-Fesc,"34255","34",7,Occitanie,10670
+1004,Freyming-Merlebach,"57240","57",8,Grand Est,12952
+1005,Mérignac,"33281","33",4,Nouvelle Aquitaine,74775
+1006,Auchel,"62048","62",5,Hauts De France,10263
+1007,Châteaulin,"29026","29",3,Bretagne,5578
+1008,Nogaro,"32296","32",4,Occitanie,2238
+1009,Cahors,"46042","46",4,Occitanie,21081
+1010,Villeurbanne,"69266","69",6,Auvergne / Rhone-Alpes,155858
+1011,Contes,"06048","6",7,Provence-Alpes-Cote D'Azur,7612
+1012,Saint-Maximin-la-Sainte-Baume,"83116","83",7,Provence-Alpes-Cote D'Azur,18006
+1013,La Riche,"37195","37",3,Centre-Val De Loire,10469
+1014,Saint-Pierre-d'Oléron,"17385","17",4,Nouvelle Aquitaine,6682
+1015,Dol-de-Bretagne,"35095","35",3,Bretagne,6110
+1016,Argent-sur-Sauldre,"18011","18",3,Centre-Val De Loire,2108
+1017,Blanquefort,"33056","33",4,Nouvelle Aquitaine,15862
+1018,Vaison-la-Romaine,"84137","84",7,Provence-Alpes-Cote D'Azur,6019
+1019,Istres,"13047","13",7,Provence-Alpes-Cote D'Azur,45119
+1020,Bagneux,"92007","92",2,Ile-De-France,42122
+1021,Descartes,"37115","37",3,Centre-Val De Loire,3386
+1022,Ars-sur-Moselle,"57032","57",8,Grand Est,4743
+1023,Tinchebray-Bocage,"61486","61",3,Normandie,4982
+1024,Barentin,"76057","76",3,Normandie,12478
+1025,Varennes-sur-Seine,"77482","77",2,Ile-De-France,3732
+1026,Limoux,"11206","11",7,Occitanie,10681
+1027,Fontenay-le-Fleury,"78242","78",2,Ile-De-France,13682
+1028,Saint-Ouen,"93070","93",2,Ile-De-France,51656
+1029,Cazères,"31135","31",4,Occitanie,4824
+1030,Langogne,"48080","48",7,Occitanie,3069
+1031,Léguevin,"31291","31",4,Occitanie,9615
+1032,Strasbourg,"67482","67",8,Grand Est,293538
+1033,Les Herbiers,"85109","85",4,Pays De La Loire,16801
+1034,Groix,"56069","56",3,Bretagne,2303
+1035,Saulieu,"21584","21",6,Bourgogne / Franche-Comte,2454
+1036,Le Dorat,"87059","87",4,Nouvelle Aquitaine,1594
+1037,Saint-Cloud,"92064","92",2,Ile-De-France,30115
+1038,Hérouville-Saint-Clair,"14327","14",3,Normandie,22388
+1039,Cormeilles-en-Parisis,"95176","95",2,Ile-De-France,26297
+1040,Carmaux,"81060","81",4,Occitanie,10036
+1041,Josselin,"56091","56",3,Bretagne,2613
+1042,Fougères,"35115","35",3,Bretagne,21121
+1043,Lamastre,"07129","7",6,Auvergne / Rhone-Alpes,2401
+1044,Cholet,"49099","49",3,Pays De La Loire,56286
+1045,Tarascon,"13108","13",7,Provence-Alpes-Cote D'Azur,15639
+1046,Vaires-sur-Marne,"77479","77",2,Ile-De-France,13450
+1047,Itteville,"91315","91",2,Ile-De-France,6701
+1048,Saint-Martin-du-Fouilloux,"49306","49",3,Pays De La Loire,1704
+1049,Dampierre-en-Burly,"45122","45",3,Centre-Val De Loire,1461
+1050,Paris 3e Arrondissement,"75103","75",1,Ile-De-France,33651
+1051,Langres,"52269","52",3,Grand Est,8081
+1052,Cergy,"95127","95",2,Ile-De-France,68275
+1053,Montauban-de-Bretagne,"35184","35",3,Bretagne,6487
+1054,Dinsheim-sur-Bruche,"67098","67",8,Grand Est,1534
+1055,Peyrehorade,"40224","40",4,Nouvelle Aquitaine,3821
+1056,La Montagne,"44101","44",3,Pays De La Loire,6515
+1057,Vire Normandie,"14762","14",3,Normandie,17784
+1058,Salon-de-Provence,"13103","13",7,Provence-Alpes-Cote D'Azur,45595
+1059,Sully-sur-Loire,"45315","45",3,Centre-Val De Loire,5203
+1060,Palaiseau,"91477","91",2,Ile-De-France,35056
+1061,Gex,"01173","1",6,Auvergne / Rhone-Alpes,13467
+1062,Bellevigne-en-Layon,"49345","49",3,Pays De La Loire,5897
+1063,Mur-de-Barrez,"12164","12",4,Occitanie,710
+1064,Échirolles,"38151","38",6,Auvergne / Rhone-Alpes,37181
+1065,Libourne,"33243","33",4,Nouvelle Aquitaine,24941
+1066,Malakoff,"92046","92",2,Ile-De-France,31412
+1067,Béziers,"34032","34",7,Occitanie,79873
+1068,Aubenas,"07019","7",6,Auvergne / Rhone-Alpes,13177
+1069,Saint-Savinien,"17397","17",4,Nouvelle Aquitaine,2553
+1070,Saint-Georges-de-Reintembault,"35271","35",3,Bretagne,1512
+1071,Portes-lès-Valence,"26252","26",6,Auvergne / Rhone-Alpes,10685
+1072,Roubaix,"59512","59",5,Hauts De France,98480
+1073,Sillingy,"74272","74",6,Auvergne / Rhone-Alpes,5619
+1074,Quetigny,"21515","21",6,Bourgogne / Franche-Comte,9287
+1075,Mussidan,"24299","24",4,Nouvelle Aquitaine,2836
+1076,Porto-Vecchio,"2A247","20",7,Corse,11210
+1077,Jard-sur-Mer,"85114","85",4,Pays De La Loire,2701
+1078,Durfort-et-Saint-Martin-de-Sossenac,"30106","30",7,Occitanie,767
+1079,Champigny-sur-Marne,"94017","94",2,Ile-De-France,77751
+1080,Villeneuve-lès-Béziers,"34336","34",7,Occitanie,4153
+1081,Roche-la-Molière,"42189","42",6,Auvergne / Rhone-Alpes,9966
+1082,Bergerac,"24037","24",4,Nouvelle Aquitaine,27101
+1083,Villefontaine,"38553","38",6,Auvergne / Rhone-Alpes,19131
+1084,Guebwiller,"68112","68",8,Grand Est,11281
+1085,Saint-Germain-de-Calberte,"48155","48",7,Occitanie,476
+1086,Ouroux-en-Morvan,"58205","58",6,Bourgogne / Franche-Comte,608
+1087,Arvieu,"12011","12",4,Occitanie,791
+1088,Moissac,"82112","82",4,Occitanie,14074
+1089,La Châtre,"36046","36",3,Centre-Val De Loire,4165
+1090,Altkirch,"68004","68",8,Grand Est,5787
+1091,Pornichet,"44132","44",3,Pays De La Loire,12159
+1092,Longwy,"54323","54",9,Grand Est,15357
+1093,Ferrals-les-Corbières,"11140","11",7,Occitanie,1277
+1094,Gap,"05061","5",7,Provence-Alpes-Cote D'Azur,41528
+1095,Cluses,"74081","74",6,Auvergne / Rhone-Alpes,17372
+1096,Les Gets,"74134","74",6,Auvergne / Rhone-Alpes,1250
+1097,Muntzenheim,"68227","68",8,Grand Est,1312
+1098,Poligny,"39434","39",6,Bourgogne / Franche-Comte,4384
+1099,Juvisy-sur-Orge,"91326","91",2,Ile-De-France,17773
+1100,Neufchâtel-Hardelot,"62604","62",5,Hauts De France,3818
+1101,Trégueux,"22360","22",3,Bretagne,8639
+1102,Quillan,"11304","11",7,Occitanie,3237
+1103,Paris 12e Arrondissement,"75112","75",1,Ile-De-France,141275
+1104,Gençay,"86103","86",4,Nouvelle Aquitaine,1807
+1105,Nangis,"77327","77",2,Ile-De-France,8990
+1106,Jouy-le-Moutier,"95323","95",2,Ile-De-France,17357
+1107,Anglet,"64024","64",4,Nouvelle Aquitaine,41388
+1108,Schirmeck,"67448","67",8,Grand Est,2180
+1109,Visan,"84150","84",7,Provence-Alpes-Cote D'Azur,1962
+1110,Selles-sur-Cher,"41242","41",3,Centre-Val De Loire,4522
+1111,Aubigny-sur-Nère,"18015","18",3,Centre-Val De Loire,5623
+1112,Marignana,"2A154","20",7,Corse,112
+1113,Fontenay-le-Comte,"85092","85",4,Pays De La Loire,13828
+1114,Aurec-sur-Loire,"43012","43",6,Auvergne / Rhone-Alpes,6249
+1115,Tergnier,"02738","2",3,Hauts De France,13694
+1116,Forcalquier,"04088","4",7,Provence-Alpes-Cote D'Azur,5210
+1117,Montluçon,"03185","3",6,Auvergne / Rhone-Alpes,34868
+1118,La Ciotat,"13028","13",7,Provence-Alpes-Cote D'Azur,36812
+1119,Créteil,"94028","94",2,Ile-De-France,92984
+1120,Bourges,"18033","18",3,Centre-Val De Loire,66385
+1121,Saint-Paul-en-Forêt,"83117","83",7,Provence-Alpes-Cote D'Azur,1813
+1122,Guémené-Penfao,"44067","44",3,Pays De La Loire,5322
+1123,Sartrouville,"78586","78",2,Ile-De-France,52158
+1124,Marly,"57447","57",8,Grand Est,10187
+1125,Chinon,"37072","37",3,Centre-Val De Loire,8361
+1126,Castelmaurou,"31117","31",4,Occitanie,4508
+1127,Canéjan,"33090","33",4,Nouvelle Aquitaine,6074
+1128,Vitry-le-François,"51649","51",3,Grand Est,11678
+1129,L' Union,"31561","31",4,Occitanie,12511
+1130,Poissy,"78498","78",2,Ile-De-France,40049
+1131,Gardanne,"13041","13",7,Provence-Alpes-Cote D'Azur,21850
+1132,Auzielle,"31036","31",4,Occitanie,1635
+1133,Gorron,"53107","53",3,Pays De La Loire,2596
+1134,Bricquebec-en-Cotentin,"50082","50",3,Normandie,5936
+1135,Port-Jérôme-sur-Seine,"76476","76",3,Normandie,10453
+1136,Saint-Égrève,"38382","38",6,Auvergne / Rhone-Alpes,16221
+1137,Jarzé Villages,"49163","49",3,Pays De La Loire,2797
+1138,Beaufort,"73034","73",6,Auvergne / Rhone-Alpes,2106
+1139,Talmont-Saint-Hilaire,"85288","85",4,Pays De La Loire,8119
+1140,Sainte-Geneviève-des-Bois,"91549","91",2,Ile-De-France,36190
+1141,Ydes,"15265","15",6,Auvergne / Rhone-Alpes,1657
+1142,Valmeinier,"73307","73",6,Auvergne / Rhone-Alpes,572
+1143,Montargis,"45208","45",3,Centre-Val De Loire,15220
+1144,Saint-Cyr-sur-Loire,"37214","37",3,Centre-Val De Loire,17286
+1145,Saint-Junien,"87154","87",4,Nouvelle Aquitaine,11600
+1146,Beaurepaire,"38034","38",6,Auvergne / Rhone-Alpes,5088
+1147,Vaugneray,"69255","69",6,Auvergne / Rhone-Alpes,6193
+1148,Honfleur,"14333","14",3,Normandie,6933
+1149,Saint-Marcellin,"38416","38",6,Auvergne / Rhone-Alpes,7914
+1150,Veules-les-Roses,"76735","76",3,Normandie,536
+1151,Pélussin,"42168","42",6,Auvergne / Rhone-Alpes,3829
+1152,Châteaugiron,"35069","35",3,Bretagne,10808
+1153,Aubigny-Les Clouzeaux,"85008","85",4,Pays De La Loire,7146
+1154,Aire-sur-l'Adour,"40001","40",4,Nouvelle Aquitaine,6753
+1155,Yvetot,"76758","76",3,Normandie,11485
+1156,Moirans-en-Montagne,"39333","39",6,Bourgogne / Franche-Comte,2241
+1157,Castets,"40075","40",4,Nouvelle Aquitaine,2525
+1158,Chessy,"77111","77",2,Ile-De-France,6780
+1159,Ozoir-la-Ferrière,"77350","77",2,Ile-De-France,20921
+1160,Gentilly,"94037","94",2,Ile-De-France,18950
+1161,Aigues-Mortes,"30003","30",7,Occitanie,8742
+1162,Trévoux,"01427","1",6,Auvergne / Rhone-Alpes,7108
+1163,Retiers,"35239","35",3,Bretagne,4599
+1164,Campbon,"44025","44",3,Pays De La Loire,4016
+1165,Langeais,"37123","37",3,Centre-Val De Loire,4411
+1166,Tende,"06163","6",7,Provence-Alpes-Cote D'Azur,2193
+1167,Roumoules,"04172","4",7,Provence-Alpes-Cote D'Azur,745
+1168,Labruguière,"81120","81",4,Occitanie,6624
+1169,Benfeld,"67028","67",8,Grand Est,5914
+1170,Genlis,"21292","21",6,Bourgogne / Franche-Comte,5234
+1171,Châteaubourg,"35068","35",3,Bretagne,7673
+1172,Miramas,"13063","13",7,Provence-Alpes-Cote D'Azur,26807
+1173,Chantonnay,"85051","85",4,Pays De La Loire,8927
+1174,Aniche,"59008","59",5,Hauts De France,10025
+1175,Saint-Genis-Laval,"69204","69",6,Auvergne / Rhone-Alpes,21439
+1176,Chazay-d'Azergues,"69052","69",6,Auvergne / Rhone-Alpes,4270
+1177,Belleville,"69019","69",6,Auvergne / Rhone-Alpes,13616
+1178,Réquista,"12197","12",4,Occitanie,2056
+1179,Laignes,"21336","21",6,Bourgogne / Franche-Comte,675
+1180,Franconville,"95252","95",2,Ile-De-France,37494
+1181,Marthon,"16211","16",4,Nouvelle Aquitaine,566
+1182,Artenay,"45008","45",3,Centre-Val De Loire,1998
+1183,Carry-le-Rouet,"13021","13",7,Provence-Alpes-Cote D'Azur,5831
+1184,Foix,"09122","9",4,Occitanie,9841
+1185,Léognan,"33238","33",4,Nouvelle Aquitaine,10804
+1186,Blonville-sur-Mer,"14079","14",3,Normandie,1587
+1187,Avallon,"89025","89",3,Bourgogne / Franche-Comte,6635
+1188,Poisy,"74213","74",6,Auvergne / Rhone-Alpes,8886
+1189,Blainville-sur-l'Eau,"54076","54",9,Grand Est,3991
+1190,Auris,"38020","38",6,Auvergne / Rhone-Alpes,184
+1191,Montbéliard,"25388","25",6,Bourgogne / Franche-Comte,26269
+1192,Capbreton,"40065","40",4,Nouvelle Aquitaine,9494
+1193,Mirande,"32256","32",4,Occitanie,3733
+1194,Le Bourget,"93013","93",2,Ile-De-France,15695
+1195,Zonza,"2A362","20",7,Corse,2790
+1196,Saint-Céré,"46251","46",4,Occitanie,3582
+1197,La Roche-Posay,"86207","86",4,Nouvelle Aquitaine,1601
+1198,Nemours,"77333","77",2,Ile-De-France,13109
+1199,Harnes,"62413","62",5,Hauts De France,12369
+1200,Clessé,"71135","71",6,Bourgogne / Franche-Comte,894
+1201,Le Blanc,"36018","36",3,Centre-Val De Loire,6449
+1202,Peyrat-le-Château,"87117","87",4,Nouvelle Aquitaine,1044
+1203,Lescar,"64335","64",4,Nouvelle Aquitaine,10007
+1204,Thonon-les-Bains,"74281","74",6,Auvergne / Rhone-Alpes,37732
+1205,Leers,"59339","59",5,Hauts De France,9628
+1206,Gramat,"46128","46",4,Occitanie,3539
+1207,Saint-Raphaël,"83118","83",7,Provence-Alpes-Cote D'Azur,36460
+1208,Saint-Quentin,"02691","2",3,Hauts De France,54347
+1209,Villeneuve-Loubet,"06161","6",7,Provence-Alpes-Cote D'Azur,16588
+1210,Roscoff,"29239","29",3,Bretagne,3446
+1211,Chevilly-Larue,"94021","94",2,Ile-De-France,20447
+1212,Riom-ès-Montagnes,"15162","15",6,Auvergne / Rhone-Alpes,2494
+1213,Annonay,"07010","7",6,Auvergne / Rhone-Alpes,16962
+1214,Marly-le-Roi,"78372","78",2,Ile-De-France,16857
+1215,Onnion,"74205","74",6,Auvergne / Rhone-Alpes,1309
+1216,Cizos,"65148","65",4,Occitanie,135
+1217,Abbeville,"80001","80",3,Hauts De France,23318
+1218,Thiais,"94073","94",2,Ile-De-France,30994
+1219,Sainte-Hélène,"33417","33",4,Nouvelle Aquitaine,2985
+1220,Commercy,"55122","55",9,Grand Est,5578
+1221,Pontvallain,"72243","72",3,Pays De La Loire,1660
+1222,Guingamp,"22070","22",3,Bretagne,7682
+1223,Mutzig,"67313","67",8,Grand Est,6136
+1224,Évry,"91228","91",2,Ile-De-France,66543
+1225,Confolens,"16106","16",4,Nouvelle Aquitaine,2873
+1226,Caen,"14118","14",3,Normandie,109401
+1227,Morzine,"74191","74",6,Auvergne / Rhone-Alpes,2764
+1228,Gujan-Mestras,"33199","33",4,Nouvelle Aquitaine,22485
+1229,Saint-Hilaire-du-Harcouët,"50484","50",3,Normandie,6077
+1230,Morcenx,"40197","40",4,Nouvelle Aquitaine,5108
+1231,Concarneau,"29039","29",3,Bretagne,21099
+1232,Quintin,"22262","22",3,Bretagne,3029
+1233,Bourgoin-Jallieu,"38053","38",6,Auvergne / Rhone-Alpes,30011
+1234,SERVON,"77450","77",2,Ile-De-France,3359
+1235,Saint-Cyr-l'École,"78545","78",2,Ile-De-France,21244
+1236,Templeuve-en-Pévèle,"59586","59",5,Hauts De France,6559
+1237,Guérande,"44069","44",3,Pays De La Loire,16612
+1238,Montluel,"01262","1",6,Auvergne / Rhone-Alpes,6944
+1239,Le Bourg-d'Oisans,"38052","38",6,Auvergne / Rhone-Alpes,3386
+1240,Saint-Sébastien-sur-Loire,"44190","44",3,Pays De La Loire,28639
+1241,Saint-Mars-la-Jaille,"44180","44",3,Pays De La Loire,6607
+1242,Soustons,"40310","40",4,Nouvelle Aquitaine,8522
+1243,La Turballe,"44211","44",3,Pays De La Loire,4982
+1244,Machecoul-Saint-Même,"44087","44",3,Pays De La Loire,7859
+1245,Saint-Pierre-des-Nids,"53246","53",3,Pays De La Loire,1820
+1246,Thizy-les-Bourgs,"69248","69",6,Auvergne / Rhone-Alpes,6061
+1247,Saint-Aubin-sur-Mer,"14562","14",3,Normandie,2198
+1248,Saint-Michel-Chef-Chef,"44182","44",3,Pays De La Loire,5385
+1249,Baraqueville,"12056","12",4,Occitanie,3259
+1250,Mantes-la-Jolie,"78361","78",2,Ile-De-France,44114
+1251,La Couarde-sur-Mer,"17121","17",4,Nouvelle Aquitaine,1121
+1252,La Valette-du-Var,"83144","83",7,Provence-Alpes-Cote D'Azur,24377
+1253,Vichy,"03310","3",6,Auvergne / Rhone-Alpes,25680
+1254,Montredon-Labessonnié,"81182","81",4,Occitanie,2060
+1255,Lannion,"22113","22",3,Bretagne,21356
+1256,Capdenac-Gare,"12052","12",4,Occitanie,4516
+1257,Enchastrayes,"04073","4",7,Provence-Alpes-Cote D'Azur,397
+1258,Castres,"81065","81",4,Occitanie,43833
+1259,Ablon-sur-Seine,"94001","94",2,Ile-De-France,5938
+1260,Livry-Gargan,"93046","93",2,Ile-De-France,45818
+1261,Bischwiller,"67046","67",8,Grand Est,12759
+1262,Barneville-Carteret,"50031","50",3,Normandie,2268
+1263,Montrichard Val de Cher,"41151","41",3,Centre-Val De Loire,3716
+1264,Fouras,"17168","17",4,Nouvelle Aquitaine,4069
+1265,Montigny-le-Bretonneux,"78423","78",2,Ile-De-France,32335
+1266,La Ferrière,"85089","85",4,Pays De La Loire,5520
+1267,Rodez,"12202","12",4,Occitanie,26266
+1268,Saintes,"17415","17",4,Nouvelle Aquitaine,26814
+1269,DENAIN,"59172","59",5,Hauts De France,20532
+1270,Granville,"50218","50",3,Normandie,13230
+1271,Bray-sur-Seine,"77051","77",2,Ile-De-France,2355
+1272,Chapelle-sur-Erdre,"44035","44",3,Pays De La Loire,20420
+1273,Nantes,"44109","44",3,Pays De La Loire,325857
+1274,Vierzon,"18279","18",3,Centre-Val De Loire,25542
+1275,La Charité-sur-Loire,"58059","58",6,Bourgogne / Franche-Comte,4726
+1276,Rivesaltes,"66164","66",7,Occitanie,9160
+1277,Bretteville-sur-Laize,"14100","14",3,Normandie,1937
+1278,Nuits-Saint-Georges,"21464","21",6,Bourgogne / Franche-Comte,5421
+1279,Savigny-le-Temple,"77445","77",2,Ile-De-France,30404
+1280,Raon-l'Étape,"88372","88",9,Grand Est,6247
+1281,Châteaubriant,"44036","44",3,Pays De La Loire,12474
+1282,Saint-Méen-le-Grand,"35297","35",3,Bretagne,4732
+1283,Les Angles,"66004","66",7,Occitanie,554
+1284,Château-Chinon (Ville),"58062","58",6,Bourgogne / Franche-Comte,2317
+1285,Hagetmau,"40119","40",4,Nouvelle Aquitaine,4739
+1286,Desvres,"62268","62",5,Hauts De France,4898
+1287,Le Grau-du-Roi,"30133","30",7,Occitanie,8426
+1288,Thionville,"57672","57",8,Grand Est,42117
+1289,Donzère,"26116","26",6,Auvergne / Rhone-Alpes,6062
+1290,Pirou,"50403","50",3,Normandie,1466
+1291,Meymac,"19136","19",4,Nouvelle Aquitaine,2494
+1292,Luc-sur-Mer,"14384","14",3,Normandie,3301
+1293,Meudon,"92048","92",2,Ile-De-France,46517
+1294,Paris 17e Arrondissement,"75117","75",1,Ile-De-France,167765
+1295,Argelès-sur-Mer,"66008","66",7,Occitanie,10844
+1296,Merville,"59400","59",5,Hauts De France,9780
+1297,Mugron,"40201","40",4,Nouvelle Aquitaine,1432
+1298,Combs-la-Ville,"77122","77",2,Ile-De-France,21801
+1299,Le Péage-de-Roussillon,"38298","38",6,Auvergne / Rhone-Alpes,6499
+1300,L' Isle-en-Dodon,"31239","31",4,Occitanie,1662
+1301,Mougins,"06085","6",7,Provence-Alpes-Cote D'Azur,20626
+1302,Landry,"73142","73",6,Auvergne / Rhone-Alpes,822
+1303,Saint-Galmier,"42222","42",6,Auvergne / Rhone-Alpes,5966
+1304,Monsempron-Libos,"47179","47",4,Nouvelle Aquitaine,2088
+1305,Saint-Quay-Portrieux,"22325","22",3,Bretagne,3382
+1306,Les Lilas,"93045","93",2,Ile-De-France,23396
+1307,Trévières,"14711","14",3,Normandie,928
+1308,Neuville-sur-Saône,"69143","69",6,Auvergne / Rhone-Alpes,7700
+1309,Cambrai,"59122","59",5,Hauts De France,32128
+1310,Bayeux,"14047","14",3,Normandie,12966
+1311,Le Cheylard,"07064","7",6,Auvergne / Rhone-Alpes,3004
+1312,Dax,"40088","40",4,Nouvelle Aquitaine,21857
+1313,La Flèche,"72154","72",3,Pays De La Loire,16165
+1314,Athis-Mons,"91027","91",2,Ile-De-France,35927
+1315,Roanne,"42187","42",6,Auvergne / Rhone-Alpes,35152
+1316,Gravelines,"59273","59",5,Hauts De France,11175
+1317,Uvernet-Fours,"04226","4",7,Provence-Alpes-Cote D'Azur,574
+1318,Saint-Fargeau-Ponthierry,"77407","77",2,Ile-De-France,14429
+1319,Falaise,"14258","14",3,Normandie,8083
+1320,Montoison,"26208","26",6,Auvergne / Rhone-Alpes,1976
+1321,Métabief,"25380","25",6,Bourgogne / Franche-Comte,1449
+1322,Le Chesnay,"78158","78",2,Ile-De-France,31707
+1323,Saint-Pons-de-Thomières,"34284","34",7,Occitanie,1939
+1324,Roye,"80685","80",3,Hauts De France,5758
+1325,Fleurance,"32132","32",4,Occitanie,6001
+1326,Prunelli-di-Fiumorbo,"2B251","20",7,Corse,3762
+1327,Port-Saint-Louis-du-Rhône,"13078","13",7,Provence-Alpes-Cote D'Azur,8447
+1328,Saint-Denis,"93066","93",2,Ile-De-France,114027
+1329,Sallanches,"74256","74",6,Auvergne / Rhone-Alpes,17450
+1330,Neufchâteau,"88321","88",9,Grand Est,6925
+1331,Saint-Rome-de-Tarn,"12244","12",4,Occitanie,899
+1332,Cruas,"07076","7",6,Auvergne / Rhone-Alpes,3135
+1333,Saint-Arnoult-en-Yvelines,"78537","78",2,Ile-De-France,5925
+1334,Prats-de-Mollo-la-Preste,"66150","66",7,Occitanie,1169
+1335,Les Deux Alpes,"38253","38",6,Auvergne / Rhone-Alpes,1979
+1336,Saint-Julien-en-Born,"40266","40",4,Nouvelle Aquitaine,1722
+1337,Boulogne-Billancourt,"92012","92",2,Ile-De-France,122162
+1338,La Bresse,"88075","88",9,Grand Est,4289
+1339,Gacé,"61181","61",3,Normandie,1855
+1340,Les Pavillons-sous-Bois,"93057","93",2,Ile-De-France,24003
+1341,Caromb,"84030","84",7,Provence-Alpes-Cote D'Azur,3505
+1342,Louviers,"27375","27",3,Normandie,19022
+1343,Nontron,"24311","24",4,Nouvelle Aquitaine,3151
+1344,Chamrousse,"38567","38",6,Auvergne / Rhone-Alpes,416
+1345,Cours,"69066","69",6,Auvergne / Rhone-Alpes,4457
+1346,Saint-Just-Malmont,"43205","43",6,Auvergne / Rhone-Alpes,4301
+1347,Marignane,"13054","13",7,Provence-Alpes-Cote D'Azur,32735
+1348,Saint-Aignan,"41198","41",3,Centre-Val De Loire,2930
+1349,Le Creusot,"71153","71",6,Bourgogne / Franche-Comte,21319
+1350,Calais,"62193","62",5,Hauts De France,68193
+1351,Saint-Tropez,"83119","83",7,Provence-Alpes-Cote D'Azur,3669
+1352,Chennevières-sur-Marne,"94019","94",2,Ile-De-France,18115
+1353,Solliès-Toucas,"83131","83",7,Provence-Alpes-Cote D'Azur,5975
+1354,Muzillac,"56143","56",3,Bretagne,5181
+1355,Cassis,"13022","13",7,Provence-Alpes-Cote D'Azur,6889
+1356,Bénodet,"29006","29",3,Bretagne,3775
+1357,Dorlisheim,"67101","67",8,Grand Est,2637
+1358,Saint-Martin-de-Clelles,"38419","38",6,Auvergne / Rhone-Alpes,185
+1359,Saint-Julien-du-Sault,"89348","89",3,Bourgogne / Franche-Comte,2273
+1360,Munster,"68226","68",8,Grand Est,4794
+1361,Régusse,"83102","83",7,Provence-Alpes-Cote D'Azur,2607
+1362,Vars,"05177","5",7,Provence-Alpes-Cote D'Azur,565
+1363,Graulhet,"81105","81",4,Occitanie,13153
+1364,Gourdon,"46127","46",4,Occitanie,4086
+1365,Bruay-la-Buissière,"62178","62",5,Hauts De France,22306
+1366,Lesneven,"29124","29",3,Bretagne,7506
+1367,Sainte-Sigolène,"43224","43",6,Auvergne / Rhone-Alpes,6120
+1368,Loriol-sur-Drôme,"26166","26",6,Auvergne / Rhone-Alpes,6722
+1369,Mortagne-au-Perche,"61293","61",3,Normandie,4055
+1370,Janzé,"35136","35",3,Bretagne,8687
+1371,Chauffayer,"05039","5",7,Provence-Alpes-Cote D'Azur,730
+1372,Vic-Fezensac,"32462","32",4,Occitanie,3640
+1373,Montval-sur-Loir,"72071","72",3,Pays De La Loire,6120
+1374,Buzançais,"36031","36",3,Centre-Val De Loire,4579
+1375,Neuvic,"19148","19",4,Nouvelle Aquitaine,1916
+1376,Baillargues,"34022","34",7,Occitanie,7702
+1377,Voreppe,"38565","38",6,Auvergne / Rhone-Alpes,9888
+1378,Pont-de-Chéruy,"38316","38",6,Auvergne / Rhone-Alpes,6070
+1379,Courbevoie,"92026","92",2,Ile-De-France,82701
+1380,Audierne,"29003","29",3,Bretagne,3756
+1381,La Salvetat-Saint-Gilles,"31526","31",4,Occitanie,8694
+1382,Villefranche-de-Rouergue,"12300","12",4,Occitanie,12195
+1383,Le Pian-Médoc,"33322","33",4,Nouvelle Aquitaine,7138
+1384,Mont-Dore,"63236","63",6,Auvergne / Rhone-Alpes,1292
+1385,Aigurande,"36001","36",3,Centre-Val De Loire,1412
+1386,Saint-Palais,"64493","64",4,Nouvelle Aquitaine,2023
+1387,Valbonne,"06152","6",7,Provence-Alpes-Cote D'Azur,13665
+1388,Le Crès,"34090","34",7,Occitanie,9440
+1389,Saint-Geniès-Bellevue,"31484","31",4,Occitanie,2571
+1390,Montmorency,"95428","95",2,Ile-De-France,21942
+1391,Frontignan,"34108","34",7,Occitanie,23705
+1392,Saint-Just-Saint-Rambert,"42279","42",6,Auvergne / Rhone-Alpes,15488
+1393,Terres-de-Caux,"76258","76",3,Normandie,4317
+1394,Coquelles,"62239","62",5,Hauts De France,2635
+1395,Saint-Martin-de-Crau,"13097","13",7,Provence-Alpes-Cote D'Azur,13661
+1396,Cauterets,"65138","65",4,Occitanie,889
+1397,Langon,"33227","33",4,Nouvelle Aquitaine,7516
+1398,Bourgueil,"37031","37",3,Centre-Val De Loire,3897
+1399,Neuilly-sur-Seine,"92051","92",2,Ile-De-France,60411
+1400,Bezons,"95063","95",2,Ile-De-France,31978
+1401,Bagnolet,"93006","93",2,Ile-De-France,38571
+1402,Domont,"95199","95",2,Ile-De-France,15874
+1403,Bohain-en-Vermandois,"02095","2",3,Hauts De France,5778
+1404,Saint-Yrieix-la-Perche,"87187","87",4,Nouvelle Aquitaine,7147
+1405,Bastia,"2B033","20",7,Corse,48928
+1406,Sées,"61464","61",3,Normandie,4634
+1407,Sainte-Maxime,"83115","83",7,Provence-Alpes-Cote D'Azur,14954
+1408,Labège,"31254","31",4,Occitanie,4268
+1409,Challans,"85047","85",4,Pays De La Loire,22690
+1410,Saint-Aubin-du-Cormier,"35253","35",3,Bretagne,4240
+1411,Mauges-sur-Loire,"49244","49",3,Pays De La Loire,18559
+1412,Réville,"50433","50",3,Normandie,1037
+1413,Châteauneuf-les-Martigues,"13026","13",7,Provence-Alpes-Cote D'Azur,17883
+1414,Bayonne,"64102","64",4,Nouvelle Aquitaine,53296
+1415,Tulle,"19272","19",4,Nouvelle Aquitaine,14973
+1416,Thourotte,"60636","60",3,Hauts De France,4530
+1417,Ris-Orangis,"91521","91",2,Ile-De-France,29829
+1418,Argenteuil,"95018","95",2,Ile-De-France,109058
+1419,Amboise,"37003","37",3,Centre-Val De Loire,12936
+1420,Arâches-la-Frasse,"74014","74",6,Auvergne / Rhone-Alpes,1865
+1421,Obernai,"67348","67",8,Grand Est,12471
+1422,Huez,"38191","38",6,Auvergne / Rhone-Alpes,1330
+1423,Espalion,"12096","12",4,Occitanie,4798
+1424,Crozon,"29042","29",3,Bretagne,7575
+1425,Erstein,"67130","67",8,Grand Est,10850
+1426,Salives,"21579","21",6,Bourgogne / Franche-Comte,213
+1427,Redon,"35236","35",3,Bretagne,10060
+1428,Notre-Dame-d'Oé,"37172","37",3,Centre-Val De Loire,4302
+1429,Nice,"06088","6",7,Provence-Alpes-Cote D'Azur,346376
+1430,Lisieux,"14366","14",3,Normandie,20366
+1431,San-Nicolao,"2B313","20",7,Corse,2055
+1432,Bobigny,"93008","93",2,Ile-De-France,55066
+1433,Poitiers,"86194","86",4,Nouvelle Aquitaine,92296
+1434,Thouars,"79329","79",4,Nouvelle Aquitaine,14225
+1435,Blaye,"33058","33",4,Nouvelle Aquitaine,5014
+1436,Megève,"74173","74",6,Auvergne / Rhone-Alpes,3123
+1437,Isle-sur-la-Sorgue,"84054","84",7,Provence-Alpes-Cote D'Azur,20531
+1438,Civray,"86078","86",4,Nouvelle Aquitaine,2708
+1439,Garat,"16146","16",4,Nouvelle Aquitaine,2158
+1440,Monségur,"33289","33",4,Nouvelle Aquitaine,1668
+1441,Soissons,"02722","2",3,Hauts De France,29543
+1442,Maubeuge,"59392","59",5,Hauts De France,29913
+1443,Cannes,"06029","6",7,Provence-Alpes-Cote D'Azur,73159
+1444,Saint-Ouen-l'Aumône,"95572","95",2,Ile-De-France,24849
+1445,Condé-en-Normandie,"14174","14",3,Normandie,6605
+1446,Prades-le-Lez,"34217","34",7,Occitanie,6111
+1447,Baccarat,"54039","54",9,Grand Est,4221
+1448,La Mure,"38269","38",6,Auvergne / Rhone-Alpes,5109
+1449,Le Puy-en-Velay,"43157","43",6,Auvergne / Rhone-Alpes,19784
+1450,Châteauneuf-la-Forêt,"87040","87",4,Nouvelle Aquitaine,1542
+1451,Sain-Bel,"69171","69",6,Auvergne / Rhone-Alpes,2465
+1452,Laval,"53130","53",3,Pays De La Loire,52169
+1453,Aumale,"76035","76",3,Normandie,2014
+1454,Forges-les-Eaux,"76276","76",3,Normandie,3922
+1455,Étampes,"91223","91",2,Ile-De-France,26454
+1456,Paris 9e Arrondissement,"75109","75",1,Ile-De-France,60784
+1457,Cavaillon,"84035","84",7,Provence-Alpes-Cote D'Azur,26206
+1458,Saint-Paul-lès-Durance,"13099","13",7,Provence-Alpes-Cote D'Azur,904
+1459,Tonneins,"47310","47",4,Nouvelle Aquitaine,9371
+1460,Meximieux,"01244","1",6,Auvergne / Rhone-Alpes,8141
+1461,Saint-Jean-d'Arves,"73242","73",6,Auvergne / Rhone-Alpes,282
+1462,Les Ollières-sur-Eyrieux,"07167","7",6,Auvergne / Rhone-Alpes,1034
+1463,Manosque,"04112","4",7,Provence-Alpes-Cote D'Azur,23689
+1464,Les Mathes,"17225","17",4,Nouvelle Aquitaine,2210
+1465,Saint-Donat-sur-l'Herbasse,"26301","26",6,Auvergne / Rhone-Alpes,4388
+1466,Labarthe-sur-Lèze,"31248","31",4,Occitanie,6479
+1467,Ungersheim,"68343","68",8,Grand Est,2455
+1468,Sèvres,"92072","92",2,Ile-De-France,23472
+1469,Puteaux,"92062","92",2,Ile-De-France,44275
+1470,Meung-sur-Loire,"45203","45",3,Centre-Val De Loire,6660
+1471,Gannat,"03118","3",6,Auvergne / Rhone-Alpes,6012
+1472,Saint-Mandrier-sur-Mer,"83153","83",7,Provence-Alpes-Cote D'Azur,6170
+1473,Saint-Pierre-des-Corps,"37233","37",3,Centre-Val De Loire,16151
+1474,Saint-Lunaire,"35287","35",3,Bretagne,2589
+1475,Salles,"33498","33",4,Nouvelle Aquitaine,7764
+1476,Malestroit,"56124","56",3,Bretagne,2564
+1477,Égletons,"19073","19",4,Nouvelle Aquitaine,5008
+1478,Saverdun,"09282","9",4,Occitanie,4966
+1479,Palavas-les-Flots,"34192","34",7,Occitanie,5785
+1480,Sisteron,"04209","4",7,Provence-Alpes-Cote D'Azur,7910
+1481,Neuilly-Plaisance,"93049","93",2,Ile-De-France,21059
+1482,Hauteville-Lompnes,"01185","1",6,Auvergne / Rhone-Alpes,4981
+1483,Saint-Just-en-Chaussée,"60581","60",3,Hauts De France,6105
+1484,Le Vésinet,"78650","78",2,Ile-De-France,16108
+1485,Saint-Affrique,"12208","12",4,Occitanie,8651
+1486,Tignes,"73296","73",6,Auvergne / Rhone-Alpes,2058
+1487,Loches,"37132","37",3,Centre-Val De Loire,6691
+1488,Beaune,"21054","21",6,Bourgogne / Franche-Comte,20808
+1489,Le Lude,"72176","72",3,Pays De La Loire,4173
+1490,Figeac,"46102","46",4,Occitanie,10380
+1491,Tarare,"69243","69",6,Auvergne / Rhone-Alpes,10833
+1492,Anost,"71009","71",6,Bourgogne / Franche-Comte,727
+1493,Vittel,"88516","88",9,Grand Est,4943
+1494,Le Cannet,"06030","6",7,Provence-Alpes-Cote D'Azur,42524
+1495,Saint-Florent-sur-Cher,"18207","18",3,Centre-Val De Loire,6527
+1496,Sanary-sur-Mer,"83123","83",7,Provence-Alpes-Cote D'Azur,17440
+1497,Carros,"06033","6",7,Provence-Alpes-Cote D'Azur,13010
+1498,Rillieux-la-Pape,"69286","69",6,Auvergne / Rhone-Alpes,31210
+1499,Saint-Malo,"35288","35",3,Bretagne,48328
+1500,Romorantin-Lanthenay,"41194","41",3,Centre-Val De Loire,18685
+1501,Argentré-du-Plessis,"35006","35",3,Bretagne,4662
+1502,Pierre-Bénite,"69152","69",6,Auvergne / Rhone-Alpes,10555
+1503,Saint-Ciers-sur-Gironde,"33389","33",4,Nouvelle Aquitaine,3071
+1504,Brive-la-Gaillarde,"19031","19",4,Nouvelle Aquitaine,47175
+1505,Brignais,"69027","69",6,Auvergne / Rhone-Alpes,12572
+1506,Villiers-sur-Marne,"94079","94",2,Ile-De-France,29820
+1507,Gourin,"56066","56",3,Bretagne,3935
+1508,Pontchâteau,"44129","44",3,Pays De La Loire,11306
+1509,Lit-et-Mixe,"40157","40",4,Nouvelle Aquitaine,1721
+1510,Étel,"56055","56",3,Bretagne,2233
+1511,Beauvais,"60057","60",3,Hauts De France,58306
+1512,Archamps,"74016","74",6,Auvergne / Rhone-Alpes,2657
+1513,Saint-Laurent-de-Cerdans,"66179","66",7,Occitanie,1050
+1514,Le Cateau-Cambrésis,"59136","59",5,Hauts De France,7153
+1515,Tours,"37261","37",3,Centre-Val De Loire,140474
+1516,Antony,"92002","92",2,Ile-De-France,63639
+1517,Montréjeau,"31390","31",4,Occitanie,2758
+1518,Le Pouliguen,"44135","44",3,Pays De La Loire,4116
+1519,Corbara,"2B093","20",7,Corse,933
+1520,Givors,"69091","69",6,Auvergne / Rhone-Alpes,20798
+1521,La Rochelle,"17300","17",4,Nouvelle Aquitaine,79323
+1522,Issoire,"63178","63",6,Auvergne / Rhone-Alpes,15681
+1523,Hasparren,"64256","64",4,Nouvelle Aquitaine,7808
+1524,Uzerche,"19276","19",4,Nouvelle Aquitaine,2846
+1525,Pons,"17283","17",4,Nouvelle Aquitaine,4456
+1526,Roques,"31458","31",4,Occitanie,4993
+1527,Cazaubon,"32096","32",4,Occitanie,1705
+1528,Questembert,"56184","56",3,Bretagne,8219
+1529,Arcueil,"94003","94",2,Ile-De-France,21962
+1530,Saint-Genis-Pouilly,"01354","1",6,Auvergne / Rhone-Alpes,14463
+1531,Agen,"47001","47",4,Nouvelle Aquitaine,33046
+1532,Paris 2e Arrondissement,"75102","75",1,Ile-De-France,21277
+1533,Montbazon,"37154","37",3,Centre-Val De Loire,4694
+1534,Fos-sur-Mer,"13039","13",7,Provence-Alpes-Cote D'Azur,15685
+1535,Luxeuil-les-Bains,"70311","70",9,Bourgogne / Franche-Comte,6903
+1536,Marcigny,"71275","71",6,Bourgogne / Franche-Comte,1754
+1537,Val-du-Layon,"49292","49",3,Pays De La Loire,3503
+1538,Solre-le-Château,"59572","59",5,Hauts De France,1798
+1539,Hénin-Beaumont,"62427","62",5,Hauts De France,26258
+1540,Le Grand-Bornand,"74136","74",6,Auvergne / Rhone-Alpes,2135
+1541,Draguignan,"83050","83",7,Provence-Alpes-Cote D'Azur,40362
+1542,Rumilly,"74225","74",6,Auvergne / Rhone-Alpes,16362
+1543,Salies-de-Béarn,"64499","64",4,Nouvelle Aquitaine,4684
+1544,Grenade,"31232","31",4,Occitanie,9016
+1545,Chaponnay,"69270","69",6,Auvergne / Rhone-Alpes,4482
+1546,Castelginest,"31116","31",4,Occitanie,10901
+1547,Villars-les-Dombes,"01443","1",6,Auvergne / Rhone-Alpes,5040
+1548,Bar-sur-Aube,"10033","10",3,Grand Est,4968
+1549,Gaillac,"81099","81",4,Occitanie,15572
+1550,Pouzauges,"85182","85",4,Pays De La Loire,5764
+1551,Pontonx-sur-l'Adour,"40230","40",4,Nouvelle Aquitaine,2997
+1552,Plougastel-Daoulas,"29189","29",3,Bretagne,13637
+1553,Cavalaire-sur-Mer,"83036","83",7,Provence-Alpes-Cote D'Azur,7735
+1554,Paris 11e Arrondissement,"75111","75",1,Ile-De-France,145124
+1555,Pont-à-Mousson,"54431","54",9,Grand Est,14550
+1556,CAVAILLON,"84035","84",7,Provence-Alpes-Cote D'Azur,26206
+1557,Merdrignac,"22147","22",3,Bretagne,3186
+1558,Gueugnon,"71230","71",6,Bourgogne / Franche-Comte,6862
+1559,Chamonix-Mont-Blanc,"74056","74",6,Auvergne / Rhone-Alpes,9019
+1560,Brides-les-Bains,"73057","73",6,Auvergne / Rhone-Alpes,504
+1561,Saint-Ouen,"80711","80",3,Hauts De France,1802
+1562,Sigean,"11379","11",7,Occitanie,5640
+1563,Dompierre-sur-Besbre,"03102","3",6,Auvergne / Rhone-Alpes,3062
+1564,Noisy-le-Grand,"93051","93",2,Ile-De-France,69352
+1565,Wasquehal,"59646","59",5,Hauts De France,21190
+1566,Paris 10e Arrondissement,"75110","75",1,Ile-De-France,83873
+1567,Maury,"66107","66",7,Occitanie,801
+1568,Saint-Honoré-les-Bains,"58246","58",6,Bourgogne / Franche-Comte,711
+1569,Dammarie-les-Lys,"77152","77",2,Ile-De-France,22471
+1570,Beaumont-de-Lomagne,"82013","82",4,Occitanie,3951
+1571,Wittenheim,"68376","68",8,Grand Est,15166
+1572,Montgenèvre,"05085","5",7,Provence-Alpes-Cote D'Azur,466
+1573,Amélie-les-Bains-Palalda,"66003","66",7,Occitanie,3632
+1574,Cournon-d'Auvergne,"63124","63",6,Auvergne / Rhone-Alpes,20712
+1575,Lambesc,"13050","13",7,Provence-Alpes-Cote D'Azur,10273
+1576,Monnaie,"37153","37",3,Centre-Val De Loire,4732
+1577,Sabres,"40246","40",4,Nouvelle Aquitaine,1312
+1578,Morlaix,"29151","29",3,Bretagne,15172
+1579,Apt,"84003","84",7,Provence-Alpes-Cote D'Azur,11116
+1580,Saint-Malo-de-Guersac,"44176","44",3,Pays De La Loire,3259
+1581,Quimper,"29232","29",3,Bretagne,65875
+1582,Montélimar,"26198","26",6,Auvergne / Rhone-Alpes,40969
+1583,Angers,"49007","49",3,Pays De La Loire,159103
+1584,Les Avanchers-Valmorel,"73024","73",6,Auvergne / Rhone-Alpes,790
+1585,Maromme,"76410","76",3,Normandie,10971
+1586,Annemasse,"74012","74",6,Auvergne / Rhone-Alpes,37859
+1587,Saint-Flour,"15187","15",6,Auvergne / Rhone-Alpes,6992
+1588,Les Ponts-de-Cé,"49246","49",3,Pays De La Loire,13123
+1589,Romilly-sur-Seine,"10323","10",3,Grand Est,14959
+1590,Carbonne,"31107","31",4,Occitanie,5954
+1591,Saint-Michel-de-Maurienne,"73261","73",6,Auvergne / Rhone-Alpes,2754
+1592,Beaumont-sur-Oise,"95052","95",2,Ile-De-France,9671
+1593,Vaulx-en-Velin,"69256","69",6,Auvergne / Rhone-Alpes,51990
+1594,Stains,"93072","93",2,Ile-De-France,39277
+1595,La Roche-sur-Yon,"85191","85",4,Pays De La Loire,58168
+1596,Le Croisic,"44049","44",3,Pays De La Loire,4170
+1597,Bazas,"33036","33",4,Nouvelle Aquitaine,5064
+1598,Gérardmer,"88196","88",9,Grand Est,8442
+1599,Bressuire,"79049","79",4,Nouvelle Aquitaine,20846
+1600,Tournus,"71543","71",6,Bourgogne / Franche-Comte,5832
+1601,Salernes,"83121","83",7,Provence-Alpes-Cote D'Azur,3848
+1602,La Garde,"83062","83",7,Provence-Alpes-Cote D'Azur,25876
+1603,Avesnes-sur-Helpe,"59036","59",5,Hauts De France,4295
+1604,Carcassonne,"11069","11",7,Occitanie,47854
+1605,Decize,"58095","58",6,Bourgogne / Franche-Comte,5375
+1606,Unieux,"42316","42",6,Auvergne / Rhone-Alpes,8525
+1607,Villeneuve-le-Roi,"94077","94",2,Ile-De-France,21493
+1608,Bressols,"82025","82",4,Occitanie,3804
+1609,Mennecy,"91386","91",2,Ile-De-France,15914
+1610,Mourenx,"64410","64",4,Nouvelle Aquitaine,6075
+1611,Laruns,"64320","64",4,Nouvelle Aquitaine,1205
+1612,Vanves,"92075","92",2,Ile-De-France,28157
+1613,Camaret-sur-Aigues,"84029","84",7,Provence-Alpes-Cote D'Azur,4636
+1614,Châtillon-sur-Chalaronne,"01093","1",6,Auvergne / Rhone-Alpes,5171
+1615,Melle,"79174","79",4,Nouvelle Aquitaine,6319
+1616,Brumath,"67067","67",8,Grand Est,10165
+1617,Anet,"28007","28",3,Centre-Val De Loire,2793
+1618,La Clusaz,"74080","74",6,Auvergne / Rhone-Alpes,1758
+1619,Mauvezin,"32249","32",4,Occitanie,2287
+1620,Canet-en-Roussillon,"66037","66",7,Occitanie,12916
+1621,Orry-la-Ville,"60482","60",3,Hauts De France,3473
+1622,Saint-Calais,"72269","72",3,Pays De La Loire,3346
+1623,Grande-Synthe,"59271","59",5,Hauts De France,20840
+1624,Ville-d'Avray,"92077","92",2,Ile-De-France,11170
+1625,La Réole,"33352","33",4,Nouvelle Aquitaine,4435
+1626,Le Palais,"56152","56",3,Bretagne,2589
+1627,Solliès-Pont,"83130","83",7,Provence-Alpes-Cote D'Azur,12158
+1628,Dinan,"22050","22",3,Bretagne,15256
+1629,Cotignac,"83046","83",7,Provence-Alpes-Cote D'Azur,2145
+1630,Limeil-Brévannes,"94044","94",2,Ile-De-France,28391
+1631,Versailles,"78646","78",2,Ile-De-France,85474
+1632,Aubusson,"23008","23",4,Nouvelle Aquitaine,3335
+1633,Mende,"48095","48",7,Occitanie,13143
+1634,Cabourg,"14117","14",3,Normandie,3541
+1635,La Courneuve,"93027","93",2,Ile-De-France,46951
+1636,Dunkerque,"59183","59",5,Hauts De France,87805
+1637,Vals-les-Bains,"07331","7",6,Auvergne / Rhone-Alpes,3561
+1638,Méry-sur-Oise,"95394","95",2,Ile-De-France,10083
+1639,Hauts de Bienne,"39368","39",6,Bourgogne / Franche-Comte,5496
+1640,Entre-deux-Guiers,"38155","38",6,Auvergne / Rhone-Alpes,1908
+1641,Gimont,"32147","32",4,Occitanie,3078
+1642,Neuville-de-Poitou,"86177","86",4,Nouvelle Aquitaine,5459
+1643,Vesoul,"70550","70",9,Bourgogne / Franche-Comte,15626
+1644,La Teste-de-Buch,"33529","33",4,Nouvelle Aquitaine,26648
+1645,Voiron,"38563","38",6,Auvergne / Rhone-Alpes,20853
+1646,Romans-sur-Isère,"26281","26",6,Auvergne / Rhone-Alpes,33486
+1647,Pantin,"93055","93",2,Ile-De-France,60597
+1648,Cambo-les-Bains,"64160","64",4,Nouvelle Aquitaine,6731
+1649,Mondeville,"14437","14",3,Normandie,10285
+1650,Val-au-Perche,"61484","61",3,Normandie,3482
+1651,Saint-Pierre-en-Auge,"14654","14",3,Normandie,7665
+1652,Prades,"66149","66",7,Occitanie,6375
+1653,Marmande,"47157","47",4,Nouvelle Aquitaine,17797
+1654,Melun,"77288","77",2,Ile-De-France,41867
+1655,Ingrandes-Le Fresne sur Loire,"49160","49",3,Pays De La Loire,2747
+1656,Guémené-sur-Scorff,"56073","56",3,Bretagne,1074
+1657,Saint-Genix-sur-Guiers,"73236","73",6,Auvergne / Rhone-Alpes,2962
+1658,Ambérieu-en-Bugey,"01004","1",6,Auvergne / Rhone-Alpes,14662
+1659,Meaux,"77284","77",2,Ile-De-France,56191
+1660,Carrère,"64167","64",4,Nouvelle Aquitaine,219
+1661,Écully,"69081","69",6,Auvergne / Rhone-Alpes,19142
+1662,Bègles,"33039","33",4,Nouvelle Aquitaine,30890
+1663,Antibes,"06004","6",7,Provence-Alpes-Cote D'Azur,75779
+1664,Usson-en-Forez,"42318","42",6,Auvergne / Rhone-Alpes,1512
+1665,Bernay,"27056","27",3,Normandie,9935
+1666,Monein,"64393","64",4,Nouvelle Aquitaine,4520
+1667,Montvalezan,"73176","73",6,Auvergne / Rhone-Alpes,728
+1668,Le Buisson-de-Cadouin,"24068","24",4,Nouvelle Aquitaine,1985
+1669,Saint-Claude,"39478","39",6,Bourgogne / Franche-Comte,9139
+1670,Roquefort-les-Pins,"06105","6",7,Provence-Alpes-Cote D'Azur,7476
+1671,Saran,"45302","45",3,Centre-Val De Loire,16787
+1672,Valence,"26362","26",6,Auvergne / Rhone-Alpes,65709
+1673,Jeumont,"59324","59",5,Hauts De France,10544
+1674,Saint Aulaye-Puymangou,"24376","24",4,Nouvelle Aquitaine,1441
+1675,Orbey,"68249","68",8,Grand Est,3527
+1676,Thiviers,"24551","24",4,Nouvelle Aquitaine,3060
+1677,Bourg-Argental,"42023","42",6,Auvergne / Rhone-Alpes,3010
+1678,Francheville,"69089","69",6,Auvergne / Rhone-Alpes,15046
+1679,Suresnes,"92073","92",2,Ile-De-France,49992
+1680,Nyons,"26220","26",6,Auvergne / Rhone-Alpes,6921
+1681,Boën-sur-Lignon,"42019","42",6,Auvergne / Rhone-Alpes,3092
+1682,Morestel,"38261","38",6,Auvergne / Rhone-Alpes,4606
+1683,Doullens,"80253","80",3,Hauts De France,6042
+1684,Saint-Cyr-sur-Mer,"83112","83",7,Provence-Alpes-Cote D'Azur,12303
+1685,Boulazac Isle Manoire,"24053","24",4,Nouvelle Aquitaine,11090
+1686,Le Pontet,"84092","84",7,Provence-Alpes-Cote D'Azur,17146
+1687,La Ferté Macé,"61168","61",3,Normandie,5489
+1688,Cagnes-sur-Mer,"06027","6",7,Provence-Alpes-Cote D'Azur,52575
+1689,Saint-Julien-lès-Metz,"57616","57",8,Grand Est,3531
+1690,Douchy-les-Mines,"59179","59",5,Hauts De France,10179
+1691,Céret,"66049","66",7,Occitanie,7968
+1692,Delle,"90033","90",6,Bourgogne / Franche-Comte,5774
+1693,Montbrison,"42147","42",6,Auvergne / Rhone-Alpes,16545
+1694,Capvern,"65127","65",4,Occitanie,1289
+1695,Cachan,"94016","94",2,Ile-De-France,30492
+1696,Saint-Symphorien-sur-Coise,"69238","69",6,Auvergne / Rhone-Alpes,3797
+1697,Saint-Julien-Molin-Molette,"42246","42",6,Auvergne / Rhone-Alpes,1164
+1698,Bron,"69029","69",6,Auvergne / Rhone-Alpes,42819
+1699,Gray,"70279","70",9,Bourgogne / Franche-Comte,5980
+1700,Pessac,"33318","33",4,Nouvelle Aquitaine,66606
+1701,Bourbon-l'Archambault,"03036","3",6,Auvergne / Rhone-Alpes,2635
+1702,Riom,"63300","63",6,Auvergne / Rhone-Alpes,19476
+1703,Challes-les-Eaux,"73064","73",6,Auvergne / Rhone-Alpes,5875
+1704,Saint-Dizier,"52448","52",3,Grand Est,23566
+1705,Dieulefit,"26114","26",6,Auvergne / Rhone-Alpes,3371
+1706,Andernos-les-Bains,"33005","33",4,Nouvelle Aquitaine,12569
+1707,La Plagne Tarentaise,"73150","73",6,Auvergne / Rhone-Alpes,3959
