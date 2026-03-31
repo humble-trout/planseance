@@ -19,6 +19,10 @@ La fonction "matching", centrale dans l'application, permet d'organiser une renc
 
 Deux options sont possibles pour tester cette fonction : 
 
-- Il est possible de créer deux comptes et de 
+- Il est possible de créer deux comptes différents et de s'inscrire à la même séance.
+
+- Nous avons créé plusieurs utilisateurs qui se sont inscrits à des séances.
+
+  => Pour matcher avec 
 
 
