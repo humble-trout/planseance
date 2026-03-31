@@ -15,16 +15,33 @@ Avant de lancer l'application, il est nécessaire de faire tourner le script SQL
 
 IMPORTANT : Avant de faire tourner ce script, il est nécessaire de créer la base de données et le schéma par des requêtes "CREATE DATABASE" et "CREATE SCHEMA". Le nom donné à la BDD doit être "planseance" et celui du schéma doit être "psch". 
 
-# Utilisation 
+# Fonctionnalités 
 
-Pour utiliser l'application, il est nécessaire de créer un compte grâce à la fonction "register", et de se connecter avec la fonction "login". 
+L'application compte plusieurs fonctionnalités : 
 
-L'utilisateur a accès à des informations sur la programmation des cinémas. Il dispose d'un profil personnalisé, notamment composé d'un calendrier des 
-séances auxquelles il a prévu d'assister, ou d'une liste des films vus récemment. 
+- Gestion de compte : Inscription et création d'un profil incluant nom, préférences
+cinématographiques et mot de passe sécurisé.
 
-La fonction "matching", centrale dans l'application, permet d'organiser une rencontre entre deux utilisateurs sur la base d'une séance commune de cinéma. 
+- Recherche : Moteur de recherche plein texte pour identifier rapidement un film ou un cinéma
+indépendant.
 
-Pour tester cette fonctionnalité, vous aurez besoin de créer deux comptes différents et d'inscrire les deux comptes à la même séance. Un match vous sera alors proposé et vous aurez la possibilité de l'accepter ou non. 
+- Filtres avancés : permettent une recherche affinée des films, par genre ou par date de sortie.
+
+- Cartographie : Carte interactive pour localiser les cinémas et consulter la programmation par
+emplacement. L’utilisateurice a accès à une carte de la France, depuis laquelle iel peut sélectionner
+sa ville et voir les cinémas indépendants. La carte affiche également la position que l’utilisateurice a
+déclarée.
+
+- Matching de séance : Proposition de mise en relation entre utilisateurices ayant sélectionné la
+même séance. Une page « Match » s’affiche après que l’utilisateurice ait sélectionné une séance.
+
+- Calendrier personnel : Agenda regroupant l'ensemble des séances auxquelles l'utilisateurice a
+prévu d'assister.
+
+
+# Notes d'utilisation 
+
+La fonction "matching", centrale dans l'application, permet d'organiser une rencontre entre deux utilisateurs. Pour tester cette fonctionnalité, vous aurez donc besoin de créer deux comptes différents et d'inscrire les deux comptes à la même séance. Un match vous sera alors proposé et vous aurez la possibilité de l'accepter ou non. 
 
 
 
