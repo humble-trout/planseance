@@ -23,6 +23,10 @@ Deux options sont possibles pour tester cette fonction :
 
 - Nous avons créé plusieurs utilisateurs qui se sont inscrits à des séances.
 
-  => Pour matcher avec 
+  => Pour matcher avec l'utilisateur Raphael, il suffit de s'inscrire pour aller voir "La Réparation", film diffusé au café des images le 28 avril 2026.
+  => Pour matcher avec l'utilisateur Kev Adams, il faut s'inscrire à la séance de ..., au cinéma .... le .... .
+  => L'utilisateur .... ira à la séance de ... le ... à ....
+  => L'utilisateur .... ira à la séance de ... le ... à ....
+  
 
 
