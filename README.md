@@ -13,4 +13,12 @@ IMPORTANT : Avant de faire tourner ce script, il est nécessaire de créer la ba
 
 # Utilisation 
 
-Pour utiliser l'application, il est nécessaire de créer un compte. 
+Pour utiliser l'application, il est nécessaire de créer un compte grâce à la fonction "register", et de se connecter avec la fonction "login". 
+
+La fonction "matching", centrale dans l'application, permet d'organiser une rencontre entre deux utilisateurs sur la base d'une séance commune de cinéma. 
+
+Deux options sont possibles pour tester cette fonction : 
+
+- Il est possible de créer deux comptes et de 
+
+
