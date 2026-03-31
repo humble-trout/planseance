@@ -8,7 +8,7 @@ D'après le modèle Dating App de Shaktiranjan.
 
 # Lancement de l'application 
 
-Avant de lancer l'application, il est nécessaire de faire tourner le script SQL de notre base de données "planseance" (METTRE LE LIEN DU DÉPOT DÉFINITIF) 
+Avant de lancer l'application, il est nécessaire de faire tourner le script SQL permettant de créer notre base de données "planseance", et contenu dans le dossier /Script BDD. 
 
 IMPORTANT : Avant de faire tourner ce script, il est nécessaire de créer la base de données et le schéma par des requêtes "CREATE DATABASE" et "CREATE SCHEMA". Le nom donné à la BDD doit être "planseance" et celui du schéma doit être "psch". 
 
