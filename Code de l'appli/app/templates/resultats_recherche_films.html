@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+
+{% block title %}Recherche films - Plan-Séance{% endblock %}
+
+{% block content %}
+
+{% block extra_css %}
+<style>
+    /* Conteneur global de la barre de filtres */
+    .search-filters-bar {
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        margin: 40px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border: 1px solid #eee;
+    }
+
+    /* Flexbox pour l'alignement des groupes */
+    .filters-form {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    /* Groupes de champs */
+    .filter-group {
+        flex: 1;
+        min-width: 180px;
+    }
+
+    .filter-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: var(--vert-fonce);
+        font-size: 0.9rem;
+        padding-left: 15px;
+    }
+
+    /* Style des Inputs et Selects (identique à l'accueil) */
+    .form-control-custom {
+        width: 100%;
+        padding: 12px 20px;
+        border: 2px solid var(--vert-fonce);
+        border-radius: 25px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        outline: none;
+        background-color: white;
+        box-sizing: border-box;
+    }
+
+    /* Effet Focus */
+    .form-control-custom:focus {
+        border-color: #8c3839;
+        box-shadow: 0 4px 12px rgba(140, 56, 57, 0.2);
+    }
+
+    /* Bouton Filtrer */
+    .btn-filter {
+        background-color: var(--vert-fonce);
+        color: white;
+        border: none;
+        padding: 12px 35px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        height: 50px;
+    }
+
+    .btn-filter:hover {
+        background-color: #8c3839;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .btn-filter:active {
+        transform: translateY(0);
+    }
+</style>
+{% endblock %}
+
+<div class="container-fluid">
+    
+    <!-- Titre de la recherche -->
+    <div class="search-results-header" style="text-align: center; margin: 100px 0 40px 0;">
+        <h1 style="font-family: 'NeulisCursive', sans-serif; color: var(--vert-fonce); font-size: 2rem;">
+            Résultats pour <span style="color: var(--rouge-brique); font-style: italic;">"{{ requete }}"</span>
+        </h1>
+    </div>
+
+    <div class="search-filters-bar">
+        <form method="GET" action="{{ url_for('generales.recherche_rapide_film') }}" class="filters-form">
+            
+            <div class="filter-group" style="flex: 2;">
+                <label>Titre</label>
+                {{ form.chaine(class="form-control-custom", placeholder="Rechercher un film...") }}
+            </div>
+
+            <div class="filter-group">
+                <label>Genre</label>
+                {{ form.genre(class="form-control-custom") }}
+            </div>
+
+            <div class="filter-group">
+                <label>Année</label>
+                {{ form.annee(class="form-control-custom", placeholder="Ex: 1994") }}
+            </div>
+
+            <button type="submit" class="btn-filter">
+                Filtrer
+            </button>
+        </form>
+    </div>
+
+    {% if donnees and donnees.items %}
+        <!-- Grille de films (même style que l'accueil) -->
+        <div class="movie-grid">
+            {% for film in donnees.items %}
+            <div class="movie-card">
+                <a href="{{ url_for('generales.film', id_film=film.id_film) if film.id_film else '#' }}">
+                    <img class="movie-poster" 
+                         data-movie-title="{{ film.titre }}"
+                         src="/static/img/placeholder-poster.jpg" 
+                         alt="{{ film.titre }}"
+                         loading="lazy">
+                    <h3 class="movie-title">{{ film.titre }}</h3>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if donnees.pages > 1 %}
+        <div class="pagination-container" style="display: flex; justify-content: center; gap: 10px; margin: 40px 0; flex-wrap: wrap;">
+            <a href="{{ url_for('generales.recherche_rapide_film', page=donnees.prev_num, chaine=requete) }}"
+               class="pagination-btn {% if donnees.page == 1 %}disabled{% endif %}"
+               style="padding: 10px 20px; border: 2px solid var(--vert-fonce); background: {% if donnees.page == 1 %}#ccc{% else %}white{% endif %}; color: var(--vert-fonce); border-radius: 8px; text-decoration: none; font-weight: 600;">
+                ‹ Précédent
+            </a>
+
+            {% for page_num in donnees.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+                {% if page_num %}
+                    <a href="{{ url_for('generales.recherche_rapide_film', page=page_num, chaine=requete) }}"
+                       style="padding: 10px 20px; border: 2px solid var(--vert-fonce); background: {% if donnees.page == page_num %}var(--vert-fonce){% else %}white{% endif %}; color: {% if donnees.page == page_num %}white{% else %}var(--vert-fonce){% endif %}; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                        {{ page_num }}
+                    </a>
+                {% else %}
+                    <span style="padding: 10px 20px; color: #999;">...</span>
+                {% endif %}
+            {% endfor %}
+
+            <a href="{{ url_for('generales.recherche_rapide_film', page=donnees.next_num, chaine=requete) }}"
+               class="pagination-btn {% if donnees.page == donnees.pages %}disabled{% endif %}"
+               style="padding: 10px 20px; border: 2px solid var(--vert-fonce); background: {% if donnees.page == donnees.pages %}#ccc{% else %}white{% endif %}; color: var(--vert-fonce); border-radius: 8px; text-decoration: none; font-weight: 600;">
+                Suivant ›
+            </a>
+        </div>
+        {% endif %}
+
+    {% elif requete %}
+        <div class="no-results" style="text-align: center; padding: 60px 20px; color: #999; font-size: 1.1rem;">
+            <p>Aucun film trouvé pour <strong>"{{ requete }}"</strong></p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Essayez avec d'autres mots-clés</p>
+        </div>
+
+    {% else %}
+        <div class="no-results" style="text-align: center; padding: 60px 20px; color: #999; font-size: 1.1rem;">
+            <p>Entrez un terme de recherche pour trouver des films</p>
+        </div>
+    {% endif %}
+</div>
+
+{% block extra_js %}
+<script>
+    // Charger les affiches TMDB pour les résultats de recherche
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Chargement des résultats de recherche');
+    });
+</script>
+{% endblock %}
+{% endblock %}

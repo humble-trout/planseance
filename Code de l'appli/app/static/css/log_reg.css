@@ -1,0 +1,100 @@
+/* login & register */
+
+.page {
+    padding: 0px 20px 60px 20px;
+    min-height: calc(100vh - 200px);
+    margin-top: -20px;
+}
+
+.container {
+    padding: 30px 40px;
+    margin-top: 0px;
+}
+
+.form-wrapper {
+    margin-top: 30px;
+}
+
+/* form */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-family: 'NeulisCursive', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--vert-fonce);
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--vert-fonce);
+}
+
+/* bouton */
+.btn-action {
+    font-family: 'NeulisCursive', sans-serif;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--vert-fonce);
+    color: white;
+    border: 2px solid var(--vert-fonce);
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Lien inscription */
+.footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid var(--rose-clair);
+    font-size: 1.1rem;
+}
+
+.link {
+    color: var(--vert-fonce);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: var(--rouge-brique);
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .btn-action {
+        width: 100%;
+        max-width: none;
+    }
+}

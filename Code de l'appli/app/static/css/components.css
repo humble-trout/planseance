@@ -1,0 +1,52 @@
+/* card*/
+.card-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-sticky {
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.section-title {
+    font-family: 'NeulisCursive', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--vert-fonce);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.subsection-title {
+    font-family: 'NeulisCursive', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--vert-fonce);
+    margin: 0 0 5px 0;
+}
+
+/* section*/
+.section-colored {
+    background-color: var(--rose-clair);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.container {
+    padding: 40px 0;
+}
+
+/* grille */
+.grid-container {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}

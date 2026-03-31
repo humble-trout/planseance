@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+
+{% block title %}Cinémap - Plan-Séance{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/leaflet-custom.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container cinemap-container">
+    <h1 class="title">
+        Cinémap
+    </h1>
+    
+    <!-- Barre de recherche cinéma -->
+    <div class="search-container">
+        <div class="search-wrapper">
+            <input type="text" 
+                   id="cinema-search" 
+                   class="search-bar"
+                   placeholder="Rechercher un cinéma..."
+                   onkeypress="if(event.key==='Enter' && this.value.trim().length >= 2) { window.location.href='/recherche_rapide_cine?chaine=' + encodeURIComponent(this.value.trim()); }">
+        </div>
+    </div>
+    
+    <div class="map-container">
+        <div id="map"></div>
+        
+        <div class="cinema-info">
+            <p class="cinema-count">
+                <span id="cinema-count">Chargement... c'est long mais ça vient</span>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+<script>
+    // Initialisation de la carte centrée sur la France
+    const map = L.map('map').setView([46.603354, 1.888334], 6);
+    
+    // Tuiles OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+    }).addTo(map);
+    
+    // icone
+    const cinemaIcon = L.icon({
+        iconUrl: '/static/img/pin.png',
+        iconSize: [50, 50],     
+        iconAnchor: [20, 40],    
+        popupAnchor: [0, -40]  
+    });
+    
+    // charger les cinémas depuis l'API avec les affiches
+    fetch('/api/cinemas?mode=full')
+        .then(response => response.json())
+        .then(data => {
+            console.log(`${data.cinemas.length} cinémas chargés`);
+            
+            // mettre à jour le compteur
+            document.getElementById('cinema-count').textContent = 
+                `${data.cinemas.length} cinémas indépendants ont on programmation en ce moment !`;
+            
+            // bounds pour centrer la carte sur tous les marqueurs
+            const bounds = [];
+            
+            // ajouter un marqueur pour chaque cinéma
+            data.cinemas.forEach(cinema => {
+                if (cinema.latitude && cinema.longitude) {
+                    const marker = L.marker([cinema.latitude, cinema.longitude], {
+                        icon: cinemaIcon
+                    }).addTo(map);
+                    
+                    // construction des affiches avec classes CSS
+                    let filmsHTML = '';
+                    if (cinema.films && cinema.films.length > 0) {
+                        filmsHTML = '<div class="popup-films-scroll">';
+                        cinema.films.forEach(film => {
+                            const posterSrc = film.poster_url || '/static/img/placeholder-poster.jpg';
+                            filmsHTML += `
+                                <div style="flex-shrink: 0;">
+                                    <img src="${posterSrc}" 
+                                         alt="${film.titre}" 
+                                         class="popup-film-poster"
+                                         title="${film.titre}"
+                                         onerror="this.src='/static/img/placeholder-poster.jpg'">
+                                </div>
+                            `;
+                        });
+                        filmsHTML += '</div>';
+                    } else {
+                        filmsHTML = '<p style="color: var(--rouge-brique); font-size: 0.9rem; font-style: italic; padding: 10px; margin: 10px 0;">📽️ L\'application ne dispose malheureusement pas de cette programmation :(</p>';
+                    }
+                    
+                    // bouton + d'info avec classe CSS
+                    const moreInfoButton = `
+                        <a href="/cinema/${cinema.id_cinema}" class="popup-more-info-btn">
+                            + d'info
+                        </a>
+                    `;
+                    
+                    // infobulle
+                    const popupContent = `
+                        <div>
+                            <h3 class="popup-cinema-name">${cinema.nom_cinema || 'Cinéma'}</h3>
+                            ${cinema.adresse ? `<p class="popup-cinema-address"><img src="/static/img/pin.png" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 4px;"> ${cinema.adresse}</p>` : ''}
+                            ${cinema.commune ? `<p class="popup-cinema-city">${cinema.commune}</p>` : ''}
+                            <p class="popup-cinema-films"><img src="/static/img/pin.png" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 4px;"> ${cinema.film_count} film(s) à l'affiche</p>
+                            ${filmsHTML}
+                            ${moreInfoButton}
+                        </div>
+                    `;
+                    
+                    marker.bindPopup(popupContent, {
+                        maxWidth: 420,
+                        minWidth: 380,
+                        className: 'custom-popup',
+                        autoPan: true,
+                        autoPanPadding: [50, 50],
+                        closeButton: true,
+                        keepInView: true
+                    });
+                    
+                    bounds.push([cinema.latitude, cinema.longitude]);
+                }
+            });
+            
+            //centrer la carte
+            if (bounds.length > 0) {
+                map.fitBounds(bounds, { padding: [50, 50] });
+            }
+        })
+        .catch(error => {
+            console.error('Erreur lors du chargement des cinémas:', error);
+            document.getElementById('cinema-count').textContent = 
+                'Erreur lors du chargement des cinémas';
+        });
+    
+    // // Fonction pour vider le cache
+    // function clearCinemaCache() {
+    //     localStorage.removeItem(CACHE_KEY);
+    //     alert('Cache vidé ! La page va se recharger.');
+    //     location.reload();
+    // }
+    
+    // Charger les cinémas au chargement de la page
+    loadCinemas();
+</script>
+{% endblock %}

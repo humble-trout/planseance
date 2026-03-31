@@ -1,0 +1,339 @@
+/* calendrier liste*/
+
+.calendar-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/*header compteur et boutons*/
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.seances-count {
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.seances-count strong {
+    color: var(--rouge-brique);
+    font-size: 1.3rem;
+}
+
+.btn-back-calendar {
+    font-family: 'NeulisCursive', sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--vert-fonce);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(18, 89, 13, 0.2);
+}
+
+.btn-back-calendar:hover {
+    background-color: var(--rouge-brique);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(140, 56, 57, 0.3);
+}
+
+/* séance */
+.seance-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.seance-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* affiche */
+.seance-poster {
+    width: 140px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.seance-poster-placeholder {
+    width: 140px;
+    height: 210px;
+    background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--rouge-brique) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* info*/
+.seance-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.seance-title {
+    font-family: 'NeulisCursive', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--vert-fonce);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.seance-info {
+    font-family: 'NeulisCursive', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.seance-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-size: 1rem;
+}
+
+.seance-date {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--rouge-brique);
+}
+
+/* Actions */
+.seance-actions {
+    font-family: 'NeulisCursive', sans-serif;
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.btn-action {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-film {
+    background-color: var(--vert-fonce);
+    color: white;
+}
+
+.btn-film:hover {
+    background-color: #0d4009;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(18, 89, 13, 0.3);
+}
+
+.btn-cinema {
+    background-color: var(--rose-fonce);
+    color: white;
+}
+
+.btn-cinema:hover {
+    background-color: var(--rouge-brique);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(218, 112, 115, 0.3);
+}
+
+.btn-match {
+    background-color: var(--rose-clair);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-match:hover {
+    background-color: var(--rose-fonce);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 211, 219, 0.4);
+}
+
+.match-stamp-inline {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.2));
+}
+
+/* Badge Match (ancien style - maintenant inutilisé, gardé pour compatibilité) */
+.match-badge {
+    display: none;
+}
+
+.match-stamp-list {
+    display: none;
+}
+
+/* supprimer*/
+.btn-delete-seance {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: white;
+    border: 2px solid var(--rouge-brique);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-delete-seance:hover {
+    background-color: var(--rouge-brique);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(140, 56, 57, 0.4);
+}
+
+.btn-delete-seance img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+.btn-delete-seance:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
+.btn-browse {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: var(--vert-fonce);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(18, 89, 13, 0.3);
+}
+
+.btn-browse:hover {
+    background-color: var(--rouge-brique);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(140, 56, 57, 0.4);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .calendar-list-title {
+        font-size: 2rem;
+    }
+    
+    .list-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .seance-card {
+        flex-direction: column;
+        padding: 20px;
+        padding-right: 70px; /* Espace pour le bouton supprimer */
+    }
+    
+    .seance-poster,
+    .seance-poster-placeholder {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .seance-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .seance-info {
+        align-items: center;
+    }
+    
+    .seance-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-action {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .match-badge {
+        top: 10px;
+        right: 60px; /* Décalé pour ne pas chevaucher le bouton supprimer */
+    }
+    
+    .match-stamp-list {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .btn-delete-seance {
+        width: 45px;
+        height: 45px;
+        right: 10px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-list-title {
+        font-size: 1.5rem;
+    }
+    
+    .seance-card {
+        padding: 15px;
+    }
+    
+    .seance-title {
+        font-size: 1.3rem;
+    }
+}

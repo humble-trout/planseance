@@ -1,0 +1,109 @@
+.search-results-container {
+        max-width: 1200px;
+        margin: 80px auto 40px auto;
+        padding: 0 20px;
+    }
+    
+    .search-header {
+        font-family: 'NeulisCursive', sans-serif;
+        color: var(--vert-fonce);
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .search-query {
+        color: var(--rouge-brique);
+        font-style: italic;
+    }
+    
+    .cinema-result-card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .cinema-result-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .cinema-result-title {
+        font-family: 'NeulisCursive', sans-serif;
+        font-size: 1.3rem;
+        color: var(--vert-fonce);
+        margin-bottom: 10px;
+    }
+    
+    .cinema-result-meta {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 5px;
+    }
+    
+    .cinema-result-meta strong {
+        color: var(--rouge-brique);
+    }
+    
+    .highlight {
+        background-color: var(--rose-clair);
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-weight: 600;
+    }
+    
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .pagination-btn {
+        padding: 8px 16px;
+        border: 2px solid var(--vert-fonce);
+        background: white;
+        color: var(--vert-fonce);
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+    
+    .pagination-btn:hover:not(.disabled) {
+        background: var(--vert-fonce);
+        color: white;
+    }
+    
+    .pagination-btn.active {
+        background: var(--vert-fonce);
+        color: white;
+    }
+    
+    .pagination-btn.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+    
+    .no-results {
+        text-align: center;
+        padding: 60px 20px;
+        color: #999;
+        font-size: 1.1rem;
+    }
+    
+    .cinema-link {
+        color: var(--rouge-brique);
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    
+    .cinema-link:hover {
+        text-decoration: underline;
+    }

@@ -1,0 +1,393 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ film.titre }} - Plan-Séance{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/movie.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='compnents/style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row" data-movie-title="{{ film.titre }}">
+        
+        <!-- colonne info-->
+        <div class="col-lg-7 mb-4">
+            <div class="info-section card-container card-sticky">
+                <h1 class="page-title">{{ film.titre }}</h1>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-3 text-center">
+                        <img class="movie-detail-poster" 
+                             src="{% if film.poster_url %}{{ film.poster_url }}{% else %}/static/img/placeholder-poster.jpg{% endif %}" 
+                             alt="{{ film.titre }}">
+                    </div>
+                    
+                    <div class="col-md-8">
+                        {% if film.realisateur %}
+                        <p>
+                            <strong class="info">Réalisateur :</strong> {{ film.realisateur }}
+                        </p>
+                        {% endif %}
+                        
+                        <p>
+                            <strong class="info">Durée :</strong> 
+                            {% if film.duree %}
+                                {% set hours = film.duree // 60 %}
+                                {% set minutes = film.duree % 60 %}
+                                {{ hours }}h{{ '%02d'|format(minutes) }}
+                            {% else %}
+                                Non renseignée
+                            {% endif %}
+                        </p>
+                        
+                        {% if film.genres %}
+                        <p>
+                            <strong class="info">Genres :</strong> {{ film.genres }}
+                        </p>
+                        {% endif %}
+                        
+                        {% if film.annee %}
+                        <p>
+                            <strong class="info">Année :</strong> {{ film.annee }}
+                        </p>
+                        {% endif %}
+                        
+                        {% if film.note %}
+                        <p>
+                            <strong class="info">Note BDD :</strong> {{ film.note }}/100
+                        </p>
+                        {% endif %}
+                        
+                        {% if film.tmdb_note %}
+                        <p>
+                            <strong class="info">Note TMDB :</strong> {{ "%.1f"|format(film.tmdb_note) }}/10 
+                            {% set stars = (film.tmdb_note / 2)|round|int %}
+                            {{ '⭐' * stars }}
+                            {% if film.tmdb_votes %}
+                                ({{ film.tmdb_votes }} votes)
+                            {% endif %}
+                        </p>
+                        {% endif %}
+                        
+                        {% if film.langues %}
+                        <p>
+                            <strong class="info">Langues :</strong> {{ film.langues }}
+                        </p>
+                        {% endif %}
+                        
+                        {% if film.pays %}
+                        <p>
+                            <strong class="info">Pays :</strong> {{ film.pays }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="movie-synopsis">
+                    {% if film.synopsis %}
+                        {{ film.synopsis }}
+                    {% else %}
+                        <em>Synopsis non disponible.</em>
+                    {% endif %}
+                </div>
+                
+                {% if film.budget or film.revenue %}
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid var(--rose-clair);">
+                    {% if film.budget and film.budget > 0 %}
+                    <p>
+                        <strong class="info">Budget :</strong> {{ "%.1f"|format(film.budget / 1000000) }}M $
+                    </p>
+                    {% endif %}
+                    
+                    {% if film.revenue and film.revenue > 0 %}
+                    <p>
+                        <strong class="info">Box-office :</strong> {{ "%.1f"|format(film.revenue / 1000000) }}M $
+                    </p>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- colonne seance -->
+        <div class="col-lg-5">
+            <div class="seances-section">
+                <h2 class="section-title">Séances disponibles</h2>
+                
+                <div id="seances-container">
+                {% if seances %}
+                    {% set seances_by_cinema = {} %}
+                    {% for seance in seances %}
+                        {% set cinema_key = seance.cinema_nom or 'Cinéma non spécifié' %}
+                        {% if cinema_key not in seances_by_cinema %}
+                            {% set _ = seances_by_cinema.update({cinema_key: []}) %}
+                        {% endif %}
+                        {% set _ = seances_by_cinema[cinema_key].append(seance) %}
+                    {% endfor %}
+                    
+                    {% for cinema_nom, cinema_seances in seances_by_cinema.items() %}
+                    <div class="cinema-row">
+                        <div class="cinema-row-header">
+                            <h3 class="cinema-row-title">
+                                <img src="/static/img/pin.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 6px;">
+                                {% if cinema_seances[0].id_cinema %}
+                                    <a href="{{ url_for('generales.cinema', id_cinema=cinema_seances[0].id_cinema) }}" 
+                                       style="color: var(--vert-fonce); text-decoration: none; transition: color 0.3s;"
+                                       onmouseover="this.style.color='var(--rouge-brique)'" 
+                                       onmouseout="this.style.color='var(--vert-fonce)'">
+                                        {{ cinema_nom }}
+                                    </a>
+                                {% else %}
+                                    {{ cinema_nom }}
+                                {% endif %}
+                                
+                            </h3>
+                            {% if cinema_seances[0].ville %}
+                                <p class="cinema-row-location">{{ cinema_seances[0].ville }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="seances-scroll-container">
+                            {% for seance in cinema_seances %}
+                            
+                            <div class="seance-col" data-seance-id="{{ seance.id_seance }}" onclick="addToCalendar({{ seance.id_seance }}, this)"
+                                        title="Ajouter à mon calendrier">
+                                <div class="seance-col-date">
+                                    {% if seance.date_seance %}
+                                        {% if seance.date_seance is not string %}
+                                            {{ seance.date_seance.strftime('%d/%m') }}
+                                        {% else %}
+                                            {{ seance.date_seance[8:10] }}/{{ seance.date_seance[5:7] }}
+                                        {% endif %}
+                                    {% else %}
+                                        --/--
+                                    {% endif %}
+                                </div>
+                                <div class="seance-col-time" >
+                                    {% if seance.heure_debut %}
+                                        {% if seance.heure_debut is not string %}
+                                            {{ seance.heure_debut.strftime('%H:%M') }}
+                                        {% else %}
+                                            {% set time_parts = seance.heure_debut.split(' ') %}
+                                            {% if time_parts|length > 1 %}
+                                                {{ time_parts[1][:5] }}
+                                            {% else %}
+                                                --:--
+                                            {% endif %}
+                                        {% endif %}
+                                    {% else %}
+                                        --:--
+                                    {% endif %}
+                                </div>
+                                <div class="seance-col-version">
+                                    {{ seance.version or 'VO' }}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="text-center" style="color: var(--rouge-brique); font-size: 1.1rem;">
+                        Aucune séance programmée pour le moment.
+                    </p>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function addToCalendar(idSeance, button) {
+    // Vérifier si l'utilisateur est connecté
+    {% if current_user.is_authenticated %}
+        // Désactiver le bouton pendant le traitement
+        button.disabled = true;
+        
+        // Appel AJAX pour ajouter la séance
+        fetch('/selection_seance/' + idSeance, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                // Erreur (déjà dans le calendrier ou autre)
+                return response.json().then(data => {
+                    throw new Error(data.error || 'Erreur');
+                });
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.message) {
+                // Succès          
+                button.style.backgroundColor = 'rgba(140, 56, 57, 0.5)';
+                button.title = 'Ajouté au calendrier';
+                
+                // Afficher message temporaire
+                showMessage('Séance ajoutée au calendrier !', 'success');
+                
+                // Si des matches sont disponibles, afficher une bannière spéciale
+                if (data.has_matches && data.match_count > 0) {
+                    showMatchBanner(data.match_count);
+                }
+            }
+        })
+        .catch(error => {
+            // Erreur ou déjà ajouté
+            button.style.backgroundColor = '#8c3839';
+            showMessage(error.message || 'Cette séance est déjà dans votre calendrier', 'info');
+            
+            // Réactiver après 2s
+            setTimeout(() => {
+                button.disabled = false;
+                button.style.backgroundColor = '';
+            }, 2000);
+        });
+    {% else %}
+        // Rediriger vers login
+        showMessage('Vous devez être connecté pour ajouter une séance', 'error');
+        setTimeout(() => {
+            window.location.href = '/login';
+        }, 1500);
+    {% endif %}
+}
+
+function showMessage(message, type) {
+    // Créer un message toast
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 25px;
+        background: ${type === 'success' ? '#12590d' : type === 'error' ? '#8c3839' : '#ffc107'};
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 10000;
+        animation: slideIn 0.3s ease;
+    `;
+    toast.textContent = message;
+    
+    document.body.appendChild(toast);
+    
+    // Supprimer après 3s
+    setTimeout(() => {
+        toast.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
+function showMatchBanner(matchCount) {
+    // bannière pour les matches
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 20000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease;
+    `;
+    
+    const banner = document.createElement('div');
+    banner.style.cssText = `
+        background: linear-gradient(135deg, #ffffff 0%, #fef9fa 100%);
+        border: 3px solid var(--rose-clair, #ffd3db);
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        text-align: center;
+        animation: popIn 0.4s ease;
+        position: relative;
+    `;
+    
+    banner.innerHTML = `
+        <div style="margin-bottom: 20px;">
+            <img src="/static/img/pin.png" style="width: 60px; height: 60px; filter: hue-rotate(320deg);" alt="Match">
+        </div>
+        <h2 style="font-family: 'NeulisCursive', sans-serif; color: var(--vert-fonce, #2b4743); font-size: 2rem; margin-bottom: 15px;">
+            Des matches disponibles !
+        </h2>
+        <p style="font-family: 'DM Sans', sans-serif; font-size: 1.2rem; color: var(--rouge-brique, #8c3839); margin-bottom: 25px;">
+            <strong>${matchCount}</strong> personne${matchCount > 1 ? 's' : ''} ${matchCount > 1 ? 'sont' : 'est'} également intéressée${matchCount > 1 ? 's' : ''} par cette séance !
+        </p>
+        <p style="font-family: 'DM Sans', sans-serif; font-size: 1rem; color: #555; margin-bottom: 30px;">
+            Rendez-vous sur <strong>Cinématch</strong> pour découvrir ${matchCount > 1 ? 'ces profils' : 'ce profil'}.
+        </p>
+        <div style="display: flex; gap: 15px; justify-content: center;">
+            <button onclick="window.location.href='/api/cinematch'" style="
+                font-family: 'NeulisCursive', sans-serif;
+                background: var(--vert-fonce, #2b4743);
+                color: white;
+                padding: 12px 30px;
+                border-radius: 25px;
+                font-size: 1.1rem;
+                transition: transform 0.2s ease, background 0.2s ease;
+            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                Voir les matches
+            </button>
+            <button onclick="this.closest('[style*=fixed]').remove()" style="
+                font-family: 'DM Sans', sans-serif;
+                background: white;
+                color: var(--rouge-brique, #8c3839);
+                padding: 12px 30px;
+                border-radius: 25px;
+                font-size: 1rem;
+                transition: transform 0.2s ease;
+            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                Plus tard
+            </button>
+        </div>
+    `;
+    
+    overlay.appendChild(banner);
+    document.body.appendChild(overlay);
+    
+    // Fermer en cliquant sur l'overlay
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.remove();
+        }
+    });
+}
+
+// Animations CSS
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from { transform: translateX(400px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(400px); opacity: 0; }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes popIn {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+`;
+document.head.appendChild(style);
+</script>
+{% endblock %}

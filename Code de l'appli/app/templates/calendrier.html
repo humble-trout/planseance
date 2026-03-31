@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block title %}Calendrier - Plan-Séance{% endblock %}
+
+{% block extra_css %}
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/calendrier.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="calendar-page-container">
+    <h1 class="title">
+        Calendrier
+    </h1>
+    
+    {% if not current_user.is_authenticated %}
+        <div class="empty-state">
+            <p class="empty-state-text">Vous devez être connecté pour voir votre calendrier</p>
+            <div class="empty-state-btn-container">
+                <img src="/static/img/pin.png" class="btn-icon-left" alt="">
+                <a href="{{ url_for('users.login') }}" class="btn-login-calendar">Se connecter</a>
+                <img src="/static/img/pin.png" class="btn-icon-right" alt="">
+            </div>
+        </div>
+    {% elif selections is none or selections|length == 0 %}
+        <div class="empty-state">
+            <p class="empty-state-text">Aucune séance sélectionnée pour le moment</p>
+            <p class="empty-state-subtitle">Parcourez les films et ajoutez des séances à votre calendrier !</p>
+            <a href="{{ url_for('generales.index') }}" class="btn-browse">Parcourir les films</a>
+        </div>
+    {% else %}
+        <p class="seances-count">
+            <a href="{{ url_for('generales.calendrier_liste') }}" class="seances-count-link">
+                Vous avez <strong>{{ selections|length }}</strong> séance(s) dans votre calendrier (en savoir +)
+            </a>
+        </p>   
+
+        <div id="calendar"></div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% if selections and selections|length > 0 %}
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.10/locales/fr.global.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const calendarEl = document.getElementById('calendar');
+    
+   // Préparer les événements depuis les données Jinja2
+    const events = [
+        {% for seance in selections %}
+        {
+            title: '{{ seance.titre|safe }}',
+            start: '{{ seance.debut.isoformat() if seance.debut else "" }}',
+            extendedProps: {
+                cinema: '{{ seance.cinema|safe if seance.cinema else "Cinéma non spécifié" }}',
+                id_film: {{ seance.id_film if seance.id_film else 'null' }},
+                id_cinema: {{ seance.id_cinema if seance.id_cinema else 'null' }}
+            },
+            classNames: ['seance-event']
+        }{{ ',' if not loop.last else '' }}
+        {% endfor %}
+    ];
+
+    
+    // initialiser FullCalendar
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'fr',
+        firstDay: 1, // commence le lundi
+        headerToolbar: {
+            left: 'title',
+            center: '',
+            right: 'prev,next today'
+        },
+        buttonText: {
+            today: "Aujourd'hui"
+        },
+        events: events,
+        eventTimeFormat: {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        },
+        eventContent: function(arg) {
+            const event = arg.event;
+            const props = event.extendedProps;
+            
+            const container = document.createElement('div');
+            container.style.position = 'relative';
+            container.style.width = '100%';
+            
+            const textContainer = document.createElement('div');
+            
+            // heure
+            const time = document.createElement('div');
+            time.className = 'fc-event-time';
+            time.textContent = arg.timeText;
+            textContainer.appendChild(time);
+            
+            // titre du film
+            const title = document.createElement('div');
+            title.className = 'fc-event-title';
+            title.textContent = event.title;
+            textContainer.appendChild(title);
+            
+            // ciné
+            if (props.cinema) {
+                const cinema = document.createElement('div');
+                cinema.className = 'seance-cinema-info';
+                cinema.textContent = props.cinema;
+                textContainer.appendChild(cinema);
+            }
+            
+            container.appendChild(textContainer);
+            
+            return { domNodes: [container] };
+        },
+        eventClick: function(info) {
+            const props = info.event.extendedProps;
+            
+            // redirection vers la page film
+            if (props.id_film) {
+                window.location.href = `/film/${props.id_film}`;
+            }
+            // sinon redirection vers le ciné
+            else if (props.id_cinema) {
+                window.location.href = `/cinema/${props.id_cinema}`;
+            }
+        },
+        
+        height: 'auto',
+        dayMaxEvents: false,
+        dayCellClassNames: function(arg) {
+            return [];
+        }
+    });
+    
+    calendar.render();
+});
+</script>
+{% endif %}
+{% endblock %}

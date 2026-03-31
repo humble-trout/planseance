@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ cinema.nom_cinema }} - Plan-Séance{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cinema.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/leaflet-custom.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        
+        <!-- colonne info ciné-->
+        <div class="col-lg-5 mb-4">
+            <div class="info-section card-container card-sticky">
+                <h1 class="page-title">{{ cinema.nom_cinema }}</h1>
+                
+                {% if cinema.adresse %}
+                <p class="info">
+                    <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Adresse :</strong> {{ cinema.adresse }}
+                </p>
+                {% endif %}
+                
+                {% if cinema.commune %}
+                <p class="info">
+                    <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Commune :</strong> {{ cinema.commune }}
+                </p>
+                {% endif %}
+                
+                {% if cinema.ecrans %}
+                <p class="info">
+                    <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Écrans :</strong> {{ cinema.ecrans }}
+                </p>
+                {% endif %}
+                
+                {% if cinema.fauteuils %}
+                <p class="info">
+                    <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Fauteuils :</strong> {{ cinema.fauteuils }}
+                </p>
+                {% endif %}
+                
+                <p class="info">
+                    <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Films programmés :</strong> {{ films|length }}
+                </p>
+                
+                <!-- Carte de localisation -->
+                {% if cinema.latitude and cinema.longitude %}
+                <div id="cinema-map"></div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- colonne film -->
+        <div class="col-lg-7">
+            <div class="films-section section-colored">
+                <h2 class="section-title">Films à l'affiche</h2>
+                
+                {% if films %}
+                <div class="films-grid">
+                    {% for film in films %}
+                    <a href="{{ url_for('generales.film', id_film=film.id_film) }}" class="film-card">
+                        <img class="film-card-poster" 
+                             src="{% if film.poster_url %}{{ film.poster_url }}{% else %}/static/img/placeholder-poster.jpg{% endif %}" 
+                             alt="{{ film.titre }}">
+                        <div class="film-card-info">
+                            <h3 class="film-card-title">{{ film.titre }}</h3>
+                            <p class="film-card-seances">{{ film.nb_seances }} séance(s)</p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div style="padding: 40px 20px; text-align: center; border-radius: 12px; margin: 20px 0;">
+                    <p style="color: var(--rouge-brique); font-size: 1.2rem; margin: 0; font-weight: 600;">
+                        L'application ne dispose malheureusement pas de cette programmation :(
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% if cinema.latitude and cinema.longitude %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+<script>
+    // carte du cinéma
+    const cinemaMap = L.map('cinema-map').setView([{{ cinema.latitude }}, {{ cinema.longitude }}], 15);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+    }).addTo(cinemaMap);
+    
+    // pin
+    const cinemaIcon = L.icon({
+        iconUrl: '/static/img/pin.png',
+        iconSize: [50, 50],     
+        iconAnchor: [25, 50],    
+        popupAnchor: [0, -50]
+    });
+    
+    L.marker([{{ cinema.latitude }}, {{ cinema.longitude }}], {
+        icon: cinemaIcon
+    }).addTo(cinemaMap);
+</script>
+{% endif %}
+{% endblock %}

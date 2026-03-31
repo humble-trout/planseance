@@ -1,0 +1,305 @@
+/* calendrier FullCalendar.js  */
+
+.calendar-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/*modification des hyperliens pcq les jour son indiqué comme ca mais jsp ppourquoi*/
+a {
+    color: var(--rouge-brique);
+    text-decoration: none;
+}
+
+/* conteneur*/
+#calendar {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* custom header*/
+
+/*mois */
+.fc .fc-toolbar-title {
+    font-family: 'NeulisCursive', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 2.5rem !important;
+    color: var(--vert-fonce) !important;
+    text-transform: capitalize;
+}
+
+/* boutons navigation */
+.fc .fc-button-primary {
+    background-color: var(--rouge-brique) !important;
+    border-color: var(--rouge-brique) !important;
+    color: white !important;
+    font-weight: 600;
+    border-radius: 10px !important;
+    padding: 8px 16px !important;
+    transition: all 0.3s ease;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: var(--rose-fonce) !important;
+    border-color: var(--rose-fonce) !important;
+    transform: translateY(-2px);
+}
+
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+    background-color: var(--vert-fonce) !important;
+    border-color: var(--vert-fonce) !important;
+}
+
+/* grille*/
+
+/* jours */
+.fc .fc-col-header-cell {
+    background-color: var(--rose-clair);
+    color: var(--rose-fonce) !important;
+    font-family: 'NeulisCursive', sans-serif !important;
+    font-weight: 700 !important;
+    padding: 15px 10px !important;
+    font-size: 1.2rem !important;
+    border: 2px solid var(--rose-fonce) !important;
+}
+
+/* numéros des jours */
+.fc .fc-daygrid-day-number {
+    font-family: 'NeulisCursive', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+    color: var(--vert-fonce) !important;
+    padding: 8px !important;
+}
+
+/* Cellules du calendrier */
+.fc .fc-daygrid-day {
+    border: 1px solid #e0e0e0 !important;
+    min-height: 120px;
+    background: #fafafa;
+    transition: background-color 0.2s ease;
+}
+
+.fc .fc-daygrid-day:hover {
+    background-color: #f0f0f0;
+}
+
+/* Aujourd'hui */
+.fc .fc-day-today {
+    background-color: #ffd3db !important;
+    border: 2px solid var(--rose-fonce) !important;
+}
+
+/* évennenemnt */
+
+.fc-event {
+
+    background-color: var(--vert-fonce) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 5px 8px !important;
+    margin: 2px 3px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: visible !important;
+}
+
+.fc-event:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.fc-event-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: white !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fc-event-time {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.9) !important;
+}
+
+
+/* avec match */
+.fc-event.seance-event.has-match {
+    background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--rouge-brique) 100%) !important;
+}
+
+/* icone */
+.match-stamp {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 35px;
+    height: 35px;
+    z-index: 100;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.2s ease;
+}
+
+.match-stamp:hover {
+    transform: scale(1.15);
+}
+
+.match-stamp:active {
+    transform: scale(0.95);
+}
+
+/* info */
+
+.seance-cinema-info {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/* compteur de séance*/
+
+.seances-count {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.seances-count strong {
+    color: var(--rouge-brique);
+    font-size: 1.3rem;
+}
+
+.seances-count-link {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.seances-count-link:hover {
+    color: var(--vert-fonce);
+    transform: translateY(-2px);
+}
+
+.seances-count-link:hover strong {
+    color: var(--vert-fonce);
+    text-decoration: underline;
+}
+
+/* Empty state - Non connecté */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-state-text {
+    font-family: 'NeulisCursive', sans-serif;
+    font-size: 1.5rem;
+    color: var(--vert-fonce);
+    margin-bottom: 30px;
+}
+
+.empty-state-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-icon-left,
+.btn-icon-right {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+}
+
+.btn-login-calendar {
+    font-family: 'NeulisCursive', sans-serif;
+    padding: 15px 50px;
+    background-color: var(--vert-fonce);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-login-calendar:hover {
+    background-color: var(--rouge-brique);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* responsive*/
+
+@media (max-width: 768px) {
+    .calendar-page-title {
+        font-size: 2rem;
+    }
+    
+    .fc .fc-toolbar-title {
+        font-size: 1.8rem !important;
+    }
+    
+    #calendar {
+        padding: 15px;
+    }
+    
+    .fc .fc-daygrid-day {
+        min-height: 80px;
+    }
+    
+    .fc-event-title,
+    .seance-cinema-info {
+        font-size: 0.7rem;
+    }
+    
+    .match-stamp {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-page-title {
+        font-size: 1.5rem;
+    }
+    
+    .fc .fc-toolbar-title {
+        font-size: 1.3rem !important;
+    }
+    
+    .fc .fc-daygrid-day-number {
+        font-size: 1rem !important;
+    }
+    
+    .fc .fc-col-header-cell {
+        font-size: 0.85rem;
+        padding: 10px 5px !important;
+    }
+}

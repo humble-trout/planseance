@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+
+{% block title %}Cinématch - Plan-Séance{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cinematch.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="cinematch-container">
+    <div class="cinematch-header">
+        <h1 class="title">Cinématch</h1>
+        {% if current_user.is_authenticated and matches %}
+        <p class="match-count">
+            Vous avez <strong>{{ total_matches - confirmed_matches }}</strong> match{{ 's' if (total_matches - confirmed_matches) > 1 else '' }} potentiel{{ 's' if total_matches > 1 else '' }}
+            {% if confirmed_matches > 0 %}
+            <br>
+            <span style="color: var(--vert-fonce);">Vous avez <strong>{{ confirmed_matches }}</strong> match{{ 's' if confirmed_matches > 1 else '' }} confirmé{{ 's' if confirmed_matches > 1 else '' }} !</span>
+            {% endif %}
+        </p>
+        {% endif %}
+    </div>
+
+    {% if not current_user.is_authenticated %}
+        <div class="empty-state">
+            <p class="empty-state-text">Connectez-vous pour découvrir vos matchs</p>
+            <div class="empty-state-btn-container">
+                <img src="/static/img/pin.png" class="btn-icon-left" alt="">
+                <a href="{{ url_for('users.login') }}" class="btn-login-calendar">Se connecter</a>
+                <img src="/static/img/pin.png" class="btn-icon-right" alt="">
+            </div>
+        </div>
+    {% elif matches %}
+        {% set matches_by_seance = {} %}
+        {% for match in matches %}
+            {% set seance_key = match.seance.id ~ '_' ~ match.seance.date ~ '_' ~ match.seance.horaire %}
+            {% if seance_key not in matches_by_seance %}
+                {% set _ = matches_by_seance.update({seance_key: {'seance': match.seance, 'users': []}}) %}
+            {% endif %}
+            {% set _ = matches_by_seance[seance_key]['users'].append(match) %}
+        {% endfor %}
+
+        <div class="seances-list">
+            {% for seance_key, seance_data in matches_by_seance.items() %}
+            <div class="seance-section">
+                <div class="seance-info">
+                    <img src="/static/img/pin.png" class="seance-pin" alt="">
+                    <div class="seance-details">
+                        {% if seance_data.seance.film_id %}
+                        <h3 class="seance-film">
+                            <a href="{{ url_for('generales.film', id_film=seance_data.seance.film_id) }}">
+                                {{ seance_data.seance.film_titre }}
+                            </a>
+                        </h3>
+                        {% else %}
+                        <h3 class="seance-film">{{ seance_data.seance.film_titre }}</h3>
+                        {% endif %}
+                        <p class="seance-cinema-name">{{ seance_data.seance.cinema_nom }}</p>
+                        <p class="seance-datetime">{{ seance_data.seance.date }} à {{ seance_data.seance.horaire }}</p>
+                    </div>
+                    <span class="seance-badge">{{ seance_data.users|length }} match{{ 's' if seance_data.users|length > 1 else '' }}</span>
+                </div>
+
+                <div class="profiles-carousel">
+                    {% for match in seance_data.users %}
+                    <div class="profile-card {% if match.they_accepted %}profile-interested{% endif %}">
+                        <!-- Lien cliquable sur la photo et les infos -->
+                        <a href="{{ url_for('users.view_user_profile', user_id=match.match_user.id) }}" class="profile-link">
+                            <div class="profile-image-wrapper">
+                                <img src="{{ match.match_user.photo_url or '/static/img/default.png' }}" 
+                                     alt="Photo de {{ match.match_user.name }}" 
+                                     class="profile-image">
+                            </div>
+                            
+                            <div class="profile-info">
+                                <h4 class="profile-name">{{ match.match_user.name }}</h4>
+                                {% if match.match_user.age %}
+                                <span class="profile-age">{{ match.match_user.age }} ans</span>
+                                {% endif %}
+                            </div>
+
+                            <div class="profile-bio">
+                                {% if match.match_user.bio %}
+                                    {{ match.match_user.bio[:100] }}{{ '...' if match.match_user.bio|length > 100 else '' }}
+                                {% else %}
+                                    <em>Aucune bio</em>
+                                {% endif %}
+                            </div>
+
+                            <div class="profile-extras">
+                                {% if match.match_user.cinema_favori %}
+                                <div class="profile-extra-item">
+                                    <strong>Cinéma favori:</strong> {{ match.match_user.cinema_favori }}
+                                </div>
+                                {% endif %}
+                                {% if match.match_user.films_recents %}
+                                <div class="profile-extra-item">
+                                    <strong>Films récents:</strong>
+                                    <span class="films-list">
+                                        {% for film in match.match_user.films_recents[:1] %}
+                                            {{ film }}{% if not loop.last %}, {% endif %}
+                                        {% endfor %}
+                                    </span>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </a>
+
+                        {% if match.they_accepted and not match.is_mutual %}
+                        <p class="profile-liked-badge">Vous a liké</p>
+                        {% else %}
+                        <p class="profile-liked-badge" style="opacity: 0;">Placeholder</p>
+                        {% endif %}
+
+                        <div class="profile-actions">
+                            {% if match.is_mutual %}
+                                <div class="match-success">
+                                    <img src="/static/img/pin.png" style="filter: brightness(0) invert(1)" class="success-icon" alt="">
+                                    <p class="success-text">C'est un match !</p>
+                                    <p class="success-subtext">Rendez-vous au cinéma !</p>
+                                </div>
+                            {% elif match.i_accepted %}
+                                <div class="match-pending">
+                                    <p class="pending-text">Invitation envoyée...</p>
+                                    <form action="{{ url_for('insertions.valider_match', id_matchee=match.match_user.id, id_seance=match.seance.id, action='decline') }}" method="GET">
+                                        <button type="submit" class="btn-cancel">Annuler</button>
+                                    </form>
+                                </div>
+                            {% else %}
+                                <div class="match-buttons">
+                                    <form action="{{ url_for('insertions.valider_match', id_matchee=match.match_user.id, id_seance=match.seance.id, action='decline') }}" method="GET" style="display: inline;">
+                                        <button type="submit" class="btn-swipe btn-decline">
+                                            <img src="{{ url_for('static', filename='img/croix.png') }}" alt="Refuser" class="btn-swipe-icon">
+                                        </button>
+                                    </form>
+                                    <form action="{{ url_for('insertions.valider_match', id_matchee=match.match_user.id, id_seance=match.seance.id, action='accept') }}" method="GET" style="display: inline;">
+                                        <button type="submit" class="btn-swipe btn-accept">♥</button>
+                                    </form>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <p class="empty-text">Aucun cinéphile ne partage tes séances pour l'instant :(</p>
+            <p class="empty-subtext">Ajoute plus de films à ton calendrier pour trouver des matchs !</p>
+            <a href="{{ url_for('generales.index') }}" class="btn-back">
+                Retour aux films
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

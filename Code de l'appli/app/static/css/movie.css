@@ -1,0 +1,177 @@
+
+/*poster*/
+.movie-detail-poster {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/*résumé*/
+.movie-synopsis {
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 20px;
+    font-size: 1.05rem;
+}
+
+/* ciné*/
+.cinema-row {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cinema-row-header {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--rose-fonce);
+    padding-bottom: 10px;
+}
+
+.cinema-row-title {
+    font-family: 'NeulisCursive', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--vert-fonce);
+    margin: 0 0 5px 0;
+}
+
+.cinema-row-title a {
+    color: var(--vert-fonce);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cinema-row-title a:hover {
+    color: var(--rouge-brique);
+}
+
+.cinema-row-title img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.cinema-row-location {
+    font-size: 0.9rem;
+    color: var(--vert-fonce);
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* séances scroll*/
+.seances-scroll-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 5px;
+    scroll-behavior: smooth;
+}
+
+.seances-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.seances-scroll-container::-webkit-scrollbar-track {
+    background: rgba(218, 112, 115, 0.2);
+    border-radius: 10px;
+}
+
+.seances-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--rose-fonce);
+    border-radius: 10px;
+}
+
+.seances-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: var(--rouge-brique);
+}
+
+/*séance*/
+.seance-col {
+    min-width: 100px;
+    background: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.seance-col:hover {
+    background: var(--rouge-brique);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(140, 56, 57, 0.3);
+}
+
+.seance-col-date {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-family: 'NeulisCursive', sans-serif;
+    color: var(--vert-fonce);
+}
+
+.seance-col:hover .seance-col-date {
+    color: white;
+}
+
+.seance-col-time {
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+    color: var(--vert-fonce);
+}
+
+.seance-col:hover .seance-col-time {
+    color: white;
+}
+
+.seance-col-version {
+    background-color: var(--vert-fonce);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.seance-col:hover .seance-col-version {
+    background-color: white;
+    color: var(--vert-fonce);
+}
+
+.btn-add-calendar {
+    background: var(--vert-fonce);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-add-calendar:hover {
+    background: var(--rouge-brique);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-add-calendar:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}

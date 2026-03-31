@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block title %}Recherche cinémas - Plan-Séance{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resultats.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<div class="search-results-container">
+    <h1 class="search-header">
+        Résultats de recherche : <span class="search-query">"{{ requete }}"</span>
+    </h1>
+
+    {% if donnees and donnees.items %}
+        <div class="results-list">
+            {% for cinema in donnees.items %}
+            <div class="cinema-result-card">
+                <h2 class="cinema-result-title">
+                    {{ cinema.nom_cinema | replace(requete, '<span class="highlight">' + requete + '</span>') | safe }}
+                </h2>
+                
+                {% if cinema.adresse %}
+                <p class="cinema-result-meta">
+                    <strong>Adresse :</strong> 
+                    {{ cinema.adresse | replace(requete, '<span class="highlight">' + requete + '</span>') | safe }}
+                </p>
+                {% endif %}
+                
+                {% if cinema.commune %}
+                <p class="cinema-result-meta">
+                    <strong>Ville :</strong> 
+                    {{ cinema.commune | replace(requete, '<span class="highlight">' + requete + '</span>') | safe }}
+                </p>
+                {% endif %}
+                
+                <p class="cinema-result-meta">
+                    {% if cinema.ecrans %}<strong>Écrans :</strong> {{ cinema.ecrans }}{% endif %}
+                    {% if cinema.fauteuils %} • <strong>Fauteuils :</strong> {{ cinema.fauteuils }}{% endif %}
+                </p>
+                
+                {% if cinema.id_cinema %}
+                <a href="{{ url_for('generales.cinema', id_cinema=cinema.id_cinema) }}" class="cinema-link">
+                    Voir la programmation →
+                </a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if donnees.pages > 1 %}
+        <div class="pagination-container">
+            <a href="{{ url_for('generales.recherche_rapide_cine', page=donnees.prev_num, chaine=requete) }}"
+               class="pagination-btn {% if donnees.page == 1 %}disabled{% endif %}">
+                ‹ Précédent
+            </a>
+
+            {% for page_num in donnees.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+                {% if page_num %}
+                    <a href="{{ url_for('generales.recherche_rapide_cine', page=page_num, chaine=requete) }}"
+                       class="pagination-btn {% if donnees.page == page_num %}active{% endif %}">
+                        {{ page_num }}
+                    </a>
+                {% else %}
+                    <span class="pagination-btn disabled">...</span>
+                {% endif %}
+            {% endfor %}
+
+            <a href="{{ url_for('generales.recherche_rapide_cine', page=donnees.next_num, chaine=requete) }}"
+               class="pagination-btn {% if donnees.page == donnees.pages %}disabled{% endif %}">
+                Suivant ›
+            </a>
+        </div>
+        {% endif %}
+
+    {% elif requete %}
+        <div class="no-results">
+            <p>Aucun cinéma trouvé pour <strong>"{{ requete }}"</strong></p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Essayez avec d'autres mots-clés</p>
+        </div>
+
+    {% else %}
+        <div class="no-results">
+            <p>Entrez un terme de recherche pour trouver des cinémas</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

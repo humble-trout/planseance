@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block title %}Mes Séances - Plan-Séance{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/calendrier-liste.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="calendar-list-container">
+    <h1 class="title">
+        Mes Séances
+    </h1>
+    
+    {% if not current_user.is_authenticated %}
+        <div class="empty-state">
+            <p class="empty-state-text">Vous devez être connecté pour voir vos séances</p>
+            <a href="{{ url_for('users.login') }}" class="btn-browse">Se connecter</a>
+        </div>
+    {% elif selections is none or selections|length == 0 %}
+        <div class="empty-state">
+            <p class="empty-state-text">Aucune séance sélectionnée pour le moment</p>
+            <p class="empty-state-subtitle">Parcourez les films et ajoutez des séances à votre calendrier !</p>
+            <a href="{{ url_for('generales.index') }}" class="btn-browse">Parcourir les films</a>
+        </div>
+    {% else %}
+        <div class="list-header">
+            <p class="seances-count">
+                <strong>{{ selections|length }}</strong> séance(s) dans votre calendrier
+            </p>
+            <a href="{{ url_for('generales.calendrier') }}" class="btn-back-calendar">
+                Voir le calendrier
+            </a>
+        </div>
+        
+        {% for seance in selections %}
+        <div class="seance-card">
+            {% if seance.poster_url %}
+                <img src="{{ seance.poster_url }}" alt="{{ seance.titre }}" class="seance-poster">
+            {% else %}
+                <div class="seance-poster-placeholder"></div>
+            {% endif %}
+            
+            <div class="seance-details">
+                <h2 class="seance-title">{{ seance.titre }}</h2>
+                <div class="seance-info">
+                    <div class="seance-info-item seance-date">
+                        {{ seance.debut.strftime('%d/%m/%Y à %H:%M') if seance.debut else 'Date non disponible' }}
+                    </div>
+                    <div class="seance-info-item">
+                        {{ seance.cinema}}
+                    </div>
+                </div>
+                
+                <div class="seance-actions">
+                    {% if seance.id_film %}
+                    <a href="/film/{{ seance.id_film }}" class="btn-action btn-film">
+                        Voir le film
+                    </a>
+                    {% endif %}
+                    {% if seance.id_cinema %}
+                    <a href="/cinema/{{ seance.id_cinema }}" class="btn-action btn-cinema">
+                        Voir le cinéma
+                    </a>
+                    {% endif %}
+                    
+                    {% if seance.matched_user_id %}
+                    <a href="{{ url_for('users.view_user_profile', user_id=seance.matched_user_id) }}" class="btn-action btn-match" title="Voir le profil de votre match">
+                        <img src="{{ url_for('static', filename='img/stamp-match.png') }}" alt="Match" class="match-stamp-inline">
+                    </a>
+                    {% endif %}
+                
+                </div>
+            </div>
+            
+            <!-- Bouton Supprimer -->
+            <button class="btn-delete-seance" 
+                    onclick="confirmerSuppression({{ seance.id_seance }}, '{{ seance.titre|replace("'", "\\'") }}')"
+                    title="Supprimer cette séance">
+                <img src="{{ url_for('static', filename='img/croix.png') }}" alt="Supprimer">
+            </button>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function confirmerSuppression(idSeance, titre) {
+    if (confirm(`Voulez-vous vraiment supprimer la séance "${titre}" de votre calendrier ?`)) {
+        // Envoyer la requête de suppression
+        fetch(`/api/calendrier/supprimer/${idSeance}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Recharger la page pour voir les changements
+                window.location.reload();
+            } else {
+                alert('Erreur lors de la suppression : ' + (data.message || 'Erreur inconnue'));
+            }
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+            alert('Erreur lors de la suppression de la séance');
+        });
+    }
+}
+</script>
+{% endblock %}

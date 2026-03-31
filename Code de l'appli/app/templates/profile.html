@@ -1,0 +1,176 @@
+{% extends "layout.html" %}
+
+{% block title %}Profil - {{ config['APP_NAME'] }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container profile-page">
+    {% if current_user.is_authenticated %}
+        <div class="row">
+            <!-- Colonne gauche : Photo et Informations -->
+            <div class="col-lg-4 mb-4">
+                <div class="info-section card-container card-sticky">
+                    <h1 class="title">{{ current_user.nom}}</h1>
+                    
+                    <!-- pdp -->
+            <div class="profile-photo" 
+                style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; border: 1px solid #ccc;">
+                
+                {% if current_user.photo_url %}
+                    <img src="{{ current_user.photo_url }}" 
+                        alt="Photo de profil" 
+                        style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                {% else %}
+                    <svg viewBox="0 0 100 100" 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        style="width: 60%; height: 60%; color: #888;">
+                        <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="50" cy="40" r="15" fill="currentColor"/>
+                        <path d="M 30 75 Q 30 60, 50 60 Q 70 60, 70 75" fill="currentColor"/>
+                    </svg>
+                {% endif %}
+                
+            </div>
+                    
+                    <!-- info inscriptions -->
+                    <p class="info">
+                        <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Nom d'utilisateur :</strong> <span class="info-value">{{ current_user.nom_utilisateur }}</span>
+                    </p>
+                    {% if current_user.age %}
+                    <p class="info">
+                        <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Age :</strong> <span class="info-value">{{ current_user.age }} ans</span>
+                    </p>
+                    {% endif %}
+                    {% if current_user.email %}
+                    <p class="info">
+                        <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Email :</strong> <span class="info-value">{{ current_user.email }}</span>
+                    </p>
+                    {% endif %}
+                    <p class="info">
+                        <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Séances au calendrier :</strong> <span class="info-value">{{ calendar_count or 0 }}</span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- colonne droite info -->
+            <div class="col-lg-8">
+                <div class="profile-section">
+                    <h2 class="section-title">Profil</h2>
+                    
+                    <p class="info">
+                        <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Biographie :</strong> <span class="info-value">{{ current_user.bio or 'Aucune biographie pour le moment.' }}</span>
+                    </p>
+                    
+                    <p class="info">
+                        <strong><img src="/static/img/pin.png" style="width: 18px; height: 18px; vertical-align: middle;"> Cinéma Favori :</strong> <span class="info-value">{{ fav_cinema }}</span>
+                    </p>
+                    
+                    <!-- séparateur -->
+                    <div style="margin-top: 25px; padding-top: 25px; border-top: 2px solid var(--rose-clair);"></div>
+                    
+                    <!-- films vu -->
+                    <section class="favorite-films-section">
+                        <h3 class="subsection-title">Films vus récemment</h3>
+                        
+                        {% if calendar_films and calendar_films|length > 0 %}
+                        <div class="films-scroll">
+                            {% for film in calendar_films %}
+                            <a href="{{ url_for('generales.film', id_film=film.id_film) }}" class="film-poster-link">
+                                <img src="{{ film.poster_url or url_for('static', filename='img/placeholder-poster.jpg') }}" 
+                                     alt="{{ film.titre }}"
+                                     class="film-poster">
+                            </a>
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        <p class="no-films">Ajoutez des séances passées à votre calendrier pour voir vos films préférés.</p>
+                        {% endif %}
+                    </section>
+                    
+                    <!-- Séparateur rose -->
+                    <div style="margin-top: 30px; padding-top: 30px; border-top: 2px solid var(--rose-clair);"></div>
+                    
+                    <!-- bouton action profil-->
+                    <div class="profile-actions-inline">
+                        <button class="btn-profile-action btn-edit" onclick="window.location.href='{{ url_for('users.profile', edit='true') }}'">
+                            Modifier Mon Profil
+                        </button>
+                        <button class="btn-profile-action btn-logout" onclick="window.location.href='{{ url_for('users.logout') }}'">
+                            Déconnexion
+                        </button>
+                        <button class="btn-profile-action btn-show-danger" onclick="document.getElementById('danger-zone').style.display='block'; this.style.display='none'">
+                            Supprimer Mon Compte
+                        </button>
+                    </div>
+                    
+                    <!-- suppression cachée -->
+                    <div id="danger-zone" style="display:none;">
+                        <p class="danger-title">Suppression De Compte</p>
+                        <p class="danger-text">Cette action est irréversible. Toutes vos données seront définitivement supprimées.</p>
+                        <div class="danger-buttons">
+                            <button class="btn-danger-cancel" onclick="document.getElementById('danger-zone').style.display='none'; document.querySelector('.btn-show-danger').style.display='block'">
+                                Annuler
+                            </button>
+                            <button class="btn-danger-confirm" onclick="if(confirm('Êtes-vous vraiment sûr ?')) window.location.href='{{ url_for('users.delete_account') }}'">
+                                Confirmer La Suppression
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    {% else %}
+        <div class="not-logged-in">
+            <h1>Veuillez vous connecter</h1>
+            <p>Vous devez être connecté pour accéder à votre profil.</p>
+            <a href="{{ url_for('users.login') }}" class="btn-login">Se connecter</a>
+        </div>
+    {% endif %}
+</div>
+
+<!-- Modal d'édition (si edit_mode) -->
+{% if edit_mode and current_user.is_authenticated %}
+<div class="edit-modal-overlay" onclick="window.location.href='{{ url_for('users.profile') }}'">
+    <div class="edit-modal" onclick="event.stopPropagation()">
+        <h2>Modifier Mon Profil</h2>
+        
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Photo de profil</label>
+                <input type="file" name="photo" accept="image/*">
+                <small>Formats: PNG, JPG, JPEG, GIF (Max 5MB)</small>
+            </div>
+            
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" name="nom" value="{{ current_user.nom or '' }}">
+            </div>
+            
+            <div class="form-group">
+                <label>Date de naissance</label>
+                <input type="date" name="date_naissance" min="1900-01-01" value="{{ current_user.date_naissance or '' }}">
+            </div>
+            
+            <div class="form-group">
+                <label>Biographie</label>
+                <textarea name="bio" rows="4">{{ current_user.bio or '' }}</textarea>
+            </div>
+            
+            <div class="modal-actions">
+                <button type="button" class="btn-modal-cancel" onclick="window.location.href='{{ url_for('users.profile') }}'">
+                    Annuler
+                </button>
+                <button type="submit" class="btn-modal-save">
+                    Enregistrer
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
