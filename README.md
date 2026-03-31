@@ -17,19 +17,8 @@ Pour utiliser l'application, il est nécessaire de créer un compte grâce à la
 
 La fonction "matching", centrale dans l'application, permet d'organiser une rencontre entre deux utilisateurs sur la base d'une séance commune de cinéma. 
 
-Deux options sont possibles pour tester cette fonction : 
+Pour tester cette fonctionnalité, vous aurez besoin de créer deux comptes différents et d'inscrire les deux comptes à la même séance. Un match vous sera alors proposé et vous aurez la possibilité de l'accepter ou non. 
 
-- Il est possible de créer deux comptes différents et de s'inscrire à la même séance.
 
-- Nous avons créé plusieurs utilisateurs qui se sont inscrits à des séances.
-
-  => Pour matcher avec l'utilisateur Raphael, il suffit de s'inscrire pour aller voir "La Réparation", film diffusé au café des images le 28 avril 2026.
-  
-  => Pour matcher avec l'utilisateur Kev Adams, il faut s'inscrire à la séance de ..., au cinéma .... le .... .
-  
-  => L'utilisateur .... ira à la séance de ... le ... à ....
-  
-  => L'utilisateur .... ira à la séance de ... le ... à ....
-  
 
 
