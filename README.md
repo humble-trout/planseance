@@ -28,6 +28,7 @@ Deux options sont possibles pour tester cette fonction :
   => Pour matcher avec l'utilisateur Kev Adams, il faut s'inscrire à la séance de ..., au cinéma .... le .... .
   
   => L'utilisateur .... ira à la séance de ... le ... à ....
+  
   => L'utilisateur .... ira à la séance de ... le ... à ....
   
 
