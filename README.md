@@ -4,7 +4,6 @@ Code de l'application Plan Séance, réalisée dans le cadre du M2 TNAH de l'Eco
 Important: entrer à la ligne 9 de app/_ _init _ _.py ses informations de connection Postgres, dans l'URI. Le faire aussi dans .env.
 
 D'après le modèle Dating App de Shaktiranjan.
-D'après le modèle Dating App de Shaktiranjan.
 
 # Lancement de l'application 
 
@@ -14,3 +13,4 @@ IMPORTANT : Avant de faire tourner ce script, il est nécessaire de créer la ba
 
 # Utilisation 
 
+Pour utiliser l'application, il est nécessaire de créer un compte. 
