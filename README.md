@@ -5,9 +5,20 @@ Important: entrer à la ligne 9 de app/_ _init _ _.py ses informations de connec
 
 D'après le modèle Dating App de Shaktiranjan.
 
-# Objectif : 
+# Présentation et objectifs de l'application : 
 
-planseance est une application de type "rencontre" centrée sur les pratiques cinématographiques. 
+Notre projet vise à développer une une application de type « rencontre » centrée sur les pratiques
+cinématographiques au sein des salles indépendantes. Elle offre des fonctionnalités sociales
+permettant de se connecter et de « matcher » avec d'autres utilisateurices prévoyant d'assister à une
+même séance de cinéma. L'expérience est personnalisée par la création d'un profil cinéphile fondé sur
+les films et cinémas favoris, ainsi que par la construction d'un calendrier de séances sur mesure. Enfin,
+l'application intègre des outils de datavisualisation, incluant une carte interactive pour localiser les
+cinémas et un module « Rewind » analysant les habitudes de consommation de l'utilisateurice.
+A travers ce projet, nous voulons apprendre à maîtriser Flask, afin de construire notamment un moteur de
+recherche, un système de « matching », et une carte interactive. Nous souhaitons également affiner nos
+compétences en SQL, à travers diverses opérations de traitement de données. Enfin, nous mobiliserons
+nos connaissances en datavisualization afin de créer une série de graphiques personnalisés selon les
+données de l’utilisateurice de l’application.
 
 # Lancement de l'application 
 
@@ -41,7 +52,7 @@ prévu d'assister.
 
 # Notes d'utilisation 
 
-La fonction "matching", centrale dans l'application, permet d'organiser une rencontre entre deux utilisateurs. Pour tester cette fonctionnalité, vous aurez donc besoin de créer deux comptes différents et d'inscrire les deux comptes à la même séance. Un match vous sera alors proposé et vous aurez la possibilité de l'accepter ou non. 
+- La fonction "matching", centrale dans l'application, permet d'organiser une rencontre entre deux utilisateurs. Pour tester cette fonctionnalité, vous aurez donc besoin de créer deux comptes différents et d'inscrire les deux comptes à la même séance. Un match vous sera alors proposé et vous aurez la possibilité de l'accepter ou non. 
 
 
 
