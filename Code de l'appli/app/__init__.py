@@ -25,13 +25,13 @@ def create_app():
 
     db.init_app(app)
 
-    #connecte le login manager à cette application et redirige l'utilisateur vers la page de login s'il n'est pas connecté
+    #Connecte le login manager à cette application et redirige l'utilisateur vers la page de login s'il n'est pas connecté
     login_manager.init_app(app)
     login_manager.login_view = 'users.login'
     login_manager.login_message = None  # Pas de message flash, redirection silencieuse
 
     with app.app_context():
-        #il y avait des erreurs dans le terminal car Flask cherchait à utiliser sqlite. Le code suivant est la suggestion d'un LLM
+        #Il y avait des erreurs dans le terminal car Flask cherchait à utiliser sqlite. Le code suivant est la suggestion d'un LLM
         from sqlalchemy import create_engine
         engine = create_engine(POSTGRES_URI)
 
@@ -46,6 +46,7 @@ def create_app():
         from .routes.generales import generales
 
         app.register_blueprint(users)
+        #Insertions avait un url_prefix dans l'application modèle de Shaktiranjan, que j'ai oublié de retirer donc nous avons tout codé avec. Je le laisse là par peur que le retirer ne casse certaines pages de notre code
         app.register_blueprint(insertions, url_prefix='/api')
         app.register_blueprint(generales)
 
@@ -58,24 +59,3 @@ def create_app():
             return None
         
     return app
-
-# def create_app():
-#     app = Flask(__name__)
-#     # Définit des limites de taille pour les images utilisées par les utilisateurs
-#     app.config['UPLOAD_FOLDER'] = 'static/uploads'
-#     app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024     
-    
-#     from .routes.generales import generales
-#     from .routes.users import users
-#     from .routes.insertions import insertions
-
-#     app.register_blueprint(generales)
-#     app.register_blueprint(users)
-  
-#     #Suggestion d'un LLM: ajouter un préfixe aux routes API
-#     app.register_blueprint(insertions, url_prefix='/api') 
-
-#     #Suggestion d'un LLM permettant d'appeler le nom de l'application dans notre HTML avec {{ config['APP_NAME'] }}
-#     app.config['APP_NAME'] = "Plan Séance"
-
-#     return app
