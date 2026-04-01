@@ -1,4 +1,4 @@
-# planseance
+## Bienvenue dans Plan Séance !
 Ce dépôt GitHub contient le code complet de l'application Plan Séance, réalisée dans le cadre du M2 TNAH de l'Ecole Nationale des Chartes en 2025-2026. Il est composé de deux dossiers : Script BDD, qui permet de créer la base de données nécessaire au fonctionnement de l'application, et Code de l'appli, qui contient l'application elle-même.
 
 L'application Plan Séance a été réalisée en utilisant Dating App de Shaktiranjan (https://github.com/Shakti077/DatingApp) comme un modèle. Nous avons restructuré ce modèle selon ce que nous avions vu en cours de Flask, et avons utilisé certaines des routes de Shaktiranjan comme base pour la création des nôtres (notamment en ce qui concerne la gestion de compte et le matching).
