@@ -16,7 +16,7 @@ from sqlalchemy import or_
 
 users = Blueprint('users', __name__)
 
-#A été mis ici car ça ne marchait pas quand il était dans utils.py
+#A été mis ici car ça ne marchait pas quand il était dans utils.py. Je ne sais pas si ça marche mais je le laisse au cas où
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 def allowed_file(filename):
@@ -80,7 +80,7 @@ def login():
         flash('Email ou mot de passe invalide', 'error')
         return redirect(url_for('users.login'))
 
-    #Pour régler un problème de déconnexion sur la page calendrier. Suggestion de Gemini
+    #Pour régler un problème de déconnexion sur la page calendrier. Suggestion d'un LLM
     if request.method == 'POST':
         user = Utilisateur.query.filter_by(email=request.form.get('email')).first()
         if user and check_password_hash(user.motdepasse, request.form.get('password')):
@@ -99,61 +99,60 @@ def logout():
 @login_required
 def profile():
     """Page de profil utilisateur"""
-    # Pour modifier le profil
+    #L'edit mode est ce que l'utilisateur voit lorsqu'il sélectionne "Modifier mon profil"
     edit_mode = request.args.get('edit') == 'true'
     
-    # Pour enregistrer les modifications que l'utilisateur fait à son profil
+    #Enregistre les modifications que l'utilisateur fait à son profil
     if request.method == 'POST':
         nouveau_nom = request.form.get('nom')
         date_n_str = request.form.get('date_naissance')
         nouvelle_bio = request.form.get('bio')
         
         try:
-            # On affecte les nouvelles valeurs à l'objet current_user
-            # Mise à jour de la colonne 'nom'
+            #Mise à jour du nom de l'utilisateur
             if nouveau_nom is not None:
-                current_user.nom = nouveau_nom # Met à jour la colonne 'nom'
+                current_user.nom = nouveau_nom
 
-            # Mise à jour de la date de naissance (pour le calcul auto de l'âge)
+            #Mise à jour de la date de naissance
             if date_n_str:
-                # Conversion de la chaîne HTML 'YYYY-MM-DD' en objet date Python
+                #Suggestion d'un LLM. Conversion de la chaîne HTML 'YYYY-MM-DD' en objet date Python
                 current_user.date_naissance = datetime.strptime(date_n_str, '%Y-%m-%d').date()
 
             if nouvelle_bio is not None:
                 current_user.bio = nouvelle_bio
             
-            # Gestion de l'upload de photo
+            #Suggestion d'un LLM. Gestion de l'upload de photo
             if 'photo' in request.files:
                 file = request.files['photo']
                 
-                # Si l'utilisateur n'a pas sélectionné de fichier, le navigateur envoie un fichier vide sans nom
+                #Si l'utilisateur n'a pas sélectionné de fichier, le navigateur envoie un fichier vide sans nom
                 if file and file.filename != '' and allowed_file(file.filename):
-                    # Sécuriser le nom (évite les injections de chemin type ../../etc/passwd)
+                    #Sécurise le nom (évite les injections de chemin type ../../etc/passwd)
                     filename = secure_filename(file.filename)
                     
-                    # Créer un nom unique pour éviter les conflits (ex: user_5_photo.jpg)
+                    #Crée un nom unique pour éviter les conflits (ex: user_5_photo.jpg)
                     unique_filename = f"user_{current_user.id_utilisateur}_{filename}"
                     
-                    # Chemin complet pour l'enregistrement physique
+                    #Chemin complet pour l'enregistrement physique
                     upload_path = os.path.join(current_app.config['UPLOAD_FOLDER'], unique_filename)
                     
-                    # S'assurer que le dossier existe
+                    #S'assure que le dossier existe où l'enregistrement physique est envoyé existe bien
                     os.makedirs(current_app.config['UPLOAD_FOLDER'], exist_ok=True)
                     
-                    # Sauvegarder le fichier sur le serveur
+                    #Sauvegarde le fichier sur le serveur
                     file.save(upload_path)
                     
-                    # Mettre à jour l'URL dans la base de données (chemin relatif pour le HTML)
-                    # On stocke '/static/uploads/nom_du_fichier'
+                    #Met à jour l'URL de la photo dans la base de données
                     current_user.photo_url = url_for('static', filename=f'uploads/{unique_filename}')
                     
-                    flash('Photo de profil mise à jour !', 'success')
+                    #Commenté car redondant avec le message suivant "Profil mis à jour avec succès"
+                    #flash('Photo de profil mise à jour !', 'success')
 
-            # On sauvegarde les modifications dans la base de données
+            #Sauvegarde les mises à jours
             db.session.commit()
             flash('Profil mis à jour avec succès !', 'success')
             
-            # On sort IMMEDIATEMENT ici en cas de succès
+            #Renvoi vers le profil hors edit mode s'il y a un succèe
             return redirect(url_for('users.profile'))
             
         except Exception as e:
@@ -172,13 +171,11 @@ def profile():
     )
 
     if favorite_cinema_query:
-        # Ici favorite_cinema_query ressemble à ('Nom du Ciné', 5)
         fav_cinema = favorite_cinema_query[0]
     else:
         fav_cinema = "Aucun cinéma favori pour le moment"
     
-    # Récupère les films du calendrier de l'utilisateur pour afficher dans "Films préférés"
-    # Filtre: uniquement les films dont les séances sont PASSÉES (avant aujourd'hui)
+    #Récupère les films du calendrier de l'utilisateur pour afficher dans les films récemment vus
     from app.models import FilmTitre
     from app.tmdb_utils import search_movie_on_tmdb
     
@@ -204,7 +201,7 @@ def profile():
             'poster_url': f"https://image.tmdb.org/t/p/w500{tmdb_data['poster_path']}" if tmdb_data and tmdb_data.get('poster_path') else None
         })
     
-    # Compte total des séances
+    #Compte total des séances
     calendar_count = db.session.query(Calendrier).filter(
         Calendrier.id_utilisateur == current_user.id_utilisateur
     ).count()
@@ -222,10 +219,9 @@ def profile():
 @login_required
 def view_user_profile(user_id):
     """Afficher le profil public d'un autre utilisateur"""
-    # Récupérer l'utilisateur
     user = Utilisateur.query.get_or_404(user_id)
     
-    # Récupérer le cinéma favori
+    #Récupère le cinéma favori
     favorite_cinema_query = (
         db.session.query(Seance.nom_cinema, func.count(Seance.nom_cinema).label('occurrence'))
         .join(Calendrier, Seance.id_seance == Calendrier.id_seance)
@@ -240,7 +236,7 @@ def view_user_profile(user_id):
     else:
         fav_cinema = "Aucun cinéma favori pour le moment"
     
-    # Récupérer les films du calendrier
+    #Films récemment vus
     from app.models import FilmTitre
     from app.tmdb_utils import search_movie_on_tmdb
     
@@ -266,12 +262,12 @@ def view_user_profile(user_id):
             'poster_url': f"https://image.tmdb.org/t/p/w500{tmdb_data['poster_path']}" if tmdb_data and tmdb_data.get('poster_path') else None
         })
     
-    # Compte total des séances
+    #Compte total des séances
     calendar_count = db.session.query(Calendrier).filter(
         Calendrier.id_utilisateur == user_id
     ).count()
     
-    # Calculer l'âge
+    #Calcul de l'âge
     from datetime import date
     age = None
     if user.date_naissance:
@@ -291,6 +287,7 @@ def view_user_profile(user_id):
 @users.route('/delete_account', methods=['POST', 'GET'])
 @login_required
 def delete_account():
+    """Permet à l'utilisateur de supprimer son compte. Snif :("""
     try:
         user = current_user
         db.session.delete(user)
