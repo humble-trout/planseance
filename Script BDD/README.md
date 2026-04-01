@@ -1,3 +1,5 @@
+# Base de données Plan Séance
+
 **Tout se passe (configuration, commandes dans le terminal) au sein de ce dossier dans lequel vous lisez ce fichier**
 
 **Le projet doit s’exécuter avec `python run.py` sans aucune modification du code fourni, seuls les fichiers .env et les dossiers sql/ et csv/ doivent être créés et modifiés.**
