@@ -7,7 +7,6 @@ class FiltreFilmForm(FlaskForm):
     chaine = StringField('Titre')
     genre = SelectField('Genre', choices=[('', 'Tous')])
     annee = IntegerField('Année')
-# On laisse 'choices' vide ici, on le remplira dynamiquement dans la route
 
 class SimplePagination:
         def __init__(self, items, page, per_page, total):
@@ -21,7 +20,7 @@ class SimplePagination:
             self.prev_num = page - 1 if self.has_prev else None
             self.next_num = page + 1 if self.has_next else None
         def iter_pages(self, left_edge=2, left_current=2, right_current=5, right_edge=2):
-                """Génère les numéros de pages pour la pagination"""
+                #Génère les numéros de pages pour la pagination des résultats. Réalisé avec l'aide d'un LLM
                 last = 0
                 for num in range(1, self.pages + 1):
                     if num <= left_edge or \
