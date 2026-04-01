@@ -1,13 +1,13 @@
 # planseance
 Ce dépôt GitHub contient le code complet de l'application Plan Séance, réalisée dans le cadre du M2 TNAH de l'Ecole Nationale des Chartes en 2025-2026. Il est composé de deux dossiers : Script BDD, qui permet de créer la base de données nécessaire au fonctionnement de l'application, et Code de l'appli, qui contient l'application elle-même.
 
-**Important :** afin de connecter la base de données à l'application, il faut entrer ses informations de connection Postgres dans les fichiers .env contenus dans les dossiers Script BDD et Code de l'appli. Pour ce dernier, il faut aussi les renseigner à la ligne 9 du fichier app/_ _init _ _.py.
-
 L'application Plan Séance a été réalisée en utilisant Dating App de Shaktiranjan (https://github.com/Shakti077/DatingApp) comme un modèle. Nous avons restructuré ce modèle selon ce que nous avions vu en cours de Flask, et avons utilisé certaines des routes de Shaktiranjan comme base pour la création des nôtres (notamment en ce qui concerne la gestion de compte et le matching).
 
-Nous avons eu recours à des LLM pour aider à expliquer certaines des erreurs que nous rencontrions et à régler certains problèmes de notre code que nous ne parvenions pas à résoudre par nous-mêmes.
+Nous avons eu recours à des LLM pour aider à expliquer certaines des erreurs que nous rencontrions et à régler certains problèmes de notre code que nous ne parvenions pas à résoudre par nous-mêmes. L'utilisation de LLMs est signalée dans les commentaires du code.
 
-# Présentation et objectifs de l'application : 
+**Important :** afin de connecter la base de données à l'application, il faut entrer ses informations de connection Postgres dans les fichiers .env contenus dans les dossiers Script BDD et Code de l'appli. Pour ce dernier, il faut aussi les renseigner à la ligne 9 du fichier app/_ _init _ _.py.
+
+# Présentation et objectifs de l'application
 
 Plan Séance est une application de type « rencontre » centrée sur la fréquentation des cinémas indépendants. Elle permet de découvrir des films et des cinémas, d'obtenir un calendrier personnalisé avec les séances auquel l'on prévoit d'assister, et de « matcher » avec d'autres utilisateurices inscrit-es aux mêmes séances. L'utilisateurice peut personnaliser son profil en y ajoutant une biographie et une photo de profil, et il peut également y visionner son cinéma « favori », celui qu'il fréquente le plus. L'application intègre des outils de datavizualisation : le calendrier, une carte interactive des cinémas indépendants de France, et la page « Cinématch » qui affiche les matchs confirmés, possibles et en attente.
 
