@@ -107,3 +107,88 @@
     .cinema-link:hover {
         text-decoration: underline;
     }
+
+/*pour la recherche film*/
+    /* Conteneur global de la barre de filtres */
+    .search-filters-bar {
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        margin: 40px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border: 1px solid #eee;
+    }
+
+    /* Flexbox pour l'alignement des groupes */
+    .filters-form {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    /* Groupes de champs */
+    .filter-group {
+        flex: 1;
+        min-width: 180px;
+    }
+
+    .filter-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: var(--vert-fonce);
+        font-size: 0.9rem;
+        padding-left: 15px;
+    }
+
+    /* Style des Inputs et Selects (identique à l'accueil) */
+    .form-control-custom {
+        width: 100%;
+        padding: 12px 20px;
+        border: 2px solid var(--vert-fonce);
+        border-radius: 25px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        outline: none;
+        background-color: white;
+        box-sizing: border-box;
+    }
+
+    /* Effet Focus */
+    .form-control-custom:focus {
+        border-color: #8c3839;
+        box-shadow: 0 4px 12px rgba(140, 56, 57, 0.2);
+    }
+
+    /* Bouton Filtrer */
+    .btn-filter {
+        background-color: var(--vert-fonce);
+        color: white;
+        border: none;
+        padding: 12px 35px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        height: 50px;
+    }
+
+    .btn-filter:hover {
+        background-color: #8c3839;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .btn-filter:active {
+        transform: translateY(0);
+    }
+
+
+
+
+
+
+

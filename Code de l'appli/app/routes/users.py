@@ -120,8 +120,8 @@ def profile():
 
             if nouvelle_bio is not None:
                 current_user.bio = nouvelle_bio
-                            
-#Suggestion d'un LLM. Gestion de l'upload de photo
+            
+            #Suggestion d'un LLM. Gestion de l'upload de photo
             if 'photo' in request.files:
                 file = request.files['photo']
                 
