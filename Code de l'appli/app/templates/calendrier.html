@@ -49,16 +49,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     const calendarEl = document.getElementById('calendar');
     
-   // Préparer les événements depuis les données Jinja2
+   //Préparer les événements depuis les données Jinja2
+   //Ce code est une suggestion d'un LLM suite à un problème rencontré où la présence d'une apostrophe ou d'un guillemet dans le titre d'un film faussait les données pour Jinja et empêchait le calendrier de s'afficher
     const events = [
         {% for seance in selections %}
         {
-            title: '{{ seance.titre|safe }}',
+            title: {{ seance.titre|tojson }},
             start: '{{ seance.debut.isoformat() if seance.debut else "" }}',
             extendedProps: {
-                cinema: '{{ seance.cinema|safe if seance.cinema else "Cinéma non spécifié" }}',
-                id_film: {{ seance.id_film if seance.id_film else 'null' }},
-                id_cinema: {{ seance.id_cinema if seance.id_cinema else 'null' }}
+                cinema: {{ seance.cinema|tojson if seance.cinema else "Cinéma non spécifié"|tojson }},
+                id_film: {{ seance.id_film|tojson }},
+                id_cinema: {{ seance.id_cinema|tojson }}
             },
             classNames: ['seance-event']
         }{{ ',' if not loop.last else '' }}

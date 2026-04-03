@@ -22,8 +22,7 @@ def verify_film_on_tmdb(film_data):
 def index():
     """Page d'accueil avec films disponibles validés TMDB"""
     try:
-        # Requête avec SQLAlchemy - TOUS les films avec séances
-        # JOIN sur le titre car seance.id_film est NULL
+        #Requête avec SQLAlchemy pour obtenir tous les films avec des séances associées
         subquery = (
             db.session.query(
                 FilmTitre.id_film,
@@ -39,7 +38,6 @@ def index():
             .subquery()
         )
         
-        # Requête principale avec DISTINCT ON
         films_query = (
             db.session.query(
                 subquery.c.id_film,
@@ -47,17 +45,16 @@ def index():
             )
             .distinct(subquery.c.titre_normalise)
             .order_by(subquery.c.titre_normalise, subquery.c.titre)
-            .limit(100)  # Augmenté pour compenser le filtrage TMDB
+            .limit(100)
         )
         
         films_db = films_query.all()
         print(f"{len(films_db)} films trouvés")
         
-        # Vérification TMDB en parallèle
+        #Vérification TMDB en parallèle
         films_to_verify = [(f.id_film, f.titre) for f in films_db]
         verified_films = []
         
-        print(f"🔍 Validation TMDB en cours...")
         with ThreadPoolExecutor(max_workers=10) as executor:
             futures = {executor.submit(verify_film_on_tmdb, film): film for film in films_to_verify}
             
@@ -66,8 +63,6 @@ def index():
                 if is_valid:
                     verified_films.append({'id_film': film_id, 'titre': titre})
         
-        # Limiter à x films après validation
-        #verified_films = verified_films[:100]
         
         print(f"{len(verified_films)} films validés sur TMDB")
         print(f"Cache stats: {get_cache_stats()}")
@@ -84,7 +79,7 @@ def index():
 def film(id_film):
     """Page de détails d'un film avec ses séances"""
     try:
-        # Récupérer les informations du film avec SQLAlchemy
+        #Récupérer les informations du film avec SQLAlchemy
         film_query = (
             db.session.query(
                 FilmTitre.id_film,
@@ -104,7 +99,7 @@ def film(id_film):
             print(f"Film {id_film} non trouvé")
             return "Film non trouvé", 404
         
-        # Convertir en dico pour pouvoir ajouter les infos TMDB
+        #Convertir en dictionnaire pour pouvoir ajouter les infos TMDB
         film_data = {
             'id_film': film_query.id_film,
             'titre': film_query.titre,
@@ -123,7 +118,7 @@ def film(id_film):
             'pays': None
         }
         
-        # Compléter avec TMDB si disponible
+        #Compléter avec les données de TMDB si elles existent
         tmdb_data = search_movie_on_tmdb(film_query.titre)
         if tmdb_data:
             film_data['synopsis'] = tmdb_data.get('overview')
@@ -138,13 +133,13 @@ def film(id_film):
             if tmdb_data.get('production_countries'):
                 film_data['pays'] = ', '.join([p['name'] for p in tmdb_data['production_countries']])
         
-        # 3. Récupérer les séances avec tentative d'identification des cinémas
+        #Récupérer les séances en identifiant les cinémas correspondants
         seances_query = (
             db.session.query(
                 Seance.id_seance,
                 Seance.debut.label('date_seance'),
                 Seance.version,
-                Seance.id_cinema,  # AJOUT ID CINEMA
+                Seance.id_cinema,
                 Cinema.nom_cinema.label('cinema_nom'),
                 Cinema.commune.label('ville'),
                 Cinema.adresse,
@@ -161,15 +156,15 @@ def film(id_film):
             .all()
         )
         
-        # Identifier les cinémas + inclure ID pour liens
+        #Identifier les cinémas, avec id_cinema pour faire le lien avec les séances
         seances = []
         for s in seances_query:
             seance_dict = {
                 'id_seance': s.id_seance,
                 'date_seance': s.date_seance,
-                'heure_debut': s.date_seance,  # Contient date + heure
+                'heure_debut': s.date_seance,
                 'version': s.version or 'VO',
-                'id_cinema': s.id_cinema,  # AJOUT ID CINEMA
+                'id_cinema': s.id_cinema,
                 'cinema_nom': s.cinema_nom or s.seance_cinema_nom or 'Cinéma non spécifié',
                 'ville': s.ville
             }
@@ -198,13 +193,12 @@ def cinemap():
 
 @generales.route('/api/cinemas')
 def api_cinemas():
-    """API pour récupérer les cinémas avec leurs films programmés - VERSION OPTIMISÉE"""
+    """API pour récupérer les cinémas avec leurs films programmés"""
     try:
-        # Mode: 'light' (sans affiches, rapide) ou 'full' (avec affiches, plus lent)
+        #Il y a deux modes: light (sans affiches, rapide) et full (avec affiches, plus lent)
         mode = request.args.get('mode', 'light')
         
         # Récupérer les cinémas avec au moins un film programmé
-        # JOIN sur nom_cinema car seance.id_cinema est NULL
         cinemas_query = (
             db.session.query(
                 Cinema.id_cinema,
@@ -220,7 +214,6 @@ def api_cinemas():
                 Cinema.latitude.isnot(None),
                 Cinema.longitude.isnot(None),
                 Seance.debut.isnot(None),
-                # Seance.debut >= datetime.now(),  # Pas nécessaire pour l'eval mais serait nécessaire en conditions réelles
                 Seance.titre.isnot(None)
             )
             .group_by(
@@ -235,10 +228,9 @@ def api_cinemas():
             .all()
         )
         
-        # Pour chaque cinéma, récupérer les films
+        #récupérer les films associés à chaque cinéma
         cinemas_data = []
         for cinema in cinemas_query:
-            # Récupérer les films de ce cinéma via le nom
             films_query = (
                 db.session.query(
                     FilmTitre.id_film,
@@ -249,7 +241,7 @@ def api_cinemas():
                     func.lower(Seance.nom_cinema) == func.lower(cinema.nom_cinema)
                 )
                 .distinct()
-                .limit(5)  # Réduit de 10 à 5 pour popups
+                .limit(5)
                 .all()
             )
             
@@ -261,7 +253,7 @@ def api_cinemas():
                     'poster_url': None  # Initialiser pour éviter undefined
                 }
                 
-                # Récupérer l'affiche TMDB seulement en mode 'full'
+                #Récupérer l'affiche TMDB seulement en mode full
                 if mode == 'full':
                     tmdb_data = search_movie_on_tmdb(film.titre)
                     if tmdb_data and tmdb_data.get('poster_path'):
@@ -302,7 +294,7 @@ def api_cinemas():
 def cinema(id_cinema):
     """Page de détails d'un cinéma avec ses films"""
     try:
-        # Récupérer les informations du cinéma
+        #Récupérer les informations du cinéma en faisant la jointure sur id_cinema
         cinema_query = (
             db.session.query(Cinema)
             .filter(Cinema.id_cinema == id_cinema)
@@ -324,7 +316,7 @@ def cinema(id_cinema):
             'fauteuils': cinema_query.fauteuils
         }
         
-        # Récupérer tous les films programmés dans ce cinéma (via nom)
+        #Récupérer tous les films programmés dans ce cinéma
         films_query = (
             db.session.query(
                 FilmTitre.id_film,
@@ -335,14 +327,14 @@ def cinema(id_cinema):
             .filter(
                 func.lower(Seance.nom_cinema) == func.lower(cinema_data['nom_cinema']),
                 Seance.debut.isnot(None),
-                Seance.debut >= datetime.now()  # Pas nécessaire pour l'eval mais serait nécessaire en conditions réelles
+                Seance.debut >= datetime.now()  #Pas nécessaire pour l'eval mais serait nécessaire en conditions réelles
             )
             .group_by(FilmTitre.id_film, FilmTitre.titre)
             .order_by(FilmTitre.titre)
             .all()
         )
         
-        # Enrichir avec données TMDB (parallélisé pour rapidité)
+        #Enrichir avec données TMDB
         from concurrent.futures import ThreadPoolExecutor
         
         def get_film_with_poster(film):
@@ -359,11 +351,11 @@ def cinema(id_cinema):
                 'poster_url': poster_url
             }
         
-        # Paralléliser les appels TMDB avec 10 workers
+        #Suggestion d'un LLM. Fait tourner les appels TMDB de façon simultanée avec 10 workers, des processus séparés
         with ThreadPoolExecutor(max_workers=10) as executor:
             films_list = list(executor.map(get_film_with_poster, films_query))
         
-        print(f"✅ Cinéma '{cinema_data['nom_cinema']}' avec {len(films_list)} films (optimisé)")
+        print(f"Cinéma '{cinema_data['nom_cinema']}' avec {len(films_list)} films (optimisé)")
         
         return render_template('cinema.html', cinema=cinema_data, films=films_list)
         
@@ -380,10 +372,10 @@ def calendrier():
     if current_user.is_authenticated: 
 
         try:
-            # On utilise l'ID de l'utilisateur connecté via Flask-Login
+            #On utilise l'ID de l'utilisateur connecté via Flask-Login
             user_id = current_user.id_utilisateur
             
-            # Sous-requête pour compter les autres inscrits
+            #Sous-requête pour compter les autres inscrits et afficher les séances pour lesquelles il y a un match
             counts = db.session.query(
                 Calendrier.id_seance, 
                 func.count(Calendrier.id_utilisateur).label('total')
@@ -393,17 +385,17 @@ def calendrier():
                 db.session.query(Calendrier, Seance, FilmTitre, counts.c.total)
                 .join(Seance, Calendrier.id_seance == Seance.id_seance)
                 .join(FilmTitre, func.lower(Seance.titre) == func.lower(FilmTitre.titre))
-                .outerjoin(counts, Seance.id_seance == counts.c.id_seance) # Jointure pour récupérer le compte
+                .outerjoin(counts, Seance.id_seance == counts.c.id_seance) #Jointure pour récupérer le compte de l'autre utilisateur matché
                 .filter(Calendrier.id_utilisateur == user_id)
                 .all()
             )
             
-            # Enrichir avec TMDB
+            #Enrichir avec TMDB
             seances_enrichies = []
             for calendrier, seance, film, total_matches in selections:
                 nb = total_matches if total_matches else 0
 
-                # Vérifier s'il y a un match mutuel pour cette séance
+                #Vérifier s'il y a un match mutuel pour cette séance
                 matched_user = None
                 my_accepts = db.session.query(Matches.id_utilisateur2).filter(
                     Matches.id_seance == seance.id_seance,
@@ -412,7 +404,7 @@ def calendrier():
                 ).all()
                 
                 for (other_user_id,) in my_accepts:
-                    # Vérifier si l'autre personne m'a aussi accepté
+                    #Vérifier si l'autre utilisateur nous a aussi liké
                     reverse_match = db.session.query(Matches).filter(
                         Matches.id_seance == seance.id_seance,
                         Matches.id_utilisateur1 == other_user_id,
@@ -449,13 +441,11 @@ def calendrier():
 @login_required
 def calendrier_liste():
     """Page du calendrier en format liste"""
-    # Vérifier si l'utilisateur est connecté via Flask-Login
     if current_user.is_authenticated:
         try:
-            # On utilise l'ID de l'utilisateur connecté via Flask-Login
             user_id = current_user.id_utilisateur
             
-            # Récupérer les séances sélectionnées avec les détails
+            #Récupère les séances sélectionnées avec les détails
             selections = (
                 db.session.query(Calendrier, Seance, FilmTitre)
                 .join(Seance, Calendrier.id_seance == Seance.id_seance)
@@ -465,7 +455,6 @@ def calendrier_liste():
                 .all()
             )
             
-            # Enrichir avec TMDB
             seances_enrichies = []
             for calendrier, seance, film in selections:
                 # Vérifier s'il y a un match mutuel pour cette séance
@@ -477,7 +466,6 @@ def calendrier_liste():
                 ).all()
                 
                 for (other_user_id,) in my_accepts:
-                    # Vérifier si l'autre personne m'a aussi accepté
                     reverse_match = db.session.query(Matches).filter(
                         Matches.id_seance == seance.id_seance,
                         Matches.id_utilisateur1 == other_user_id,
@@ -509,32 +497,6 @@ def calendrier_liste():
     else:
         return render_template('calendrier_liste.html', selections=None)
 
-#Utiliser le code ci-dessous si on veut faire des notifs (ATTENTION: j'ai supprimé notifications.html, il faudra le récupérer le rendre utilisable par SQLAlchemy)
-
-# generales.route('/notifications')
-# @login_required
-# def notifications():
-#     """
-#     View all notifications for the logged-in user.
-#     """
-#     db = get_db()
-#     cursor = db.cursor()
-#     user_id = session['user_id']
-    
-#     cursor.execute('''
-#         SELECT n.id, n.type, n.message, n.is_read, n.created_at, n.match_id,
-#                u.username, u.name, u.photo_url
-#         FROM notifications n
-#         LEFT JOIN users u ON n.sender_id = u.id
-#         WHERE n.user_id = ?
-#         ORDER BY n.created_at DESC
-#     ''', (user_id,))
-    
-#     user_notifications = cursor.fetchall()
-#     db.close()
-    
-#     return render_template('notifications.html', notifications=user_notifications)
-
 @generales.route('/selection_seance/<int:id_seance>', methods=['POST'])
 @login_required
 def selection_seance(id_seance):
@@ -542,7 +504,7 @@ def selection_seance(id_seance):
     try:
         user_id = current_user.id_utilisateur
 
-        # Vérification optionnelle : est-ce que la séance est déjà ajoutée ?
+        #Evite d'ajouter la même séance à son calendrier plsuieurs fois
         deja_present = Calendrier.query.filter_by(
             id_utilisateur=user_id, 
             id_seance=id_seance
@@ -559,14 +521,13 @@ def selection_seance(id_seance):
         db.session.add(nouvelle_selection)
         db.session.commit()
         
-        # Vérifier s'il y a des matches potentiels pour cette séance
-        # Chercher d'autres utilisateurs qui ont aussi cette séance dans leur calendrier
+        #Vérifie s'il y a des matches potentiels pour cette séance en cherchant si d'autres utilisateurs ont cette séance dans leur calendrier
         autres_utilisateurs = db.session.query(Calendrier).filter(
             Calendrier.id_seance == id_seance,
             Calendrier.id_utilisateur != user_id
         ).count()
         
-        # Vérifier s'il y a des matches que l'utilisateur n'a pas encore refusés
+        #Vérifie s'il y a des matches que l'utilisateur n'a pas encore refusé
         matches_disponibles = db.session.query(Calendrier).filter(
             Calendrier.id_seance == id_seance,
             Calendrier.id_utilisateur != user_id
@@ -591,7 +552,7 @@ def selection_seance(id_seance):
         print(f"Erreur ajout séance : {e}")
         return jsonify({'error': 'Erreur lors de l\'ajout'}), 500
 
-
+#Ancienne route de la sélection du calendrier. Gardée au cas où afin de ne pas casser un lien qui utiliserait cette route pour renvoyer vers le calendrier
 @generales.route('/ma_selection')
 @login_required
 def ma_selection():
@@ -627,42 +588,40 @@ def recherche_rapide_cine(page=1):
             requete=chaine)
 
 
-#filtres avancés sur la recherche de films
-#Il a fallu utiliser un LLM pour séparer les genres car ils étaient présentés comme "Drame, Comedie, Action" au lieu d'être séparés dans le menu de sélection
+#Filtres avancés sur la recherche de films
+#Il a fallu utiliser un LLM pour séparer les genres dans le bouton de sélection car ils étaient présentés comme "Drame, Comedie, Action" au lieu d'être séparés dans le menu de sélection
+#Note: les genres disponibles dans notre menu de sélection semblent encore trop spécifiques et donc moins utiles que s'ils étaient plus généraux, mais il aurait été trop compliqué de faire en sorte que les différents types de drame ou de comédie se retrouvent regroupés sous un même genre
 @generales.route("/recherche_rapide_film")
 @generales.route("/recherche_rapide_film/<int:page>")
 def recherche_rapide_film(page=1):
     form = FiltreFilmForm(request.args)
     
-    # 1. Remplissage dynamique des genres (Nettoyage des doublons combinés)
-    # On récupère toutes les chaînes de genres
+    #Récupère les noms de genres en évitant les doublons
     raw_genres = db.session.query(Film.genre).distinct().all()
     
     set_genres = set()
     for row in raw_genres:
         if row.genre:
-            # On sépare par la virgule, on nettoie les espaces et on ajoute au set
+            #La partie suivante sépare les genres enregistrés dans la table comme "Comédie, Drame" par une virgule afin de les isoler comme en genres séparés
             parts = [g.strip() for g in row.genre.split(',')]
             set_genres.update(parts)
     
-    # On trie par ordre alphabétique pour le confort de l'utilisateur
+    #Tri des genres par ordre alphabétique pour qu'ils apparaissent ainsi dans le bouton de sélection
     form.genre.choices = [('', 'Tous les genres')] + [(g, g) for g in sorted(list(set_genres))]
 
-    # 2. Construction de la requête
+    #Requête à la table FilmTitre où se trouve le nom et l'id_film de tous nos films sans doublons
     query = db.session.query(FilmTitre)
 
-    # 3. Ajout des filtres (Correction du DuplicateAlias et du filtre Genre)
+    #Ajout de filtres
     chaine = form.chaine.data
     if chaine:
         query = query.filter(FilmTitre.titre.ilike(f"%{chaine}%"))
     
-    # On fait le JOIN une seule fois si besoin
     if form.genre.data or form.annee.data:
         query = query.join(Film)
 
         if form.genre.data:
-            # Utilisation de ILIKE pour trouver le genre même s'il y en a plusieurs
-            # Exemple : trouver "Drama" dans "Drama, Comedy"
+            #Utilisation de ilike pour trouver des noms de genre même lorsqu'il y en a plusieurs dans une même entrée sans conserver la virgule ou les autres genres
             query = query.filter(Film.genre.ilike(f"%{form.genre.data}%"))
             
         if form.annee.data:
@@ -672,8 +631,6 @@ def recherche_rapide_film(page=1):
                     cast(Film.date_sortie, String).contains(valeur_annee)
                 )
 
-    # 4. Tri et Pagination
-    # Attention : .distinct(FilmTitre.titre) nécessite que le ORDER BY commence par FilmTitre.titre
     query = query.distinct(FilmTitre.titre).order_by(FilmTitre.titre)
     
     per_page = 30

@@ -3,13 +3,8 @@ from datetime import datetime, date
 from sqlalchemy import Table, Column, Integer, ForeignKey, String, Text, DateTime
 from flask_login import UserMixin
 
-# Problèmes dans la déclaration de certaines clés secondaires : à vérifier
-
 #S'assure de bien utiliser le bon schéma
 SCHEMA_NAME = 'psch'
-
-#Ici, la première fois que j'ai tenté de connecter la base de données Postgres avec Automap, il n'a pas importé les tables: calendrier, cinema_favori, film_titre. Selon le LLM auquel j'ai demandé la raison de ce problème, c'est parce qu'il manquait des clés primaires à ces tables
-#Le LLM a suggéré la méthode "Manual reflection" à la place, afin de contourner ce problème en "forçant" SQLAlchemy à reconnaître certaines clés étrangères comme clés primaires
 
 class AireGeographique(db.Model):
     __table__ = Table(
@@ -34,7 +29,6 @@ class Utilisateur(db.Model, UserMixin):
         Column('id_utilisateur', Integer, primary_key=True),
         Column('nom_utilisateur', db.String),
         Column('nom', db.String),
-        #Nous avons supprimé "âge" car il est calculé à partir de la date de naissance
         Column('date_naissance', db.Date),
         Column('email', db.String),
         Column('motdepasse', db.String),
@@ -48,7 +42,6 @@ class Utilisateur(db.Model, UserMixin):
     def get_id(self):
         return str(self.id_utilisateur)
 
-    # Propriétés pour compatibilité avec le code existant
     #Assure que l'username correspond bien à nom_utilisateur et hache le mot de passe
     @property
     def username(self):
@@ -66,18 +59,17 @@ class Utilisateur(db.Model, UserMixin):
     def password_hash(self, value):
         self.motdepasse = value
 
-    #Calcule l'âge de l'utilisateur
+    #Calcule l'âge de l'utilisateur. Réalisé avec l'aide d'un LLM
     @property
     def age(self):
         if self.date_naissance:
             today = date.today()
-            # Calcul : Année actuelle - Année de naissance
-            # On retire 1 si l'anniversaire n'est pas encore passé cette année
+            #On retire 1 si l'anniversaire n'est pas encore passé à la date d'ajourd'hui
             age = today.year - self.date_naissance.year - (
                 (today.month, today.day) < (self.date_naissance.month, self.date_naissance.day)
             )
             return age
-        return None # Retourne None si la date de naissance est inconnue
+        return None
 
 class Cinema(db.Model):
     __table__ = Table(
@@ -126,11 +118,12 @@ class Matches(db.Model):
     schema=SCHEMA_NAME,
     extend_existing=True
     )
+    #Lien entre les deux utilisateurs matchés. Suggestion d'un LLM car je ne parvenais pas à faire fonctionner le matching. Je ne sais honnêtement pas si ça fait grand-chose mais je le laisse là au cas où
     user1 = db.relationship('Utilisateur', foreign_keys=[__table__.c.id_utilisateur1], backref='matches_as_user1')
     user2 = db.relationship('Utilisateur', foreign_keys=[__table__.c.id_utilisateur2], backref='matches_as_user2')
     
 
-#Tables sans clés primaires. On "force" SQLAlchemy à considérer des clés secondaires comme clés primaires
+#Tables sans clés primaires. J'ai dû "forcer" SQLAlchemy à considérer des clés secondaires comme clés primaires sinon la BDD ne marchait pas
 
 class Film(db.Model):
     __table__ = Table(
@@ -184,51 +177,3 @@ class CinemaFavori(db.Model):
 #Garantit qu'il n'y ait pas d'erreur parce que la table utilisateur a un nom français
 #Doit être à la fin de models.py
 User = Utilisateur
-
-#Ci-dessous: à ajouter dans Utilisateur:
-
-# CREATE TABLE IF NOT EXISTS users (
-#             id INTEGER PRIMARY KEY AUTOINCREMENT,
-#             username TEXT UNIQUE NOT NULL,
-#             email TEXT UNIQUE NOT NULL,
-#             password_hash TEXT NOT NULL,
-#             name TEXT, age INTEGER, bio TEXT, photo_url TEXT,
-#             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
-
-#Ci-dessous: à utiliser pour le matching, le calendrier et les cinémas favoris
-
-# class Like(db.Model):
-#     __tablename__ = 'likes'
-#     id = db.Column(db.Integer, primary_key=True)
-#     liker_id = db.Column(db.Integer, db.ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
-#     liked_id = db.Column(db.Integer, db.ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
-#     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    
-#     # Ensure a user can't like the same person twice
-#     __table_args__ = (db.UniqueConstraint('liker_id', 'liked_id', name='_liker_liked_uc'),)
-
-# class Match(db.Model):
-#     __tablename__ = 'matches'
-#     id = db.Column(db.Integer, primary_key=True)
-#     user1_id = db.Column(db.Integer, db.ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
-#     user2_id = db.Column(db.Integer, db.ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
-#     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-
-#     # These allow you to do: match.user1.name or match.user2.photo_url
-#     user1 = db.relationship('User', foreign_keys=[user1_id])
-#     user2 = db.relationship('User', foreign_keys=[user2_id])
-#     messages = db.relationship('Message', backref='match', cascade="all, delete-orphan")
-
-# class Notification(db.Model):
-#     __tablename__ = 'notifications'
-#     id = db.Column(db.Integer, primary_key=True)
-#     user_id = db.Column(db.Integer, db.ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
-#     sender_id = db.Column(db.Integer, db.ForeignKey('users.id', ondelete='SET NULL'), nullable=True)
-#     match_id = db.Column(db.Integer, db.ForeignKey('matches.id', ondelete='CASCADE'), nullable=True)
-#     type = db.Column(db.String(20), nullable=False) # 'like', 'match', 'message'
-#     message = db.Column(db.String(255))
-#     is_read = db.Column(db.Boolean, default=False)
-#     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-
-#     # CRITICAL: This allows notification.sender.name in your templates
-#     sender = db.relationship('User', foreign_keys=[sender_id])

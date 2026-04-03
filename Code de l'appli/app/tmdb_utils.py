@@ -1,16 +1,15 @@
-
 #Utilitaires pour l'API TMDB avec cache mémoire
 
 import requests
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any
 
-# Configuration TMDB
+#Configuration TMDB
 TMDB_API_KEY = '0d88ecf84847b9983d64130b5894bade'
 TMDB_BASE_URL = 'https://api.themoviedb.org/3'
 TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500'
 
-# Cache mémoire
+#Cache mémoire
 _tmdb_cache: Dict[str, Any] = {}
 _cache_timestamp: Dict[str, datetime] = {}
 CACHE_DURATION = timedelta(hours=24)  # Cache valide 24h
@@ -25,20 +24,21 @@ def _is_cache_valid(cache_key: str) -> bool:
 
 def search_movie_on_tmdb(titre: str) -> Optional[Dict[str, Any]]:
     """
+    Réalisé avec l'aide d'un LLM
     Recherche un film sur TMDB et retourne les détails
     Utilise le cache mémoire pour éviter les requêtes répétées
     
-    Returns:
+    Retourne:
         Dico avec les infos du film si trouvé, None sinon
     """
     cache_key = f"search_{titre.lower()}"
     
-    # Vérifier le cache
+    #Vérifier le cache
     if _is_cache_valid(cache_key):
         return _tmdb_cache.get(cache_key)
     
     try:
-        # Recherche du film
+        #Recherche du film
         search_url = f"{TMDB_BASE_URL}/search/movie"
         params = {
             'api_key': TMDB_API_KEY,
@@ -53,17 +53,17 @@ def search_movie_on_tmdb(titre: str) -> Optional[Dict[str, Any]]:
         if data.get('results') and len(data['results']) > 0:
             movie = data['results'][0]
             
-            # Récupérer les détails complets
+            #Récupérer les détails complets
             movie_id = movie['id']
             details = get_movie_details(movie_id)
             
-            # Mettre en cache
+            #Mettre en cache
             _tmdb_cache[cache_key] = details
             _cache_timestamp[cache_key] = datetime.now()
             
             return details
         else:
-            # Film non trouvé - mettre en cache aussi pour éviter de réessayer
+            #Film non trouvé - mettre en cache aussi pour éviter de réessayer
             _tmdb_cache[cache_key] = None
             _cache_timestamp[cache_key] = datetime.now()
             return None
@@ -75,11 +75,11 @@ def search_movie_on_tmdb(titre: str) -> Optional[Dict[str, Any]]:
 
 def get_movie_details(movie_id: int) -> Optional[Dict[str, Any]]:
     """
-    récup les détails complets d'un film depuis TMDB
+    Récupère les détails complets d'un film depuis TMDB
     """
     cache_key = f"details_{movie_id}"
     
-    # vérifier le cache
+    #vérifier le cache
     if _is_cache_valid(cache_key):
         return _tmdb_cache.get(cache_key)
     
@@ -95,7 +95,7 @@ def get_movie_details(movie_id: int) -> Optional[Dict[str, Any]]:
         response.raise_for_status()
         details = response.json()
         
-        # Mettre en cache
+        #Mettre en cache
         _tmdb_cache[cache_key] = details
         _cache_timestamp[cache_key] = datetime.now()
         
@@ -116,7 +116,7 @@ def get_poster_url(poster_path: Optional[str]) -> str:
 
 
 def clear_cache():
-    """vide le cache mémoire"""
+    """Vide le cache mémoire"""
     global _tmdb_cache, _cache_timestamp
     _tmdb_cache.clear()
     _cache_timestamp.clear()
@@ -124,7 +124,7 @@ def clear_cache():
 
 
 def get_cache_stats() -> Dict[str, int]:
-    """retourne des statistiques sur le cache"""
+    """Retourne des statistiques sur le cache"""
     valid_entries = sum(1 for key in _tmdb_cache.keys() if _is_cache_valid(key))
     return {
         'total_entries': len(_tmdb_cache),
